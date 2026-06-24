@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DesignationCategoryDef>
+    <defName>RimLogic</defName>
+    <label>RimLogic</label>
+    <order>390</order>
+    <showPowerGrid>true</showPowerGrid>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>Designator_Deconstruct</li>
+      <li>Designator_DeconstructConduit</li>
+    </specialDesignatorClasses>
+    <researchPrerequisites>
+      <li>RimLogic_Basics</li>
+    </researchPrerequisites>
+  </DesignationCategoryDef>
+
+</Defs>

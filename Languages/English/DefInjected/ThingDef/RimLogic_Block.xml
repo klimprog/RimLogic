@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RimLogic_LogicBlock.label>logic block</RimLogic_LogicBlock.label>
+  <RimLogic_LogicBlock.description>A universal logic block. Types include AND, OR, XOR, NAND, NOR, XNOR, splitter, and more. Use the Type button to switch between researched types.</RimLogic_LogicBlock.description>
+  <RimLogic_FunctionalBlock.label>functional block</RimLogic_FunctionalBlock.label>
+  <RimLogic_FunctionalBlock.description>A universal functional block. Types include switch, selector, math block, multitool, and more. Use the Type button to switch between researched types.</RimLogic_FunctionalBlock.description>
+  <RimLogic_Sensor.label>sensor</RimLogic_Sensor.label>
+  <RimLogic_Sensor.description>A universal sensor. Types include light, motion, temperature, power, pollution, fire, and more. Use the Type button to switch between researched types.</RimLogic_Sensor.description>
+  <RimLogic_Diode.label>diode</RimLogic_Diode.label>
+  <RimLogic_Diode.description>Lets power flow only in one direction: from input to output while the input side has surplus energy, and opens the circuit when it does not. A control signal on the input turns the diode on or off, and the output sends a signal when power is actually passing through.</RimLogic_Diode.description>
+  <RimLogic_SignalGenerator.label>signal generator</RimLogic_SignalGenerator.label>
+  <RimLogic_SignalGenerator.description>Keeps a signal on the output while enabled. A basic constant “one” source for circuits. Can be controlled by a logic input. Requires power.</RimLogic_SignalGenerator.description>
+  <RimLogic_TickGenerator.label>tick generator</RimLogic_TickGenerator.label>
+  <RimLogic_TickGenerator.description>Outputs regular signal pulses. Can be controlled by a logic input. Requires power.</RimLogic_TickGenerator.description>
+  <RimLogic_Register.label>register</RimLogic_Register.label>
+  <RimLogic_Register.description>Each new signal on the input inverts the output. Keeps its state. Requires power.</RimLogic_Register.description>
+  <RimLogic_Timer.label>timer</RimLogic_Timer.label>
+  <RimLogic_Timer.description>Delays a signal. When it receives a signal on the input, it repeats it on the output after the configured delay. Useful for pauses and timed sequences. Requires power.</RimLogic_Timer.description>
+  <RimLogic_Memory.label>memory</RimLogic_Memory.label>
+  <RimLogic_Memory.description>Stores a number. A normal signal stores 1 or 0, while blocks that carry numbers (selector, math block, another memory block) pass their value through. Memory keeps that number until the next change. It has a default value set in settings. When the value changes, it sends a pulse on the output. Requires power.</RimLogic_Memory.description>
+  <RimLogic_Screen.label>screen</RimLogic_Screen.label>
+  <RimLogic_Screen.description>Shows one digit of the number coming into its input. Several screens connected to the same source form a display: the first connected screen shows ones, the second shows tens, and so on. Negative numbers add a minus sign. Requires power.</RimLogic_Screen.description>
+  <RimLogic_Clock.label>clock</RimLogic_Clock.label>
+  <RimLogic_Clock.description>Outputs a signal at the chosen time of day. In settings, choose an hour or a range of hours and a condition (before, after, within range, and so on). While the local time matches it, the output has a signal. Requires power.</RimLogic_Clock.description>
+  <RimLogic_Loudspeaker.label>loudspeaker</RimLogic_Loudspeaker.label>
+  <RimLogic_Loudspeaker.description>When it receives a signal, it shows an in-game notification — blue or red — with your own title and text. Useful when a sensor or circuit should report an event by itself. The signal also passes through to the output. Requires power.</RimLogic_Loudspeaker.description>
+</LanguageData>

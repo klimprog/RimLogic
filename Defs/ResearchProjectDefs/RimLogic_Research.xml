@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchTabDef>
+    <defName>RimLogic</defName>
+    <label>RimLogic</label>
+    <generalTitle>RimLogic</generalTitle>
+    <generalDescription>Исследования RimLogic: Датчики, диоды, логические блоки и автоматика для электросетей колонии.</generalDescription>
+  </ResearchTabDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Basics</defName>
+    <label>Основы RimLogic</label>
+    <description>Начало RimLogic. Открывает вкладку строительства и базовые блоки.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites>
+      <li>Electricity</li>
+    </prerequisites>
+    <researchViewX>0.0</researchViewX>
+    <researchViewY>2.5</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_LogicGroup</defName>
+    <label>Логические блоки</label>
+    <description>Открывает постройку логического блока. Конкретные типы (AND, OR, …) изучаются отдельно.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Basics</li></prerequisites>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>4.90</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_SensorGroup</defName>
+    <label>Датчики</label>
+    <description>Открывает постройку блока-Датчика. Конкретные Датчики изучаются отдельно.</description>
+    <baseCost>1200</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Basics</li></prerequisites>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>0.30</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_FunctionalGroup</defName>
+    <label>Функциональные блоки</label>
+    <description>Открывает постройку функционального блока. Конкретные типы изучаются отдельно.</description>
+    <baseCost>1400</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Basics</li></prerequisites>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>4.80</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_Diode</defName>
+    <label>Диод</label>
+    <description>Открывает постройку диода — односторонний пропуск тока.</description>
+    <baseCost>600</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Basics</li></prerequisites>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_SignalGen</defName>
+    <label>Генератор сигнала</label>
+    <description>Открывает постройку генератора сигнала.</description>
+    <baseCost>700</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Basics</li></prerequisites>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>0.50</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_TickGen</defName>
+    <label>Генератор тика</label>
+    <description>Открывает постройку генератора тика.</description>
+    <baseCost>900</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Basics</li></prerequisites>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_AND</defName>
+    <label>Логическое AND</label>
+    <description>Тип «Логическое AND» для логического блока.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Res_LogicGroup</li></prerequisites>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>2.90</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_OR</defName>
+    <label>Логическое OR</label>
+    <description>Тип «Логическое OR» для логического блока.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Res_LogicGroup</li></prerequisites>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>3.40</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_XOR</defName>
+    <label>Логическое XOR</label>
+    <description>Тип «Логическое XOR» для логического блока.</description>
+    <baseCost>700</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Res_LogicGroup</li></prerequisites>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>3.90</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_NAND</defName>
+    <label>Логическое NAND</label>
+    <description>Тип «Логическое NAND» для логического блока.</description>
+    <baseCost>700</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Res_LogicGroup</li></prerequisites>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>4.40</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_NOR</defName>
+    <label>Логическое NOR</label>
+    <description>Тип «Логическое NOR» для логического блока.</description>
+    <baseCost>700</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Res_LogicGroup</li></prerequisites>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>4.90</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_XNOR</defName>
+    <label>Логическое XNOR</label>
+    <description>Тип «Логическое XNOR» для логического блока.</description>
+    <baseCost>900</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Res_LogicGroup</li></prerequisites>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>5.40</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_Register</defName>
+    <label>Регистр</label>
+    <description>Открывает постройку регистра — логической ячейки памяти.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Basics</li></prerequisites>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>1.50</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_Splitter</defName>
+    <label>Разветвитель</label>
+    <description>Тип «Разветвитель» для логического блока.</description>
+    <baseCost>600</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Res_LogicGroup</li></prerequisites>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>5.90</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_SensorLight</defName>
+    <label>Датчик света</label>
+    <description>Тип «Датчик света».</description>
+    <baseCost>700</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Res_SensorGroup</li></prerequisites>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>2.60</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_SensorMotion</defName>
+    <label>Датчик движения</label>
+    <description>Тип «Датчик движения».</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Res_SensorGroup</li></prerequisites>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>0.60</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_SensorTemperature</defName>
+    <label>Датчик температуры</label>
+    <description>Тип «Датчик температуры».</description>
+    <baseCost>800</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Res_SensorGroup</li></prerequisites>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>0.10</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_SensorCurrent</defName>
+    <label>Датчик тока</label>
+    <description>Тип «Датчик тока».</description>
+    <baseCost>900</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Res_SensorGroup</li></prerequisites>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>1.10</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_SensorPressure</defName>
+    <label>Датчик давления</label>
+    <description>Тип «Датчик давления».</description>
+    <baseCost>700</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Res_SensorGroup</li></prerequisites>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>1.60</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_SensorPollution</defName>
+    <label>Датчик загрязнений</label>
+    <description>Тип «Датчик загрязнений».</description>
+    <baseCost>900</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Res_SensorGroup</li></prerequisites>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>2.10</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_SensorFire</defName>
+    <label>Датчик огня</label>
+    <description>Тип «Датчик огня».</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Res_SensorGroup</li></prerequisites>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>3.10</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_Switch</defName>
+    <label>Выключатель</label>
+    <description>Тип «Выключатель».</description>
+    <baseCost>700</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Res_FunctionalGroup</li></prerequisites>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>4.60</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_Selector</defName>
+    <label>Переключатель</label>
+    <description>Тип «Переключатель».</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Res_FunctionalGroup</li></prerequisites>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>4.10</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_Analyzer</defName>
+    <label>Анализатор</label>
+    <description>Тип «Анализатор».</description>
+    <baseCost>700</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Res_FunctionalGroup</li></prerequisites>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>5.10</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_Timer</defName>
+    <label>Таймер</label>
+    <description>Открывает постройку таймера — задержку/повтор логического сигнала.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Basics</li></prerequisites>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>2.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_Memory</defName>
+    <label>Память</label>
+    <description>Открывает постройку блока памяти — хранение числового значения.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Basics</li></prerequisites>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>2.50</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_Screen</defName>
+    <label>Экран</label>
+    <description>Открывает постройку экрана — вывод разрядов числа.</description>
+    <baseCost>1200</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Basics</li></prerequisites>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>3.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_Clock</defName>
+    <label>Часы</label>
+    <description>Открывает постройку часов — сигнал по времени суток.</description>
+    <baseCost>900</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Basics</li></prerequisites>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>3.50</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_Loudspeaker</defName>
+    <label>Рупор</label>
+    <description>Открывает постройку рупора — уведомления по сигналу.</description>
+    <baseCost>900</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Basics</li></prerequisites>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>4.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_Math</defName>
+    <label>Математический блок</label>
+    <description>Тип «Математический блок».</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Res_FunctionalGroup</li></prerequisites>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>5.60</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_Multitool</defName>
+    <label>Мультитул</label>
+    <description>Тип «Мультитул» — многорежимный функциональный блок.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Res_FunctionalGroup</li></prerequisites>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>3.60</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

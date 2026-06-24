@@ -1,0 +1,15 @@
+RimLogic
+Electro-logic blocks for players who like their base to think for itself
+
+Overview:
+RimLogic adds a system of electro-logic blocks for automating your RimWorld colony. It is made for those moments when simply flipping switches by hand is not enough, and you want to build an actual readable circuit: a sensor detects something, logic checks the condition, and the right block turns power on, changes state, shows a number, or sends a notification.
+
+The mod includes signal links between blocks, normal interaction with the power grid, sensors, logic blocks, timers, memory, generators, screens, an alert speaker, and several functional utility blocks. Signal links can be shown directly on the map: colored lines make it clear which blocks are connected and where the signal is going. That becomes especially useful once a circuit grows beyond just two or three blocks.
+
+With the diode, you can make power flow in only one direction. No more strange chains of switches when all you really need is a simple one-way power path. The diode makes those setups cleaner and easier to understand.
+
+Every block has its own settings menu.
+
+
+
+Requires Harmony. Safe to add to an existing save.

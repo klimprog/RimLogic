@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <RimLogic.State.On>вкл</RimLogic.State.On>
+  <RimLogic.State.Off>выкл</RimLogic.State.Off>
+
+  <RimLogic.Flow.In>вход</RimLogic.Flow.In>
+  <RimLogic.Flow.Out>выход</RimLogic.Flow.Out>
+
+  <RimLogic.Port.Power>питание</RimLogic.Port.Power>
+
+  <RimLogic.Gizmo.Type>Тип</RimLogic.Gizmo.Type>
+  <RimLogic.Gizmo.TypeDesc>Выбрать, чем будет этот блок (например, AND или датчик света). Внимание: смена типа сбрасывает настройки блока — грани, связи и выходы.</RimLogic.Gizmo.TypeDesc>
+
+  <RimLogic.Gizmo.Rename>Переименовать</RimLogic.Gizmo.Rename>
+  <RimLogic.Gizmo.RenameDesc>Дать блоку своё имя. Оно показывается в заголовке и в списке связей у соседних блоков — так легче не запутаться.</RimLogic.Gizmo.RenameDesc>
+
+  <RimLogic.Gizmo.Link>Добавить связь</RimLogic.Gizmo.Link>
+  <RimLogic.Gizmo.LinkActive>Выход</RimLogic.Gizmo.LinkActive>
+  <RimLogic.Gizmo.LinkDesc>Протянуть «провод сигнала» между блоками. Нажми кнопку, кликни на выход этого блока, затем на вход нужного блока. По пустым клеткам можно расставить точки маршрута. ПКМ — шаг назад, Esc — отмена.</RimLogic.Gizmo.LinkDesc>
+  <RimLogic.Link.PickOutput>Кликни на выход, от которого пойдёт связь</RimLogic.Link.PickOutput>
+  <RimLogic.Link.PickTarget>Кликни на блок-цель.\nЛКМ по пустой клетке — точка маршрута, ПКМ — убрать последнюю.</RimLogic.Link.PickTarget>
+  <RimLogic.Link.PickInput>Кликни на вход этого блока</RimLogic.Link.PickInput>
+  <RimLogic.Link.Delete>Удалить связь</RimLogic.Link.Delete>
+  <RimLogic.Link.DeleteHint>Наведи на связь и кликни, чтобы её удалить</RimLogic.Link.DeleteHint>
+  <RimLogic.ShowLinks>Показать все связи RimLogic</RimLogic.ShowLinks>
+
+  <RimLogic.Gizmo.IconColor>Цвет значка</RimLogic.Gizmo.IconColor>
+  <RimLogic.Gizmo.IconColorDesc>Поменять цвет значка на этом блоке — чтобы похожие блоки было легче различать.</RimLogic.Gizmo.IconColorDesc>
+  <RimLogic.Gizmo.ElectroIO>Провода: вход/выход</RimLogic.Gizmo.ElectroIO>
+  <RimLogic.Gizmo.ElectroIODesc>Настроить электрические грани: какая принимает ток (вход), какая отдаёт (выход). Любую грань можно отключить.</RimLogic.Gizmo.ElectroIODesc>
+  <RimLogic.Gizmo.LogicIO>Сигнал: вход/выход</RimLogic.Gizmo.LogicIO>
+  <RimLogic.Gizmo.LogicIODesc>Настроить логические грани: какая принимает сигнал (вход), какая отдаёт (выход). Отключённая грань не показывает индикатор.</RimLogic.Gizmo.LogicIODesc>
+
+  <RimLogic.Gizmo.Settings>Настройки</RimLogic.Gizmo.Settings>
+  <RimLogic.Gizmo.SettingsDesc>Открыть настройки этого блока.</RimLogic.Gizmo.SettingsDesc>
+  <RimLogic.Gizmo.Reconnect>Переподключить питание</RimLogic.Gizmo.Reconnect>
+  <RimLogic.Gizmo.ReconnectDesc>Выбрать, от какой электролинии питать блок. Нажми кнопку и кликни на нужную линию рядом.</RimLogic.Gizmo.ReconnectDesc>
+  <RimLogic.Feed.NoNet>Рядом нет электролинии, до которой можно дотянуться.</RimLogic.Feed.NoNet>
+  <RimLogic.Settings.Desc>Настройки выбранного блока.</RimLogic.Settings.Desc>
+  <RimLogic.Settings.None>У этого блока пока нечего настраивать.</RimLogic.Settings.None>
+
+  <RimLogic.Sensor.Title>Настройка датчика тока</RimLogic.Sensor.Title>
+  <RimLogic.Sensor.Desc>Даёт сигнал, когда выбранный показатель электросети отвечает условию.</RimLogic.Sensor.Desc>
+  <RimLogic.Sensor.Source>За чем следить</RimLogic.Sensor.Source>
+  <RimLogic.Sensor.SrcNet>Свободная энергия в сети</RimLogic.Sensor.SrcNet>
+  <RimLogic.Sensor.SrcBattery>Заряд аккумуляторов</RimLogic.Sensor.SrcBattery>
+  <RimLogic.Sensor.NetTitle>Энергия в сети</RimLogic.Sensor.NetTitle>
+  <RimLogic.Sensor.NetDesc>Сколько энергии сеть отдаёт прямо сейчас</RimLogic.Sensor.NetDesc>
+  <RimLogic.Sensor.BatTitle>Аккумуляторы</RimLogic.Sensor.BatTitle>
+  <RimLogic.Sensor.BatDesc>Суммарный заряд всех аккумуляторов</RimLogic.Sensor.BatDesc>
+  <RimLogic.Sensor.CheckMode>Как проверять значение</RimLogic.Sensor.CheckMode>
+  <RimLogic.Sensor.Exact>Точное значение</RimLogic.Sensor.Exact>
+  <RimLogic.Sensor.Range>Диапазон</RimLogic.Sensor.Range>
+  <RimLogic.Sensor.Condition>Когда срабатывать</RimLogic.Sensor.Condition>
+  <RimLogic.Sensor.Value>Нужное значение</RimLogic.Sensor.Value>
+  <RimLogic.Sensor.ValueShort>Значение</RimLogic.Sensor.ValueShort>
+  <RimLogic.Sensor.RangeBounds>Границы диапазона</RimLogic.Sensor.RangeBounds>
+  <RimLogic.Sensor.From>От</RimLogic.Sensor.From>
+  <RimLogic.Sensor.To>До</RimLogic.Sensor.To>
+  <RimLogic.Sensor.UnitW>Вт</RimLogic.Sensor.UnitW>
+  <RimLogic.Sensor.UnitWd>Вт·дн</RimLogic.Sensor.UnitWd>
+
+  <RimLogic.LightSensor.Title>Настройка датчика света</RimLogic.LightSensor.Title>
+  <RimLogic.LightSensor.Desc>Даёт сигнал и пропускает ток с входа на выход, когда освещённость под блоком отвечает условию.</RimLogic.LightSensor.Desc>
+  <RimLogic.LightSensor.Threshold>Порог освещённости</RimLogic.LightSensor.Threshold>
+  <RimLogic.LightSensor.Unit>%</RimLogic.LightSensor.Unit>
+
+  <RimLogic.TempSensor.Title>Настройка датчика температуры</RimLogic.TempSensor.Title>
+  <RimLogic.TempSensor.Desc>Даёт сигнал и пропускает ток с входа на выход, когда температура под блоком отвечает условию.</RimLogic.TempSensor.Desc>
+  <RimLogic.TempSensor.Unit>°C</RimLogic.TempSensor.Unit>
+
+  <RimLogic.PollSensor.Title>Настройка датчика загрязнений</RimLogic.PollSensor.Title>
+  <RimLogic.PollSensor.Desc>Даёт сигнал и пропускает ток с входа на выход, когда в выбранной области есть загрязнение.</RimLogic.PollSensor.Desc>
+  <RimLogic.PollSensor.Area>Область проверки</RimLogic.PollSensor.Area>
+  <RimLogic.PollSensor.Circle>Круг</RimLogic.PollSensor.Circle>
+  <RimLogic.PollSensor.Square>Квадрат</RimLogic.PollSensor.Square>
+  <RimLogic.PollSensor.Room>Помещение</RimLogic.PollSensor.Room>
+  <RimLogic.PollSensor.Radius>Радиус</RimLogic.PollSensor.Radius>
+  <RimLogic.PollSensor.Cells>кл.</RimLogic.PollSensor.Cells>
+  <RimLogic.PollSensor.RoomHeader>Помещение</RimLogic.PollSensor.RoomHeader>
+  <RimLogic.PollSensor.RoomNote>Проверяется загрязнение в комнате, где стоит блок. Под открытым небом — небольшая область вокруг блока.</RimLogic.PollSensor.RoomNote>
+
+  <RimLogic.FireSensor.Title>Настройка датчика огня</RimLogic.FireSensor.Title>
+  <RimLogic.FireSensor.Desc>Даёт сигнал и пропускает ток с входа на выход, когда в выбранной области что-то горит.</RimLogic.FireSensor.Desc>
+
+  <RimLogic.Clock.Title>Настройка часов</RimLogic.Clock.Title>
+  <RimLogic.Clock.Desc>Дают сигнал, когда наступает нужное время суток.</RimLogic.Clock.Desc>
+  <RimLogic.Clock.Exact>Точное время</RimLogic.Clock.Exact>
+  <RimLogic.Clock.Time>Час суток</RimLogic.Clock.Time>
+  <RimLogic.Clock.Unit>ч</RimLogic.Clock.Unit>
+
+  <RimLogic.Loudspeaker.Title>Настройка рупора</RimLogic.Loudspeaker.Title>
+  <RimLogic.Loudspeaker.Desc>Получив сигнал, показывает тебе уведомление с твоим текстом.</RimLogic.Loudspeaker.Desc>
+  <RimLogic.Loudspeaker.LblTitle>Заголовок</RimLogic.Loudspeaker.LblTitle>
+  <RimLogic.Loudspeaker.LblMessage>Текст сообщения</RimLogic.Loudspeaker.LblMessage>
+  <RimLogic.Loudspeaker.LblType>Тип уведомления</RimLogic.Loudspeaker.LblType>
+  <RimLogic.Loudspeaker.Blue>Обычное (синее)</RimLogic.Loudspeaker.Blue>
+  <RimLogic.Loudspeaker.Red>Тревога (красное)</RimLogic.Loudspeaker.Red>
+  <RimLogic.Loudspeaker.DefaultTitle>Рупор RimLogic</RimLogic.Loudspeaker.DefaultTitle>
+
+  <RimLogic.MotionSensor.Title>Настройка датчика движения</RimLogic.MotionSensor.Title>
+  <RimLogic.MotionSensor.Desc>Даёт сигнал и пропускает ток с входа на выход, когда в выбранной области есть кто-то из отмеченных.</RimLogic.MotionSensor.Desc>
+  <RimLogic.MotionSensor.Targets>Кого замечать</RimLogic.MotionSensor.Targets>
+  <RimLogic.MotionSensor.Colonists>Колонисты</RimLogic.MotionSensor.Colonists>
+  <RimLogic.MotionSensor.TameAnimals>Домашние животные</RimLogic.MotionSensor.TameAnimals>
+  <RimLogic.MotionSensor.WildAnimals>Дикие животные</RimLogic.MotionSensor.WildAnimals>
+  <RimLogic.MotionSensor.Slaves>Рабы</RimLogic.MotionSensor.Slaves>
+  <RimLogic.MotionSensor.Prisoners>Пленники</RimLogic.MotionSensor.Prisoners>
+  <RimLogic.MotionSensor.Strangers>Чужаки (мирные)</RimLogic.MotionSensor.Strangers>
+  <RimLogic.MotionSensor.Enemies>Враги</RimLogic.MotionSensor.Enemies>
+
+  <RimLogic.Timer.Title>Настройка таймера</RimLogic.Timer.Title>
+  <RimLogic.Timer.Desc>Повторяет входной сигнал на выходе с задержкой. Задержку выбери ползунком.</RimLogic.Timer.Desc>
+  <RimLogic.Timer.Timeout>Задержка</RimLogic.Timer.Timeout>
+  <RimLogic.Timer.Ticks>тактов</RimLogic.Timer.Ticks>
+
+  <RimLogic.Memory.Title>Настройка памяти</RimLogic.Memory.Title>
+  <RimLogic.Memory.Desc>Запоминает число со входа и держит его. Когда число меняется — даёт импульс.</RimLogic.Memory.Desc>
+  <RimLogic.Memory.Default>Значение по умолчанию</RimLogic.Memory.Default>
+  <RimLogic.Memory.Current>Сейчас хранится: {0}</RimLogic.Memory.Current>
+  <RimLogic.Memory.Reset>Сбросить</RimLogic.Memory.Reset>
+
+  <RimLogic.Math.Title>Настройка математического блока</RimLogic.Math.Title>
+  <RimLogic.Math.Desc>Выбери действие. Первое число берётся с левого входа, второе — с правого.</RimLogic.Math.Desc>
+  <RimLogic.Math.CalcGroup>Вычисление</RimLogic.Math.CalcGroup>
+  <RimLogic.Math.CmpGroup>Сравнение</RimLogic.Math.CmpGroup>
+  <RimLogic.MathOp.Add>Сложение: первое + второе</RimLogic.MathOp.Add>
+  <RimLogic.MathOp.Subtract>Вычитание: первое − второе</RimLogic.MathOp.Subtract>
+  <RimLogic.MathOp.Multiply>Умножение: первое × второе</RimLogic.MathOp.Multiply>
+  <RimLogic.MathOp.Divide>Деление нацело: первое ÷ второе</RimLogic.MathOp.Divide>
+  <RimLogic.MathOp.Modulo>Остаток от деления: первое mod второе</RimLogic.MathOp.Modulo>
+  <RimLogic.MathOp.Power>Степень: первое в степени второго</RimLogic.MathOp.Power>
+  <RimLogic.MathOp.SquareRoot>Квадратный корень (нужно одно число)</RimLogic.MathOp.SquareRoot>
+  <RimLogic.MathOp.Absolute>Модуль — число без минуса (нужно одно число)</RimLogic.MathOp.Absolute>
+  <RimLogic.MathOp.Delta>Разница без минуса: |первое − второе|</RimLogic.MathOp.Delta>
+  <RimLogic.MathOp.Percent>Процент: первое × второе ÷ 100</RimLogic.MathOp.Percent>
+  <RimLogic.MathOp.PlusMinus>Сменить знак (нужно одно число)</RimLogic.MathOp.PlusMinus>
+  <RimLogic.MathOp.Equal>Равно: 1, если первое = второе, иначе 0</RimLogic.MathOp.Equal>
+  <RimLogic.MathOp.NotEqual>Не равно: 1, если первое ≠ второе</RimLogic.MathOp.NotEqual>
+  <RimLogic.MathOp.Greater>Больше: 1, если первое &gt; второе</RimLogic.MathOp.Greater>
+  <RimLogic.MathOp.GreaterEqual>Больше или равно: 1, если первое ≥ второе</RimLogic.MathOp.GreaterEqual>
+  <RimLogic.MathOp.Less>Меньше: 1, если первое &lt; второе</RimLogic.MathOp.Less>
+  <RimLogic.MathOp.LessEqual>Меньше или равно: 1, если первое ≤ второе</RimLogic.MathOp.LessEqual>
+  <RimLogic.MathOp.ApproxEqual>Примерно равно: 1, если разница не больше 1</RimLogic.MathOp.ApproxEqual>
+
+  <RimLogic.Multitool.Title>Настройка мультитула</RimLogic.Multitool.Title>
+  <RimLogic.Multitool.Desc>Выбери режим работы и его настройки.</RimLogic.Multitool.Desc>
+  <RimLogic.Multitool.ModeHeader>Режим</RimLogic.Multitool.ModeHeader>
+  <RimLogic.Multitool.Mode.CountItems>Считать предметы: считает выбранный предмет в области (на земле и в хранилищах)</RimLogic.Multitool.Mode.CountItems>
+  <RimLogic.Multitool.Mode.ToggleDevice>Включать прибор: по сигналу включает/выключает соседний прибор</RimLogic.Multitool.Mode.ToggleDevice>
+  <RimLogic.Multitool.Mode.OpenCloseDoor>Управлять дверями: по сигналу открывает/закрывает двери в области</RimLogic.Multitool.Mode.OpenCloseDoor>
+  <RimLogic.Multitool.Mode.CropMaturity>Спелость урожая: считает готовые к сбору растения в области</RimLogic.Multitool.Mode.CropMaturity>
+  <RimLogic.Multitool.Item>Предмет</RimLogic.Multitool.Item>
+  <RimLogic.Multitool.ItemNone>не выбран</RimLogic.Multitool.ItemNone>
+  <RimLogic.Multitool.PickItem>Выбрать предмет</RimLogic.Multitool.PickItem>
+  <RimLogic.Multitool.Device>Прибор</RimLogic.Multitool.Device>
+  <RimLogic.Multitool.DeviceNone>не выбран</RimLogic.Multitool.DeviceNone>
+  <RimLogic.Multitool.NoDevices>Рядом нет приборов, которые можно включать и выключать.</RimLogic.Multitool.NoDevices>
+  <RimLogic.Multitool.WorkMode>Как реагировать на сигнал</RimLogic.Multitool.WorkMode>
+  <RimLogic.Multitool.SwitchMode>Пока есть сигнал — включено</RimLogic.Multitool.SwitchMode>
+  <RimLogic.Multitool.SelectorMode>Каждый сигнал переключает</RimLogic.Multitool.SelectorMode>
+  <RimLogic.Multitool.Mode.PawnDetector>Считать пешек: считает пешек в области по фильтру (группы или конкретная)</RimLogic.Multitool.Mode.PawnDetector>
+  <RimLogic.Multitool.Mode.StorageFullness>Заполненность складов: насколько заполнены склады в области (в процентах)</RimLogic.Multitool.Mode.StorageFullness>
+  <RimLogic.Multitool.PawnTarget>Кого считать</RimLogic.Multitool.PawnTarget>
+  <RimLogic.Multitool.TargetAll>Все</RimLogic.Multitool.TargetAll>
+  <RimLogic.Multitool.TargetPawn>Одна пешка</RimLogic.Multitool.TargetPawn>
+  <RimLogic.Multitool.PawnNone>пешка не выбрана</RimLogic.Multitool.PawnNone>
+  <RimLogic.Multitool.PickPawn>Выбрать пешку</RimLogic.Multitool.PickPawn>
+  <RimLogic.Multitool.StorageTarget>Какие склады</RimLogic.Multitool.StorageTarget>
+  <RimLogic.Multitool.TargetSpot>Выбранные</RimLogic.Multitool.TargetSpot>
+  <RimLogic.Multitool.StorageAllNote>Считаются все склады в области действия.</RimLogic.Multitool.StorageAllNote>
+  <RimLogic.Multitool.StorageNone>склады не выбраны</RimLogic.Multitool.StorageNone>
+  <RimLogic.Multitool.PickStorage>Выбрать склады</RimLogic.Multitool.PickStorage>
+  <RimLogic.Multitool.Storage>хранилище</RimLogic.Multitool.Storage>
+
+  <RimLogic.ElectroIO.Title>Электрические грани</RimLogic.ElectroIO.Title>
+  <RimLogic.ElectroIO.Desc>Назначь каждой грани роль: принимать ток (вход), отдавать (выход) или ничего.</RimLogic.ElectroIO.Desc>
+  <RimLogic.ElectroIO.Hint>Можно до {0} входов и {1} выходов. Левый клик — вход, правый клик — выход, повтор по той же грани — отключить.</RimLogic.ElectroIO.Hint>
+  <RimLogic.LogicIO.Title>Логические грани</RimLogic.LogicIO.Title>
+  <RimLogic.LogicIO.Desc>Назначь каждой грани роль: принимать сигнал (вход), отдавать (выход) или ничего.</RimLogic.LogicIO.Desc>
+  <RimLogic.LogicIO.Hint>Можно до {0} входов и {1} выходов. Левый клик — вход, правый клик — выход, повтор по той же грани — отключить. Индикатор есть только у назначенной грани.</RimLogic.LogicIO.Hint>
+
+  <RimLogic.Counter.Format>{0} из {1}</RimLogic.Counter.Format>
+
+  <RimLogic.Inspect.Type>Тип</RimLogic.Inspect.Type>
+  <RimLogic.Inspect.Power>Потребление: {0} Вт</RimLogic.Inspect.Power>
+  <RimLogic.Inspect.NoPower>нет питания</RimLogic.Inspect.NoPower>
+
+  <RimLogic.Tab.Links>Связи</RimLogic.Tab.Links>
+  <RimLogic.Links.Power>Электросеть</RimLogic.Links.Power>
+  <RimLogic.Links.Logic>Сигналы</RimLogic.Links.Logic>
+  <RimLogic.Links.NoneActive>нет активных граней</RimLogic.Links.NoneActive>
+  <RimLogic.Links.Nothing>нет</RimLogic.Links.Nothing>
+
+  <RimLogic.Btn.Done>Готово</RimLogic.Btn.Done>
+  <RimLogic.Btn.Cancel>Отмена</RimLogic.Btn.Cancel>
+  <RimLogic.Btn.Apply>Применить</RimLogic.Btn.Apply>
+
+  <RimLogic.TypeWindow.Title>Выбор типа блока</RimLogic.TypeWindow.Title>
+  <RimLogic.TypeWindow.Desc>Выбери, чем будет блок, и нажми «Готово».</RimLogic.TypeWindow.Desc>
+
+  <RimLogic.ColorWindow.Title>Выбор цвета</RimLogic.ColorWindow.Title>
+  <RimLogic.ColorWindow.Desc>Выбери цвет значка блока.</RimLogic.ColorWindow.Desc>
+  <RimLogic.Color.White>Белый</RimLogic.Color.White>
+  <RimLogic.Color.Gray>Серый</RimLogic.Color.Gray>
+  <RimLogic.Color.Red>Красный</RimLogic.Color.Red>
+  <RimLogic.Color.Orange>Оранжевый</RimLogic.Color.Orange>
+  <RimLogic.Color.Yellow>Жёлтый</RimLogic.Color.Yellow>
+  <RimLogic.Color.Green>Зелёный</RimLogic.Color.Green>
+  <RimLogic.Color.Teal>Бирюзовый</RimLogic.Color.Teal>
+  <RimLogic.Color.Blue>Голубой</RimLogic.Color.Blue>
+  <RimLogic.Color.Indigo>Синий</RimLogic.Color.Indigo>
+  <RimLogic.Color.Purple>Фиолетовый</RimLogic.Color.Purple>
+  <RimLogic.Color.Pink>Розовый</RimLogic.Color.Pink>
+  <RimLogic.Color.Brown>Коричневый</RimLogic.Color.Brown>
+
+</LanguageData>

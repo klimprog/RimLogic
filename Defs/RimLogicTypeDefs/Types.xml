@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_None</defName>
+    <label>без типа</label>
+    <iconPath>Things/RimLogic/icon_none</iconPath>
+    <order>0</order>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_AND</defName>
+    <label>Логическое AND</label>
+    <description>Выдаёт сигнал, только когда сигнал есть сразу на ВСЕХ подключённых входах. Нет хотя бы на одном — на выходе пусто. С проводами так же: пропускает ток, когда запитаны все входы. Заведи сигналы (связями) или провода на входы, результат забери с выхода.</description>
+    <iconPath>Things/RimLogic/types/logic_and</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_And</workerClass>
+    <group>Logic</group>
+    <powerConsumer>false</powerConsumer>
+    <electroInputs>3</electroInputs>
+    <electroOutputs>1</electroOutputs>
+    <logicInputs>3</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <defaultElectroRoles><li>2</li><li>1</li><li>1</li><li>1</li></defaultElectroRoles>
+    <defaultLogicRoles><li>2</li><li>1</li><li>1</li><li>1</li></defaultLogicRoles>
+    <order>10</order>
+    <researchPrerequisite>RimLogic_Res_AND</researchPrerequisite>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_OR</defName>
+    <label>Логическое OR</label>
+    <description>Выдаёт сигнал, если сигнал есть хотя бы на ОДНОМ из подключённых входов. С проводами так же: ток идёт, если запитан хотя бы один вход. Заведи сигналы или провода на входы, результат — с выхода.</description>
+    <iconPath>Things/RimLogic/types/logic_or</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_Or</workerClass>
+    <group>Logic</group>
+    <powerConsumer>false</powerConsumer>
+    <electroInputs>3</electroInputs>
+    <electroOutputs>1</electroOutputs>
+    <logicInputs>3</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <defaultElectroRoles><li>2</li><li>1</li><li>1</li><li>1</li></defaultElectroRoles>
+    <defaultLogicRoles><li>2</li><li>1</li><li>1</li><li>1</li></defaultLogicRoles>
+    <order>20</order>
+    <researchPrerequisite>RimLogic_Res_OR</researchPrerequisite>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_XOR</defName>
+    <label>Логическое XOR</label>
+    <description>Выдаёт сигнал, когда входы РАЗНЫЕ: на одном есть, на другом нет. Если сигнал есть на обоих сразу или нет нигде — на выходе пусто. С проводами работает так же.</description>
+    <iconPath>Things/RimLogic/types/logic_xor</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_Xor</workerClass>
+    <group>Logic</group>
+    <powerConsumer>false</powerConsumer>
+    <electroInputs>3</electroInputs>
+    <electroOutputs>1</electroOutputs>
+    <logicInputs>3</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <defaultElectroRoles><li>2</li><li>1</li><li>1</li><li>1</li></defaultElectroRoles>
+    <defaultLogicRoles><li>2</li><li>1</li><li>1</li><li>1</li></defaultLogicRoles>
+    <order>30</order>
+    <researchPrerequisite>RimLogic_Res_XOR</researchPrerequisite>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_NAND</defName>
+    <label>Логическое NAND</label>
+    <description>Противоположность AND: сигнал на выходе есть ВСЕГДА, кроме момента, когда сигнал пришёл сразу на все входы. Работает только с сигналами (проводов нет). Заведи сигналы связями на входы, результат — с выхода.</description>
+    <iconPath>Things/RimLogic/types/logic_nand</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_Nand</workerClass>
+    <group>Logic</group>
+    <logicInputs>3</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <defaultLogicRoles><li>2</li><li>1</li><li>1</li><li>1</li></defaultLogicRoles>
+    <order>40</order>
+    <researchPrerequisite>RimLogic_Res_NAND</researchPrerequisite>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_NOR</defName>
+    <label>Логическое NOR</label>
+    <description>Противоположность OR: сигнал есть только тогда, когда НИ НА ОДНОМ входе сигнала нет. Появился сигнал хоть где-то — выход гаснет. Только сигналы (проводов нет).</description>
+    <iconPath>Things/RimLogic/types/logic_nor</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_Nor</workerClass>
+    <group>Logic</group>
+    <logicInputs>3</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <defaultLogicRoles><li>2</li><li>1</li><li>1</li><li>1</li></defaultLogicRoles>
+    <order>50</order>
+    <researchPrerequisite>RimLogic_Res_NOR</researchPrerequisite>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_XNOR</defName>
+    <label>Логическое XNOR</label>
+    <description>Противоположность XOR: сигнал есть, когда входы ОДИНАКОВЫЕ — на обоих есть или на обоих нет. Входы разные — выход гаснет. Только сигналы (проводов нет).</description>
+    <iconPath>Things/RimLogic/types/logic_xnor</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_Xnor</workerClass>
+    <group>Logic</group>
+    <logicInputs>3</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <defaultLogicRoles><li>2</li><li>1</li><li>1</li><li>1</li></defaultLogicRoles>
+    <order>60</order>
+    <researchPrerequisite>RimLogic_Res_XNOR</researchPrerequisite>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_Register</defName>
+    <label>Регистр</label>
+    <description>Каждый новый сигнал на входе инвертирует выход. Хранит состояние. Требует питание.</description>
+    <iconPath>Things/RimLogic/types/register</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_Register</workerClass>
+    <powerConsumer>true</powerConsumer>
+    <logicInputs>3</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <defaultLogicRoles><li>2</li><li>1</li><li>1</li><li>1</li></defaultLogicRoles>
+    <order>70</order>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_Splitter</defName>
+    <label>Разветвитель</label>
+    <description>Размножает один сигнал на несколько. Заведи сигнал (или провод) на вход — он пойдёт сразу на все выходы. Удобно раздать один сигнал нескольким блокам.</description>
+    <iconPath>Things/RimLogic/types/splitter</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_Splitter</workerClass>
+    <group>Logic</group>
+    <powerConsumer>false</powerConsumer>
+    <electroInputs>1</electroInputs>
+    <electroOutputs>3</electroOutputs>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>3</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <defaultElectroRoles><li>2</li><li>2</li><li>1</li><li>2</li></defaultElectroRoles>
+    <defaultLogicRoles><li>2</li><li>2</li><li>1</li><li>2</li></defaultLogicRoles>
+    <order>80</order>
+    <researchPrerequisite>RimLogic_Res_Splitter</researchPrerequisite>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_SensorLight</defName>
+    <label>Датчик света</label>
+    <description>Следит за освещённостью клетки под собой. Когда света столько, сколько ты задал в настройках — даёт сигнал и пропускает ток с входа на выход, как выключатель. Подведи провод и/или уведи сигнал связью на другой блок.</description>
+    <iconPath>Things/RimLogic/types/sensor_light</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_LightSensor</workerClass>
+    <group>Sensors</group>
+    <powerConsumer>false</powerConsumer>
+    <electroInputs>1</electroInputs>
+    <electroOutputs>1</electroOutputs>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <hasSettings>true</hasSettings>
+    <defaultElectroRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultElectroRoles>
+    <defaultLogicRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultLogicRoles>
+    <order>10</order>
+    <researchPrerequisite>RimLogic_Res_SensorLight</researchPrerequisite>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_SensorMotion</defName>
+    <label>Датчик движения</label>
+    <description>Реагирует на движение в области вокруг себя. В настройках выбери, кого ловить (колонисты, животные, враги, пленники и т.д.) и размер области. Пока внутри есть подходящая цель — даёт сигнал и пропускает ток с входа на выход.</description>
+    <iconPath>Things/RimLogic/types/sensor_motion</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_MotionSensor</workerClass>
+    <group>Sensors</group>
+    <powerConsumer>false</powerConsumer>
+    <electroInputs>1</electroInputs>
+    <electroOutputs>1</electroOutputs>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <hasSettings>true</hasSettings>
+    <defaultElectroRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultElectroRoles>
+    <defaultLogicRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultLogicRoles>
+    <order>20</order>
+    <researchPrerequisite>RimLogic_Res_SensorMotion</researchPrerequisite>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_SensorTemperature</defName>
+    <label>Датчик температуры</label>
+    <description>Следит за температурой клетки под собой. Когда она отвечает условию — даёт сигнал и пропускает ток с входа на выход. Условие задаётся в настройках.</description>
+    <iconPath>Things/RimLogic/types/sensor_temperature</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_TemperatureSensor</workerClass>
+    <group>Sensors</group>
+    <powerConsumer>false</powerConsumer>
+    <electroInputs>1</electroInputs>
+    <electroOutputs>1</electroOutputs>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <hasSettings>true</hasSettings>
+    <defaultElectroRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultElectroRoles>
+    <defaultLogicRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultLogicRoles>
+    <order>30</order>
+    <researchPrerequisite>RimLogic_Res_SensorTemperature</researchPrerequisite>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_SensorCurrent</defName>
+    <label>Датчик тока</label>
+    <description>Подключи вход к электросети — датчик смотрит, сколько в ней свободной энергии (или заряда в аккумуляторах). Когда значение отвечает условию — даёт сигнал на выход. Только наблюдает, ток дальше не пускает. Условие задаётся в настройках.</description>
+    <iconPath>Things/RimLogic/types/sensor_current</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_CurrentSensor</workerClass>
+    <group>Sensors</group>
+    <electroInputs>1</electroInputs>
+    <electroOutputs>0</electroOutputs>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <hasSettings>true</hasSettings>
+    <defaultElectroRoles><li>0</li><li>0</li><li>1</li><li>0</li></defaultElectroRoles>
+    <defaultLogicRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultLogicRoles>
+    <order>40</order>
+    <researchPrerequisite>RimLogic_Res_SensorCurrent</researchPrerequisite>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_SensorPressure</defName>
+    <label>Датчик давления</label>
+    <iconPath>Things/RimLogic/types/sensor_pressure</iconPath>
+    <group>Sensors</group>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <hidden>true</hidden>
+    <order>50</order>
+    <researchPrerequisite>RimLogic_Res_SensorPressure</researchPrerequisite>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_SensorPollution</defName>
+    <label>Датчик загрязнений</label>
+    <description>Проверяет, есть ли загрязнение в выбранной области. Если есть — даёт сигнал и пропускает ток с входа на выход. Область задаётся в настройках.</description>
+    <iconPath>Things/RimLogic/types/sensor_pollution</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_PollutionSensor</workerClass>
+    <group>Sensors</group>
+    <powerConsumer>false</powerConsumer>
+    <electroInputs>1</electroInputs>
+    <electroOutputs>1</electroOutputs>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <hasSettings>true</hasSettings>
+    <defaultElectroRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultElectroRoles>
+    <defaultLogicRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultLogicRoles>
+    <order>60</order>
+    <researchPrerequisite>RimLogic_Res_SensorPollution</researchPrerequisite>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_SensorFire</defName>
+    <label>Датчик огня</label>
+    <description>Реагирует, если в выбранной области начался пожар. Пока что-то горит — даёт сигнал и пропускает ток с входа на выход. Область задаётся в настройках.</description>
+    <iconPath>Things/RimLogic/types/sensor_fire</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_FireSensor</workerClass>
+    <group>Sensors</group>
+    <powerConsumer>false</powerConsumer>
+    <electroInputs>1</electroInputs>
+    <electroOutputs>1</electroOutputs>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <hasSettings>true</hasSettings>
+    <defaultElectroRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultElectroRoles>
+    <defaultLogicRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultLogicRoles>
+    <order>70</order>
+    <researchPrerequisite>RimLogic_Res_SensorFire</researchPrerequisite>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_Switch</defName>
+    <label>Выключатель</label>
+    <description>Управляемый сигналом выключатель. Пока на управляющем входе есть сигнал — пропускает ток с электро-входа на электро-выход; сигнал пропал — разрывает.</description>
+    <iconPath>Things/RimLogic/types/switch</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_Switch</workerClass>
+    <group>Functional</group>
+    <powerConsumer>false</powerConsumer>
+    <electroInputs>1</electroInputs>
+    <electroOutputs>1</electroOutputs>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <defaultElectroRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultElectroRoles>
+    <defaultLogicRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultLogicRoles>
+    <order>10</order>
+    <researchPrerequisite>RimLogic_Res_Switch</researchPrerequisite>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_Selector</defName>
+    <label>Переключатель</label>
+    <description>Перекидывает ток с входа на ОДИН из двух выходов — левый или правый. Каждый новый сигнал на управляющем входе переключает сторону на другую. На выход даёт короткий импульс при каждом переключении.</description>
+    <iconPath>Things/RimLogic/types/selector_switch</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_Selector</workerClass>
+    <group>Functional</group>
+    <powerConsumer>false</powerConsumer>
+    <electroInputs>1</electroInputs>
+    <electroOutputs>2</electroOutputs>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <lockFaces>true</lockFaces>
+    <defaultElectroRoles><li>0</li><li>2</li><li>1</li><li>2</li></defaultElectroRoles>
+    <defaultLogicRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultLogicRoles>
+    <order>20</order>
+    <researchPrerequisite>RimLogic_Res_Selector</researchPrerequisite>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_Analyzer</defName>
+    <label>Анализатор</label>
+    <iconPath>Things/RimLogic/types/analyzer</iconPath>
+    <group>Functional</group>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <hidden>true</hidden>
+    <order>30</order>
+    <researchPrerequisite>RimLogic_Res_Analyzer</researchPrerequisite>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_Timer</defName>
+    <label>Таймер</label>
+    <description>Задерживает сигнал на заданное время. Получив сигнал, выжидает выставленную в настройках паузу и только потом передаёт его дальше. Если к этому моменту сигнал ещё держится — выход тоже держится; если уже пропал — выход даёт короткий импульс. Требует питание.</description>
+    <iconPath>Things/RimLogic/types/timer</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_Timer</workerClass>
+    <powerConsumer>true</powerConsumer>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>3</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <hasSettings>true</hasSettings>
+    <defaultLogicRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultLogicRoles>
+    <order>130</order>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_Memory</defName>
+    <label>Память</label>
+    <description>Хранит число. От обычного сигнала запоминает 1 или 0, а от блоков передающих число (переключатель, математический блок, другая память) — полученное число, и держит до следующего изменения. Имеет значение по умолчанию заданное в настройках. При смене значения даёт импульс на выход. Требует питание.</description>
+    <iconPath>Things/RimLogic/types/memory</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_Memory</workerClass>
+    <powerConsumer>true</powerConsumer>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>3</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <hasSettings>true</hasSettings>
+    <defaultLogicRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultLogicRoles>
+    <order>140</order>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_Math</defName>
+    <label>Математический блок</label>
+    <description>Считает числа. Берёт число с левого входа (первое) и с правого (второе) и выполняет выбранное действие: сложить, вычесть, умножить, поделить, сравнить и т.д. Результат идёт на выход. Действие выбирается в настройках.</description>
+    <iconPath>Things/RimLogic/types/math_block</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_Math</workerClass>
+    <group>Functional</group>
+    <powerConsumer>false</powerConsumer>
+    <logicInputs>2</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <hasSettings>true</hasSettings>
+    <lockFaces>true</lockFaces>
+    <defaultLogicRoles><li>2</li><li>1</li><li>0</li><li>1</li></defaultLogicRoles>
+    <order>60</order>
+    <researchPrerequisite>RimLogic_Res_Math</researchPrerequisite>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_Multitool</defName>
+    <label>Мультитул</label>
+    <description>Блок-комбайн с несколькими режимами (выбираются в настройках): считать предметы в области, включать/выключать соседний прибор по сигналу, открывать/закрывать двери, считать созревший урожай, считать пешек по фильтру, мерить заполненность складов. Один блок — много задач.</description>
+    <iconPath>Things/RimLogic/types/multitool</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_Multitool</workerClass>
+    <group>Functional</group>
+    <powerConsumer>false</powerConsumer>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <hasSettings>true</hasSettings>
+    <defaultLogicRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultLogicRoles>
+    <order>70</order>
+    <researchPrerequisite>RimLogic_Res_Multitool</researchPrerequisite>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_Screen</defName>
+    <label>Экран</label>
+    <description>Показывает на себе одну цифру числа, приходящего на вход. Несколько экранов от одного источника складываются в табло: первый подключённый показывает единицы, второй — десятки и так далее. У отрицательных чисел добавляется «минус». Требует питание.</description>
+    <iconPath>Things/RimLogic/types/screen</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_Screen</workerClass>
+    <powerConsumer>true</powerConsumer>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <defaultLogicRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultLogicRoles>
+    <order>150</order>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_Clock</defName>
+    <label>Часы</label>
+    <description>Даёт сигнал в заданное время суток. В настройках выбираешь час или промежуток часов и условие (раньше, позже, в диапазоне и т.д.) — пока местное время ему отвечает, на выходе есть сигнал. Требует питание.</description>
+    <iconPath>Things/RimLogic/types/clock</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_Clock</workerClass>
+    <powerConsumer>true</powerConsumer>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <hasSettings>true</hasSettings>
+    <defaultLogicRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultLogicRoles>
+    <order>160</order>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_Loudspeaker</defName>
+    <label>Рупор</label>
+    <description>Получив сигнал, выводит на экран игровое уведомление — синее или красное, с твоим заголовком и текстом (настраивается). Удобно, чтобы датчик или схема сами сообщали о событии. Сигнал заодно проходит на выход. Требует питание.</description>
+    <iconPath>Things/RimLogic/types/loudspeaker</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_Loudspeaker</workerClass>
+    <powerConsumer>true</powerConsumer>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <hasSettings>true</hasSettings>
+    <defaultLogicRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultLogicRoles>
+    <order>170</order>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_Diode</defName>
+    <label>Диод</label>
+    <description>Пропускает ток только в одну сторону: со входа на выход, пока на входной стороне есть избыток энергии, и размыкает цепь, когда его нет. Управляющий сигнал на входе включает и выключает диод, а на выход он отдаёт сигнал, когда действительно пропускает ток.</description>
+    <iconPath>Things/RimLogic/types/diode</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_Diode</workerClass>
+    <powerConsumer>false</powerConsumer>
+    <electroInputs>1</electroInputs>
+    <electroOutputs>1</electroOutputs>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <defaultElectroRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultElectroRoles>
+    <defaultLogicRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultLogicRoles>
+    <order>100</order>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_SignalGen</defName>
+    <label>Генератор сигнала</label>
+    <description>Постоянно держит сигнал на выходе, пока включён. Базовый источник «единицы» для схем. Можно управлять логическим входом. Требует питание.</description>
+    <iconPath>Things/RimLogic/types/signal_generator</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_SignalGen</workerClass>
+    <powerConsumer>true</powerConsumer>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <defaultLogicRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultLogicRoles>
+    <order>110</order>
+  </RimLogic.RimLogicTypeDef>
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_TickGen</defName>
+    <label>Генератор тика</label>
+    <description>Выдаёт сигнал ровными импульсами. Можно управлять логическим входом. Требует питание.</description>
+    <iconPath>Things/RimLogic/types/tick_generator</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_TickGen</workerClass>
+    <powerConsumer>true</powerConsumer>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <tickPeriod>8</tickPeriod>
+    <defaultLogicRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultLogicRoles>
+    <order>120</order>
+  </RimLogic.RimLogicTypeDef>
+
+</Defs>

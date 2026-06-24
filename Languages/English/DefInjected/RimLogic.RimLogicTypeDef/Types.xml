@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RimLogic_Type_None.label>no type</RimLogic_Type_None.label>
+  <RimLogic_Type_AND.label>Logic AND</RimLogic_Type_AND.label>
+  <RimLogic_Type_AND.description>Outputs a signal only when every connected input has a signal. If even one input is off, the output is off. With power it works the same way: power passes through only when all inputs are powered. Bring signals through links or power through conduits, then take the result from the output.</RimLogic_Type_AND.description>
+  <RimLogic_Type_OR.label>Logic OR</RimLogic_Type_OR.label>
+  <RimLogic_Type_OR.description>Outputs a signal if at least one connected input has a signal. With power it works the same way: power passes through if at least one input is powered. Bring signals or conduits to the inputs; take the result from the output.</RimLogic_Type_OR.description>
+  <RimLogic_Type_XOR.label>Logic XOR</RimLogic_Type_XOR.label>
+  <RimLogic_Type_XOR.description>Outputs a signal when the inputs are different: one has a signal and the other does not. If both inputs are on, or both are off, the output is off. Power-through mode follows the same rule.</RimLogic_Type_XOR.description>
+  <RimLogic_Type_NAND.label>Logic NAND</RimLogic_Type_NAND.label>
+  <RimLogic_Type_NAND.description>The opposite of AND: the output is on all the time, except when every input has a signal at once. Signal-only, no power-through mode. Bring signals to the inputs through links; take the result from the output.</RimLogic_Type_NAND.description>
+  <RimLogic_Type_NOR.label>Logic NOR</RimLogic_Type_NOR.label>
+  <RimLogic_Type_NOR.description>The opposite of OR: the output is on only when none of the inputs has a signal. If a signal appears anywhere, the output turns off. Signal-only, no power-through mode.</RimLogic_Type_NOR.description>
+  <RimLogic_Type_XNOR.label>Logic XNOR</RimLogic_Type_XNOR.label>
+  <RimLogic_Type_XNOR.description>The opposite of XOR: the output is on when the inputs match — both on or both off. If the inputs differ, the output turns off. Signal-only, no power-through mode.</RimLogic_Type_XNOR.description>
+  <RimLogic_Type_Register.label>Register</RimLogic_Type_Register.label>
+  <RimLogic_Type_Register.description>Each new signal on the input inverts the output. Keeps its state. Requires power.</RimLogic_Type_Register.description>
+  <RimLogic_Type_Splitter.label>Splitter</RimLogic_Type_Splitter.label>
+  <RimLogic_Type_Splitter.description>Copies one signal to several outputs. Feed a signal or conduit into the input and it will go to every output at once. Useful when one signal needs to drive several blocks.</RimLogic_Type_Splitter.description>
+  <RimLogic_Type_SensorLight.label>Light sensor</RimLogic_Type_SensorLight.label>
+  <RimLogic_Type_SensorLight.description>Watches the light level on the cell under it. When the light matches the value set in its settings, it outputs a signal and passes power from input to output like a switch. Run a conduit through it and/or send its signal link to another block.</RimLogic_Type_SensorLight.description>
+  <RimLogic_Type_SensorMotion.label>Motion sensor</RimLogic_Type_SensorMotion.label>
+  <RimLogic_Type_SensorMotion.description>Reacts to movement in an area around itself. In settings, choose what it should detect — colonists, animals, enemies, prisoners, and so on — and set the area size. While a matching target is inside, it outputs a signal and passes power from input to output.</RimLogic_Type_SensorMotion.description>
+  <RimLogic_Type_SensorTemperature.label>Temperature sensor</RimLogic_Type_SensorTemperature.label>
+  <RimLogic_Type_SensorTemperature.description>Watches the temperature of the cell under it. When the temperature matches the condition, it outputs a signal and passes power from input to output. The condition is set in the settings.</RimLogic_Type_SensorTemperature.description>
+  <RimLogic_Type_SensorCurrent.label>Power sensor</RimLogic_Type_SensorCurrent.label>
+  <RimLogic_Type_SensorCurrent.description>Connect its input to a power grid and it will watch the grid's surplus power or stored battery charge. When the value matches the condition, it outputs a signal. It only watches the grid; it does not pass power onward. The condition is set in the settings.</RimLogic_Type_SensorCurrent.description>
+  <RimLogic_Type_SensorPressure.label>Pressure sensor</RimLogic_Type_SensorPressure.label>
+  <RimLogic_Type_SensorPollution.label>Pollution sensor</RimLogic_Type_SensorPollution.label>
+  <RimLogic_Type_SensorPollution.description>Checks whether there is pollution in the selected area. If pollution is found, it outputs a signal and passes power from input to output. The area is set in the settings.</RimLogic_Type_SensorPollution.description>
+  <RimLogic_Type_SensorFire.label>Fire sensor</RimLogic_Type_SensorFire.label>
+  <RimLogic_Type_SensorFire.description>Reacts when a fire starts in the selected area. While something is burning, it outputs a signal and passes power from input to output. The area is set in the settings.</RimLogic_Type_SensorFire.description>
+  <RimLogic_Type_Switch.label>Switch</RimLogic_Type_Switch.label>
+  <RimLogic_Type_Switch.description>A signal-controlled switch. While the control input has a signal, it passes power from electrical input to electrical output. When the signal disappears, the line is cut.</RimLogic_Type_Switch.description>
+  <RimLogic_Type_Selector.label>Selector</RimLogic_Type_Selector.label>
+  <RimLogic_Type_Selector.description>Routes power from the input to one of two outputs: left or right. Each new signal on the control input switches to the other side. The output sends a short pulse on every switch.</RimLogic_Type_Selector.description>
+  <RimLogic_Type_Analyzer.label>Analyzer</RimLogic_Type_Analyzer.label>
+  <RimLogic_Type_Timer.label>Timer</RimLogic_Type_Timer.label>
+  <RimLogic_Type_Timer.description>Delays a signal by a set amount of time. When it receives a signal, it waits for the pause set in its settings and only then passes it on. If the signal is still held by then, the output stays on too; if it has already disappeared, the output sends a short pulse. Requires power.</RimLogic_Type_Timer.description>
+  <RimLogic_Type_Memory.label>Memory</RimLogic_Type_Memory.label>
+  <RimLogic_Type_Memory.description>Stores a number. A normal signal stores 1 or 0, while blocks that carry numbers (selector, math block, another memory block) pass their value through. Memory keeps that number until the next change. It has a default value set in settings. When the value changes, it sends a pulse on the output. Requires power.</RimLogic_Type_Memory.description>
+  <RimLogic_Type_Math.label>Math block</RimLogic_Type_Math.label>
+  <RimLogic_Type_Math.description>Works with numbers. It takes the first number from the left input, the second from the right input, then performs the selected operation: add, subtract, multiply, divide, compare, and so on. The result goes to the output. Choose the operation in settings.</RimLogic_Type_Math.description>
+  <RimLogic_Type_Multitool.label>Multitool</RimLogic_Type_Multitool.label>
+  <RimLogic_Type_Multitool.description>A multi-purpose block with several modes chosen in settings: count items in an area, toggle a nearby device by signal, open or close doors, count harvest-ready crops, count pawns by filter, or measure storage fullness. One block, many jobs.</RimLogic_Type_Multitool.description>
+  <RimLogic_Type_Screen.label>Screen</RimLogic_Type_Screen.label>
+  <RimLogic_Type_Screen.description>Shows one digit of the number coming into its input. Several screens connected to the same source form a display: the first connected screen shows ones, the second shows tens, and so on. Negative numbers add a minus sign. Requires power.</RimLogic_Type_Screen.description>
+  <RimLogic_Type_Clock.label>Clock</RimLogic_Type_Clock.label>
+  <RimLogic_Type_Clock.description>Outputs a signal at the chosen time of day. In settings, choose an hour or a range of hours and a condition (before, after, within range, and so on). While the local time matches it, the output has a signal. Requires power.</RimLogic_Type_Clock.description>
+  <RimLogic_Type_Loudspeaker.label>Loudspeaker</RimLogic_Type_Loudspeaker.label>
+  <RimLogic_Type_Loudspeaker.description>When it receives a signal, it shows an in-game notification — blue or red — with your own title and text. Useful when a sensor or circuit should report an event by itself. The signal also passes through to the output. Requires power.</RimLogic_Type_Loudspeaker.description>
+  <RimLogic_Type_Diode.label>Diode</RimLogic_Type_Diode.label>
+  <RimLogic_Type_Diode.description>Lets power flow only in one direction: from input to output while the input side has surplus energy, and opens the circuit when it does not. A control signal on the input turns the diode on or off, and the output sends a signal when power is actually passing through.</RimLogic_Type_Diode.description>
+  <RimLogic_Type_SignalGen.label>Signal generator</RimLogic_Type_SignalGen.label>
+  <RimLogic_Type_SignalGen.description>Keeps a signal on the output while enabled. A basic constant “one” source for circuits. Can be controlled by a logic input. Requires power.</RimLogic_Type_SignalGen.description>
+  <RimLogic_Type_TickGen.label>Tick generator</RimLogic_Type_TickGen.label>
+  <RimLogic_Type_TickGen.description>Outputs regular signal pulses. Can be controlled by a logic input. Requires power.</RimLogic_Type_TickGen.description>
+</LanguageData>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RimLogic_Basics.label>RimLogic basics</RimLogic_Basics.label>
+  <RimLogic_Basics.description>The starting point for RimLogic. Unlocks the build tab and the basic blocks.</RimLogic_Basics.description>
+  <RimLogic_Res_LogicGroup.label>logic blocks</RimLogic_Res_LogicGroup.label>
+  <RimLogic_Res_LogicGroup.description>Unlocks construction of the logic block. Specific types, such as AND and OR, are researched separately.</RimLogic_Res_LogicGroup.description>
+  <RimLogic_Res_SensorGroup.label>sensors</RimLogic_Res_SensorGroup.label>
+  <RimLogic_Res_SensorGroup.description>Unlocks construction of the sensor block. Specific sensors are researched separately.</RimLogic_Res_SensorGroup.description>
+  <RimLogic_Res_FunctionalGroup.label>functional blocks</RimLogic_Res_FunctionalGroup.label>
+  <RimLogic_Res_FunctionalGroup.description>Unlocks construction of the functional block. Specific types are researched separately.</RimLogic_Res_FunctionalGroup.description>
+  <RimLogic_Res_Diode.label>diode</RimLogic_Res_Diode.label>
+  <RimLogic_Res_Diode.description>Unlocks construction of the diode — a one-way power valve.</RimLogic_Res_Diode.description>
+  <RimLogic_Res_SignalGen.label>signal generator</RimLogic_Res_SignalGen.label>
+  <RimLogic_Res_SignalGen.description>Unlocks construction of the signal generator.</RimLogic_Res_SignalGen.description>
+  <RimLogic_Res_TickGen.label>tick generator</RimLogic_Res_TickGen.label>
+  <RimLogic_Res_TickGen.description>Unlocks construction of the tick generator.</RimLogic_Res_TickGen.description>
+  <RimLogic_Res_AND.label>logic AND</RimLogic_Res_AND.label>
+  <RimLogic_Res_AND.description>The Logic AND type for the logic block.</RimLogic_Res_AND.description>
+  <RimLogic_Res_OR.label>logic OR</RimLogic_Res_OR.label>
+  <RimLogic_Res_OR.description>The Logic OR type for the logic block.</RimLogic_Res_OR.description>
+  <RimLogic_Res_XOR.label>logic XOR</RimLogic_Res_XOR.label>
+  <RimLogic_Res_XOR.description>The Logic XOR type for the logic block.</RimLogic_Res_XOR.description>
+  <RimLogic_Res_NAND.label>logic NAND</RimLogic_Res_NAND.label>
+  <RimLogic_Res_NAND.description>The Logic NAND type for the logic block.</RimLogic_Res_NAND.description>
+  <RimLogic_Res_NOR.label>logic NOR</RimLogic_Res_NOR.label>
+  <RimLogic_Res_NOR.description>The Logic NOR type for the logic block.</RimLogic_Res_NOR.description>
+  <RimLogic_Res_XNOR.label>logic XNOR</RimLogic_Res_XNOR.label>
+  <RimLogic_Res_XNOR.description>The Logic XNOR type for the logic block.</RimLogic_Res_XNOR.description>
+  <RimLogic_Res_Register.label>register</RimLogic_Res_Register.label>
+  <RimLogic_Res_Register.description>Unlocks construction of the register — a logic memory cell.</RimLogic_Res_Register.description>
+  <RimLogic_Res_Splitter.label>splitter</RimLogic_Res_Splitter.label>
+  <RimLogic_Res_Splitter.description>The Splitter type for the logic block.</RimLogic_Res_Splitter.description>
+  <RimLogic_Res_SensorLight.label>light sensor</RimLogic_Res_SensorLight.label>
+  <RimLogic_Res_SensorLight.description>The Light sensor type.</RimLogic_Res_SensorLight.description>
+  <RimLogic_Res_SensorMotion.label>motion sensor</RimLogic_Res_SensorMotion.label>
+  <RimLogic_Res_SensorMotion.description>The Motion sensor type.</RimLogic_Res_SensorMotion.description>
+  <RimLogic_Res_SensorTemperature.label>temperature sensor</RimLogic_Res_SensorTemperature.label>
+  <RimLogic_Res_SensorTemperature.description>The Temperature sensor type.</RimLogic_Res_SensorTemperature.description>
+  <RimLogic_Res_SensorCurrent.label>power sensor</RimLogic_Res_SensorCurrent.label>
+  <RimLogic_Res_SensorCurrent.description>The Power sensor type.</RimLogic_Res_SensorCurrent.description>
+  <RimLogic_Res_SensorPressure.label>pressure sensor</RimLogic_Res_SensorPressure.label>
+  <RimLogic_Res_SensorPressure.description>The Pressure sensor type.</RimLogic_Res_SensorPressure.description>
+  <RimLogic_Res_SensorPollution.label>pollution sensor</RimLogic_Res_SensorPollution.label>
+  <RimLogic_Res_SensorPollution.description>The Pollution sensor type.</RimLogic_Res_SensorPollution.description>
+  <RimLogic_Res_SensorFire.label>fire sensor</RimLogic_Res_SensorFire.label>
+  <RimLogic_Res_SensorFire.description>The Fire sensor type.</RimLogic_Res_SensorFire.description>
+  <RimLogic_Res_Switch.label>switch</RimLogic_Res_Switch.label>
+  <RimLogic_Res_Switch.description>The Switch type.</RimLogic_Res_Switch.description>
+  <RimLogic_Res_Selector.label>selector</RimLogic_Res_Selector.label>
+  <RimLogic_Res_Selector.description>The Selector type.</RimLogic_Res_Selector.description>
+  <RimLogic_Res_Analyzer.label>analyzer</RimLogic_Res_Analyzer.label>
+  <RimLogic_Res_Analyzer.description>The Analyzer type.</RimLogic_Res_Analyzer.description>
+  <RimLogic_Res_Timer.label>timer</RimLogic_Res_Timer.label>
+  <RimLogic_Res_Timer.description>Unlocks construction of the timer — a delay or repeat tool for logic signals.</RimLogic_Res_Timer.description>
+  <RimLogic_Res_Memory.label>memory</RimLogic_Res_Memory.label>
+  <RimLogic_Res_Memory.description>Unlocks construction of the memory block — storage for a numeric value.</RimLogic_Res_Memory.description>
+  <RimLogic_Res_Screen.label>screen</RimLogic_Res_Screen.label>
+  <RimLogic_Res_Screen.description>Unlocks construction of the screen — a display for digits in a number.</RimLogic_Res_Screen.description>
+  <RimLogic_Res_Clock.label>clock</RimLogic_Res_Clock.label>
+  <RimLogic_Res_Clock.description>Unlocks construction of the clock — a signal based on time of day.</RimLogic_Res_Clock.description>
+  <RimLogic_Res_Loudspeaker.label>loudspeaker</RimLogic_Res_Loudspeaker.label>
+  <RimLogic_Res_Loudspeaker.description>Unlocks construction of the loudspeaker — notifications triggered by signal.</RimLogic_Res_Loudspeaker.description>
+  <RimLogic_Res_Math.label>math block</RimLogic_Res_Math.label>
+  <RimLogic_Res_Math.description>The Math block type.</RimLogic_Res_Math.description>
+  <RimLogic_Res_Multitool.label>multitool</RimLogic_Res_Multitool.label>
+  <RimLogic_Res_Multitool.description>The Multitool type — a multi-mode functional block.</RimLogic_Res_Multitool.description>
+</LanguageData>

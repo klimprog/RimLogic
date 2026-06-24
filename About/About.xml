@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>RimLogic</name>
+  <author>klimprog</author>
+  <packageId>klimprog.rimlogic</packageId>
+  <modVersion>1.0.2</modVersion>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+  </loadAfter>
+  <url>https://github.com/klimprog/RimLogic</url>
+  <description>RimLogic adds a system of electro-logic blocks for automating your RimWorld colony. It is made for those moments when simply flipping switches by hand is not enough, and you want to build an actual readable circuit: a sensor detects something, logic checks the condition, and the right block turns power on, changes state, shows a number, or sends a notification.
+
+The mod includes signal links between blocks, normal interaction with the power grid, sensors, logic blocks, timers, memory, generators, screens, an alert speaker, and several functional utility blocks. Signal links can be shown directly on the map: colored lines make it clear which blocks are connected and where the signal is going. That becomes especially useful once a circuit grows beyond just two or three blocks.
+
+With the diode, you can make power flow in only one direction. No more strange chains of switches when all you really need is a simple one-way power path. The diode makes those setups cleaner and easier to understand.
+
+Every block has its own settings menu.</description>
+</ModMetaData>

@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef Name="RimLogic_BlockBase" ParentName="BuildingBase" Abstract="True">
+    <thingClass>RimLogic.Building_RimLogicBlock</thingClass>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/RimLogic/base_block</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.2,1.2)</drawSize>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <blockWind>false</blockWind>
+    <castEdgeShadows>false</castEdgeShadows>
+    <fillPercent>0.3</fillPercent>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToBuild>800</WorkToBuild>
+      <Flammability>0.5</Flammability>
+      <Beauty>-2</Beauty>
+      <Mass>3</Mass>
+    </statBases>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <costList>
+      <Steel>5</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="RimLogic.CompProperties_RimLogicNode">
+        <basePowerConsumption>0</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <inspectorTabs>
+      <li>RimLogic.ITab_RimLogicLinks</li>
+    </inspectorTabs>
+    <designationCategory>RimLogic</designationCategory>
+    <constructEffect>ConstructMetal</constructEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+  </ThingDef>
+
+  <ThingDef Name="RimLogic_ConsumerBlockBase" ParentName="RimLogic_BlockBase" Abstract="True">
+    <comps Inherit="False">
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>10</basePowerConsumption>
+        <transmitsPower>false</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="RimLogic_BlockBase">
+    <defName>RimLogic_LogicBlock</defName>
+    <label>Логический блок</label>
+    <description>Универсальный блок логики. Типы: AND, OR, XOR, NAND, NOR, XNOR, разветвитель и т.д.. Тип меняется кнопкой «Тип» (доступны изученные).</description>
+    <uiOrder>10</uiOrder>
+    <uiIconPath>Things/RimLogic/buttons/button_logic</uiIconPath>
+    <modExtensions>
+      <li Class="RimLogic.RimLogicBuildExt">
+        <typeGroup>Logic</typeGroup>
+      </li>
+    </modExtensions>
+    <researchPrerequisites>
+      <li>RimLogic_Res_LogicGroup</li>
+    </researchPrerequisites>
+  <costList><Steel>15</Steel><ComponentIndustrial>2</ComponentIndustrial></costList></ThingDef>
+
+  <ThingDef ParentName="RimLogic_BlockBase">
+    <defName>RimLogic_FunctionalBlock</defName>
+    <label>Функциональный блок</label>
+    <description>Универсальный функциональный блок. Типы: выключатель, переключатель, математический блок, мультитул и т.д.. Тип меняется кнопкой «Тип» (доступны изученные).</description>
+    <uiOrder>20</uiOrder>
+    <uiIconPath>Things/RimLogic/buttons/button_functional</uiIconPath>
+    <modExtensions>
+      <li Class="RimLogic.RimLogicBuildExt">
+        <typeGroup>Functional</typeGroup>
+      </li>
+    </modExtensions>
+    <researchPrerequisites>
+      <li>RimLogic_Res_FunctionalGroup</li>
+    </researchPrerequisites>
+  <costList><Steel>25</Steel><ComponentIndustrial>3</ComponentIndustrial><Silver>10</Silver></costList></ThingDef>
+
+  <ThingDef ParentName="RimLogic_BlockBase">
+    <defName>RimLogic_Sensor</defName>
+    <label>Датчик</label>
+    <description>Универсальный датчик. Типы: света, движения, температуры, тока, загрязнений, огня и т.д.. Тип меняется кнопкой «Тип» (доступны изученные).</description>
+    <uiOrder>30</uiOrder>
+    <uiIconPath>Things/RimLogic/buttons/button_sensors</uiIconPath>
+    <modExtensions>
+      <li Class="RimLogic.RimLogicBuildExt">
+        <typeGroup>Sensors</typeGroup>
+      </li>
+    </modExtensions>
+    <researchPrerequisites>
+      <li>RimLogic_Res_SensorGroup</li>
+    </researchPrerequisites>
+  <costList><Steel>20</Steel><ComponentIndustrial>2</ComponentIndustrial></costList></ThingDef>
+
+  <ThingDef ParentName="RimLogic_BlockBase">
+    <defName>RimLogic_Diode</defName>
+    <label>Диод</label>
+    <description>Пропускает ток только в одну сторону: со входа на выход, пока на входной стороне есть избыток энергии, и размыкает цепь, когда его нет. Управляющий сигнал на входе включает и выключает диод, а на выход он отдаёт сигнал, когда действительно пропускает ток.</description>
+    <uiOrder>40</uiOrder>
+    <uiIconPath>Things/RimLogic/buttons/button_diode</uiIconPath>
+    <modExtensions>
+      <li Class="RimLogic.RimLogicBuildExt">
+        <fixedType>RimLogic_Type_Diode</fixedType>
+      </li>
+    </modExtensions>
+    <researchPrerequisites>
+      <li>RimLogic_Res_Diode</li>
+    </researchPrerequisites>
+  <costList><Steel>5</Steel><ComponentIndustrial>1</ComponentIndustrial></costList></ThingDef>
+
+  <ThingDef ParentName="RimLogic_ConsumerBlockBase">
+    <defName>RimLogic_SignalGenerator</defName>
+    <label>Генератор сигнала</label>
+    <description>Постоянно держит сигнал на выходе, пока включён. Базовый источник «единицы» для схем. Можно управлять логическим входом. Требует питание.</description>
+    <uiOrder>50</uiOrder>
+    <uiIconPath>Things/RimLogic/buttons/button_signalgen</uiIconPath>
+    <modExtensions>
+      <li Class="RimLogic.RimLogicBuildExt">
+        <fixedType>RimLogic_Type_SignalGen</fixedType>
+      </li>
+    </modExtensions>
+    <researchPrerequisites>
+      <li>RimLogic_Res_SignalGen</li>
+    </researchPrerequisites>
+  <costList><Steel>8</Steel><ComponentIndustrial>1</ComponentIndustrial></costList></ThingDef>
+
+  <ThingDef ParentName="RimLogic_ConsumerBlockBase">
+    <defName>RimLogic_TickGenerator</defName>
+    <label>Генератор тика</label>
+    <description>Выдаёт сигнал ровными импульсами. Можно управлять логическим входом. Требует питание.</description>
+    <uiOrder>60</uiOrder>
+    <uiIconPath>Things/RimLogic/buttons/button_tickgen</uiIconPath>
+    <modExtensions>
+      <li Class="RimLogic.RimLogicBuildExt">
+        <fixedType>RimLogic_Type_TickGen</fixedType>
+      </li>
+    </modExtensions>
+    <researchPrerequisites>
+      <li>RimLogic_Res_TickGen</li>
+    </researchPrerequisites>
+  <costList><Steel>10</Steel><ComponentIndustrial>1</ComponentIndustrial></costList></ThingDef>
+
+  <ThingDef ParentName="RimLogic_ConsumerBlockBase">
+    <defName>RimLogic_Register</defName>
+    <label>Регистр</label>
+    <description>Каждый новый сигнал на входе инвертирует выход. Хранит состояние. Требует питание.</description>
+    <uiOrder>70</uiOrder>
+    <uiIconPath>Things/RimLogic/buttons/button_register</uiIconPath>
+    <modExtensions>
+      <li Class="RimLogic.RimLogicBuildExt">
+        <fixedType>RimLogic_Type_Register</fixedType>
+      </li>
+    </modExtensions>
+    <researchPrerequisites>
+      <li>RimLogic_Res_Register</li>
+    </researchPrerequisites>
+  <costList><Steel>15</Steel><ComponentIndustrial>2</ComponentIndustrial></costList></ThingDef>
+
+  <ThingDef ParentName="RimLogic_ConsumerBlockBase">
+    <defName>RimLogic_Timer</defName>
+    <label>Таймер</label>
+    <description>Задерживает сигнал. Получив сигнал на вход, повторит его на выходе через заданное время (настраивается). Нужен для пауз и задержек. Требует питание.</description>
+    <uiOrder>80</uiOrder>
+    <uiIconPath>Things/RimLogic/buttons/button_timer</uiIconPath>
+    <modExtensions>
+      <li Class="RimLogic.RimLogicBuildExt">
+        <fixedType>RimLogic_Type_Timer</fixedType>
+      </li>
+    </modExtensions>
+    <researchPrerequisites>
+      <li>RimLogic_Res_Timer</li>
+    </researchPrerequisites>
+  <costList><Steel>20</Steel><ComponentIndustrial>2</ComponentIndustrial></costList></ThingDef>
+
+  <ThingDef ParentName="RimLogic_ConsumerBlockBase">
+    <defName>RimLogic_Memory</defName>
+    <label>Память</label>
+    <description>Хранит число. От обычного сигнала запоминает 1 или 0, а от блоков передающих число (переключатель, математический блок, другая память) — полученное число, и держит до следующего изменения. Имеет значение по умолчанию заданное в настройках. При смене значения даёт импульс на выход. Требует питание.</description>
+    <uiOrder>90</uiOrder>
+    <uiIconPath>Things/RimLogic/buttons/button_memory</uiIconPath>
+    <modExtensions>
+      <li Class="RimLogic.RimLogicBuildExt">
+        <fixedType>RimLogic_Type_Memory</fixedType>
+      </li>
+    </modExtensions>
+    <researchPrerequisites>
+      <li>RimLogic_Res_Memory</li>
+    </researchPrerequisites>
+  <costList><Steel>30</Steel><ComponentIndustrial>3</ComponentIndustrial><ComponentSpacer>1</ComponentSpacer></costList></ThingDef>
+
+  <ThingDef ParentName="RimLogic_ConsumerBlockBase">
+    <defName>RimLogic_Screen</defName>
+    <label>Экран</label>
+    <description>Показывает на себе одну цифру числа, приходящего на вход. Несколько экранов от одного источника складываются в табло: первый подключённый показывает единицы, второй — десятки и так далее. У отрицательных чисел добавляется «минус». Требует питание.</description>
+    <uiOrder>100</uiOrder>
+    <uiIconPath>Things/RimLogic/buttons/button_screen</uiIconPath>
+    <modExtensions>
+      <li Class="RimLogic.RimLogicBuildExt">
+        <fixedType>RimLogic_Type_Screen</fixedType>
+      </li>
+    </modExtensions>
+    <researchPrerequisites>
+      <li>RimLogic_Res_Screen</li>
+    </researchPrerequisites>
+  <costList><Steel>20</Steel><ComponentIndustrial>2</ComponentIndustrial><Silver>15</Silver></costList></ThingDef>
+
+  <ThingDef ParentName="RimLogic_ConsumerBlockBase">
+    <defName>RimLogic_Clock</defName>
+    <label>Часы</label>
+    <description>Даёт сигнал в заданное время суток. В настройках выбираешь час или промежуток часов и условие (раньше, позже, в диапазоне и т.д.) — пока местное время ему отвечает, на выходе есть сигнал. Требует питание.</description>
+    <uiOrder>110</uiOrder>
+    <uiIconPath>Things/RimLogic/buttons/button_clock</uiIconPath>
+    <modExtensions>
+      <li Class="RimLogic.RimLogicBuildExt">
+        <fixedType>RimLogic_Type_Clock</fixedType>
+      </li>
+    </modExtensions>
+    <researchPrerequisites>
+      <li>RimLogic_Res_Clock</li>
+    </researchPrerequisites>
+  <costList><Steel>20</Steel><ComponentIndustrial>2</ComponentIndustrial></costList></ThingDef>
+
+  <ThingDef ParentName="RimLogic_ConsumerBlockBase">
+    <defName>RimLogic_Loudspeaker</defName>
+    <label>Рупор</label>
+    <description>Получив сигнал, выводит на экран игровое уведомление — синее или красное, с твоим заголовком и текстом (настраивается). Удобно, чтобы датчик или схема сами сообщали о событии. Сигнал заодно проходит на выход. Требует питание.</description>
+    <uiOrder>120</uiOrder>
+    <uiIconPath>Things/RimLogic/buttons/button_loudspeaker</uiIconPath>
+    <modExtensions>
+      <li Class="RimLogic.RimLogicBuildExt">
+        <fixedType>RimLogic_Type_Loudspeaker</fixedType>
+      </li>
+    </modExtensions>
+    <researchPrerequisites>
+      <li>RimLogic_Res_Loudspeaker</li>
+    </researchPrerequisites>
+  <costList><Steel>25</Steel><ComponentIndustrial>2</ComponentIndustrial><Silver>10</Silver></costList></ThingDef>
+
+</Defs>

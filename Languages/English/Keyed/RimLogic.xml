@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <RimLogic.State.On>on</RimLogic.State.On>
+  <RimLogic.State.Off>off</RimLogic.State.Off>
+
+  <RimLogic.Flow.In>input</RimLogic.Flow.In>
+  <RimLogic.Flow.Out>output</RimLogic.Flow.Out>
+
+  <RimLogic.Port.Power>power</RimLogic.Port.Power>
+
+  <RimLogic.Gizmo.Type>Type</RimLogic.Gizmo.Type>
+  <RimLogic.Gizmo.TypeDesc>Choose what this block does, such as AND or a light sensor. Changing the type resets the block setup — sides, links, and outputs.</RimLogic.Gizmo.TypeDesc>
+
+  <RimLogic.Gizmo.Rename>Rename</RimLogic.Gizmo.Rename>
+  <RimLogic.Gizmo.RenameDesc>Give this block a custom name. It appears in the title and in nearby blocks' link lists, so complex circuits are easier to read.</RimLogic.Gizmo.RenameDesc>
+
+  <RimLogic.Gizmo.Link>Add link</RimLogic.Gizmo.Link>
+  <RimLogic.Gizmo.LinkActive>Output</RimLogic.Gizmo.LinkActive>
+  <RimLogic.Gizmo.LinkDesc>Create a signal wire between blocks. Press the button, click this block's output, then click the target block's input. Click empty cells to add route points. Right-click steps back, Esc cancels.</RimLogic.Gizmo.LinkDesc>
+  <RimLogic.Link.PickOutput>Click the output this link should start from</RimLogic.Link.PickOutput>
+  <RimLogic.Link.PickTarget>Click the target block.\nLeft-click an empty cell to add a route point; right-click to remove the last.</RimLogic.Link.PickTarget>
+  <RimLogic.Link.PickInput>Click this block's input</RimLogic.Link.PickInput>
+  <RimLogic.Link.Delete>Delete link</RimLogic.Link.Delete>
+  <RimLogic.Link.DeleteHint>Hover over a link and click to delete it</RimLogic.Link.DeleteHint>
+  <RimLogic.ShowLinks>Show all RimLogic links</RimLogic.ShowLinks>
+
+  <RimLogic.Gizmo.IconColor>Icon color</RimLogic.Gizmo.IconColor>
+  <RimLogic.Gizmo.IconColorDesc>Change the icon color on this block, so similar blocks are easier to tell apart.</RimLogic.Gizmo.IconColorDesc>
+  <RimLogic.Gizmo.ElectroIO>Power sides: input/output</RimLogic.Gizmo.ElectroIO>
+  <RimLogic.Gizmo.ElectroIODesc>Configure the electrical sides: which side takes power (input), and which side sends it out (output). Any side can be disabled.</RimLogic.Gizmo.ElectroIODesc>
+  <RimLogic.Gizmo.LogicIO>Signal sides: input/output</RimLogic.Gizmo.LogicIO>
+  <RimLogic.Gizmo.LogicIODesc>Configure the logic sides: which side receives a signal (input), and which side sends one out (output). A disabled side shows no indicator.</RimLogic.Gizmo.LogicIODesc>
+
+  <RimLogic.Gizmo.Settings>Settings</RimLogic.Gizmo.Settings>
+  <RimLogic.Gizmo.SettingsDesc>Open this block's settings.</RimLogic.Gizmo.SettingsDesc>
+  <RimLogic.Gizmo.Reconnect>Reconnect power</RimLogic.Gizmo.Reconnect>
+  <RimLogic.Gizmo.ReconnectDesc>Choose which nearby power conduit feeds this block. Press the button, then click the conduit you want.</RimLogic.Gizmo.ReconnectDesc>
+  <RimLogic.Feed.NoNet>There is no reachable power conduit nearby.</RimLogic.Feed.NoNet>
+  <RimLogic.Settings.Desc>Settings for the selected block.</RimLogic.Settings.Desc>
+  <RimLogic.Settings.None>This block has nothing to configure yet.</RimLogic.Settings.None>
+
+  <RimLogic.Sensor.Title>Power sensor settings</RimLogic.Sensor.Title>
+  <RimLogic.Sensor.Desc>Outputs a signal when the selected power-grid value matches the condition.</RimLogic.Sensor.Desc>
+  <RimLogic.Sensor.Source>What to monitor</RimLogic.Sensor.Source>
+  <RimLogic.Sensor.SrcNet>Free power in the grid</RimLogic.Sensor.SrcNet>
+  <RimLogic.Sensor.SrcBattery>Stored battery power</RimLogic.Sensor.SrcBattery>
+  <RimLogic.Sensor.NetTitle>Grid power</RimLogic.Sensor.NetTitle>
+  <RimLogic.Sensor.NetDesc>How much surplus power the grid is producing right now</RimLogic.Sensor.NetDesc>
+  <RimLogic.Sensor.BatTitle>Batteries</RimLogic.Sensor.BatTitle>
+  <RimLogic.Sensor.BatDesc>Total charge stored in all batteries</RimLogic.Sensor.BatDesc>
+  <RimLogic.Sensor.CheckMode>How to check the value</RimLogic.Sensor.CheckMode>
+  <RimLogic.Sensor.Exact>Exact value</RimLogic.Sensor.Exact>
+  <RimLogic.Sensor.Range>Range</RimLogic.Sensor.Range>
+  <RimLogic.Sensor.Condition>Trigger condition</RimLogic.Sensor.Condition>
+  <RimLogic.Sensor.Value>Target value</RimLogic.Sensor.Value>
+  <RimLogic.Sensor.ValueShort>Value</RimLogic.Sensor.ValueShort>
+  <RimLogic.Sensor.RangeBounds>Range limits</RimLogic.Sensor.RangeBounds>
+  <RimLogic.Sensor.From>From</RimLogic.Sensor.From>
+  <RimLogic.Sensor.To>To</RimLogic.Sensor.To>
+  <RimLogic.Sensor.UnitW>W</RimLogic.Sensor.UnitW>
+  <RimLogic.Sensor.UnitWd>W·d</RimLogic.Sensor.UnitWd>
+
+  <RimLogic.LightSensor.Title>Light sensor settings</RimLogic.LightSensor.Title>
+  <RimLogic.LightSensor.Desc>Outputs a signal and passes power from input to output when the light level under the block matches the condition.</RimLogic.LightSensor.Desc>
+  <RimLogic.LightSensor.Threshold>Light threshold</RimLogic.LightSensor.Threshold>
+  <RimLogic.LightSensor.Unit>%</RimLogic.LightSensor.Unit>
+
+  <RimLogic.TempSensor.Title>Temperature sensor settings</RimLogic.TempSensor.Title>
+  <RimLogic.TempSensor.Desc>Outputs a signal and passes power from input to output when the temperature under the block matches the condition.</RimLogic.TempSensor.Desc>
+  <RimLogic.TempSensor.Unit>°C</RimLogic.TempSensor.Unit>
+
+  <RimLogic.PollSensor.Title>Pollution sensor settings</RimLogic.PollSensor.Title>
+  <RimLogic.PollSensor.Desc>Outputs a signal and passes power from input to output when there is pollution in the selected area.</RimLogic.PollSensor.Desc>
+  <RimLogic.PollSensor.Area>Check area</RimLogic.PollSensor.Area>
+  <RimLogic.PollSensor.Circle>Circle</RimLogic.PollSensor.Circle>
+  <RimLogic.PollSensor.Square>Square</RimLogic.PollSensor.Square>
+  <RimLogic.PollSensor.Room>Room</RimLogic.PollSensor.Room>
+  <RimLogic.PollSensor.Radius>Radius</RimLogic.PollSensor.Radius>
+  <RimLogic.PollSensor.Cells>cells</RimLogic.PollSensor.Cells>
+  <RimLogic.PollSensor.RoomHeader>Room</RimLogic.PollSensor.RoomHeader>
+  <RimLogic.PollSensor.RoomNote>Checks the room where the block is placed. Outdoors, it checks a small area around the block instead.</RimLogic.PollSensor.RoomNote>
+
+  <RimLogic.FireSensor.Title>Fire sensor settings</RimLogic.FireSensor.Title>
+  <RimLogic.FireSensor.Desc>Outputs a signal and passes power from input to output while something is burning in the selected area.</RimLogic.FireSensor.Desc>
+
+  <RimLogic.Clock.Title>Clock settings</RimLogic.Clock.Title>
+  <RimLogic.Clock.Desc>Outputs a signal at the chosen time of day.</RimLogic.Clock.Desc>
+  <RimLogic.Clock.Exact>Exact time</RimLogic.Clock.Exact>
+  <RimLogic.Clock.Time>Hour of day</RimLogic.Clock.Time>
+  <RimLogic.Clock.Unit>h</RimLogic.Clock.Unit>
+
+  <RimLogic.Loudspeaker.Title>Loudspeaker settings</RimLogic.Loudspeaker.Title>
+  <RimLogic.Loudspeaker.Desc>When it receives a signal, it shows a notification with your own text.</RimLogic.Loudspeaker.Desc>
+  <RimLogic.Loudspeaker.LblTitle>Title</RimLogic.Loudspeaker.LblTitle>
+  <RimLogic.Loudspeaker.LblMessage>Message text</RimLogic.Loudspeaker.LblMessage>
+  <RimLogic.Loudspeaker.LblType>Notification type</RimLogic.Loudspeaker.LblType>
+  <RimLogic.Loudspeaker.Blue>Normal (blue)</RimLogic.Loudspeaker.Blue>
+  <RimLogic.Loudspeaker.Red>Alert (red)</RimLogic.Loudspeaker.Red>
+  <RimLogic.Loudspeaker.DefaultTitle>RimLogic loudspeaker</RimLogic.Loudspeaker.DefaultTitle>
+
+  <RimLogic.MotionSensor.Title>Motion sensor settings</RimLogic.MotionSensor.Title>
+  <RimLogic.MotionSensor.Desc>Outputs a signal and passes power from input to output when a selected kind of target is inside the area.</RimLogic.MotionSensor.Desc>
+  <RimLogic.MotionSensor.Targets>Who to detect</RimLogic.MotionSensor.Targets>
+  <RimLogic.MotionSensor.Colonists>Colonists</RimLogic.MotionSensor.Colonists>
+  <RimLogic.MotionSensor.TameAnimals>Tame animals</RimLogic.MotionSensor.TameAnimals>
+  <RimLogic.MotionSensor.WildAnimals>Wild animals</RimLogic.MotionSensor.WildAnimals>
+  <RimLogic.MotionSensor.Slaves>Slaves</RimLogic.MotionSensor.Slaves>
+  <RimLogic.MotionSensor.Prisoners>Prisoners</RimLogic.MotionSensor.Prisoners>
+  <RimLogic.MotionSensor.Strangers>Strangers (neutral)</RimLogic.MotionSensor.Strangers>
+  <RimLogic.MotionSensor.Enemies>Enemies</RimLogic.MotionSensor.Enemies>
+
+  <RimLogic.Timer.Title>Timer settings</RimLogic.Timer.Title>
+  <RimLogic.Timer.Desc>Repeats the input signal on the output after a delay. Set the delay with the slider.</RimLogic.Timer.Desc>
+  <RimLogic.Timer.Timeout>Delay</RimLogic.Timer.Timeout>
+  <RimLogic.Timer.Ticks>ticks</RimLogic.Timer.Ticks>
+
+  <RimLogic.Memory.Title>Memory settings</RimLogic.Memory.Title>
+  <RimLogic.Memory.Desc>Stores a number from the input and keeps it. Whenever the value changes, it sends a pulse.</RimLogic.Memory.Desc>
+  <RimLogic.Memory.Default>Default value</RimLogic.Memory.Default>
+  <RimLogic.Memory.Current>Stored now: {0}</RimLogic.Memory.Current>
+  <RimLogic.Memory.Reset>Reset</RimLogic.Memory.Reset>
+
+  <RimLogic.Math.Title>Math block settings</RimLogic.Math.Title>
+  <RimLogic.Math.Desc>Choose an operation. The first number comes from the left input; the second comes from the right.</RimLogic.Math.Desc>
+  <RimLogic.Math.CalcGroup>Calculation</RimLogic.Math.CalcGroup>
+  <RimLogic.Math.CmpGroup>Comparison</RimLogic.Math.CmpGroup>
+  <RimLogic.MathOp.Add>Add: first + second</RimLogic.MathOp.Add>
+  <RimLogic.MathOp.Subtract>Subtract: first − second</RimLogic.MathOp.Subtract>
+  <RimLogic.MathOp.Multiply>Multiply: first × second</RimLogic.MathOp.Multiply>
+  <RimLogic.MathOp.Divide>Integer division: first ÷ second</RimLogic.MathOp.Divide>
+  <RimLogic.MathOp.Modulo>Remainder: first mod second</RimLogic.MathOp.Modulo>
+  <RimLogic.MathOp.Power>Power: first raised to second</RimLogic.MathOp.Power>
+  <RimLogic.MathOp.SquareRoot>Square root (uses one number)</RimLogic.MathOp.SquareRoot>
+  <RimLogic.MathOp.Absolute>Absolute value — the number without its minus sign (uses one number)</RimLogic.MathOp.Absolute>
+  <RimLogic.MathOp.Delta>Absolute difference: |first − second|</RimLogic.MathOp.Delta>
+  <RimLogic.MathOp.Percent>Percent: first × second ÷ 100</RimLogic.MathOp.Percent>
+  <RimLogic.MathOp.PlusMinus>Flip sign (uses one number)</RimLogic.MathOp.PlusMinus>
+  <RimLogic.MathOp.Equal>Equal: 1 if first = second, otherwise 0</RimLogic.MathOp.Equal>
+  <RimLogic.MathOp.NotEqual>Not equal: 1 if first ≠ second</RimLogic.MathOp.NotEqual>
+  <RimLogic.MathOp.Greater>Greater than: 1 if first &gt; second</RimLogic.MathOp.Greater>
+  <RimLogic.MathOp.GreaterEqual>Greater or equal: 1 if first ≥ second</RimLogic.MathOp.GreaterEqual>
+  <RimLogic.MathOp.Less>Less than: 1 if first &lt; second</RimLogic.MathOp.Less>
+  <RimLogic.MathOp.LessEqual>Less or equal: 1 if first ≤ second</RimLogic.MathOp.LessEqual>
+  <RimLogic.MathOp.ApproxEqual>Approximately equal: 1 if the difference is no more than 1</RimLogic.MathOp.ApproxEqual>
+
+  <RimLogic.Multitool.Title>Multitool settings</RimLogic.Multitool.Title>
+  <RimLogic.Multitool.Desc>Choose an operating mode and its settings.</RimLogic.Multitool.Desc>
+  <RimLogic.Multitool.ModeHeader>Mode</RimLogic.Multitool.ModeHeader>
+  <RimLogic.Multitool.Mode.CountItems>Count items: counts the selected item in the area, both on the ground and in storage</RimLogic.Multitool.Mode.CountItems>
+  <RimLogic.Multitool.Mode.ToggleDevice>Toggle device: turns a nearby device on or off by signal</RimLogic.Multitool.Mode.ToggleDevice>
+  <RimLogic.Multitool.Mode.OpenCloseDoor>Control doors: opens or closes doors in the area by signal</RimLogic.Multitool.Mode.OpenCloseDoor>
+  <RimLogic.Multitool.Mode.CropMaturity>Crop maturity: counts harvest-ready plants in the area</RimLogic.Multitool.Mode.CropMaturity>
+  <RimLogic.Multitool.Item>Item</RimLogic.Multitool.Item>
+  <RimLogic.Multitool.ItemNone>none selected</RimLogic.Multitool.ItemNone>
+  <RimLogic.Multitool.PickItem>Choose item</RimLogic.Multitool.PickItem>
+  <RimLogic.Multitool.Device>Device</RimLogic.Multitool.Device>
+  <RimLogic.Multitool.DeviceNone>none selected</RimLogic.Multitool.DeviceNone>
+  <RimLogic.Multitool.NoDevices>There are no nearby devices that can be toggled.</RimLogic.Multitool.NoDevices>
+  <RimLogic.Multitool.WorkMode>How to react to the signal</RimLogic.Multitool.WorkMode>
+  <RimLogic.Multitool.SwitchMode>On while signal is present</RimLogic.Multitool.SwitchMode>
+  <RimLogic.Multitool.SelectorMode>Each signal toggles</RimLogic.Multitool.SelectorMode>
+  <RimLogic.Multitool.Mode.PawnDetector>Count pawns: counts pawns in the area by filter (groups or one specific pawn)</RimLogic.Multitool.Mode.PawnDetector>
+  <RimLogic.Multitool.Mode.StorageFullness>Storage fullness: checks how full the storage in the area is, in percent</RimLogic.Multitool.Mode.StorageFullness>
+  <RimLogic.Multitool.PawnTarget>Who to count</RimLogic.Multitool.PawnTarget>
+  <RimLogic.Multitool.TargetAll>All</RimLogic.Multitool.TargetAll>
+  <RimLogic.Multitool.TargetPawn>One pawn</RimLogic.Multitool.TargetPawn>
+  <RimLogic.Multitool.PawnNone>no pawn selected</RimLogic.Multitool.PawnNone>
+  <RimLogic.Multitool.PickPawn>Choose pawn</RimLogic.Multitool.PickPawn>
+  <RimLogic.Multitool.StorageTarget>Which storage</RimLogic.Multitool.StorageTarget>
+  <RimLogic.Multitool.TargetSpot>Selected</RimLogic.Multitool.TargetSpot>
+  <RimLogic.Multitool.StorageAllNote>All storage in the operating area is counted.</RimLogic.Multitool.StorageAllNote>
+  <RimLogic.Multitool.StorageNone>no storage selected</RimLogic.Multitool.StorageNone>
+  <RimLogic.Multitool.PickStorage>Choose storage</RimLogic.Multitool.PickStorage>
+  <RimLogic.Multitool.Storage>storage</RimLogic.Multitool.Storage>
+
+  <RimLogic.ElectroIO.Title>Electrical sides</RimLogic.ElectroIO.Title>
+  <RimLogic.ElectroIO.Desc>Assign each side a role: take power (input), send power out (output), or do nothing.</RimLogic.ElectroIO.Desc>
+  <RimLogic.ElectroIO.Hint>Up to {0} inputs and {1} outputs. Left-click sets an input, right-click sets an output, and clicking the same side again disables it.</RimLogic.ElectroIO.Hint>
+  <RimLogic.LogicIO.Title>Logic sides</RimLogic.LogicIO.Title>
+  <RimLogic.LogicIO.Desc>Assign each side a role: receive a signal (input), send a signal (output), or do nothing.</RimLogic.LogicIO.Desc>
+  <RimLogic.LogicIO.Hint>Up to {0} inputs and {1} outputs. Left-click sets an input, right-click sets an output, and clicking the same side again disables it. Only assigned sides show indicators.</RimLogic.LogicIO.Hint>
+
+  <RimLogic.Counter.Format>{0} of {1}</RimLogic.Counter.Format>
+
+  <RimLogic.Inspect.Type>Type</RimLogic.Inspect.Type>
+  <RimLogic.Inspect.Power>Power draw: {0} W</RimLogic.Inspect.Power>
+  <RimLogic.Inspect.NoPower>no power</RimLogic.Inspect.NoPower>
+
+  <RimLogic.Tab.Links>Links</RimLogic.Tab.Links>
+  <RimLogic.Links.Power>Power grid</RimLogic.Links.Power>
+  <RimLogic.Links.Logic>Signals</RimLogic.Links.Logic>
+  <RimLogic.Links.NoneActive>no active sides</RimLogic.Links.NoneActive>
+  <RimLogic.Links.Nothing>none</RimLogic.Links.Nothing>
+
+  <RimLogic.Btn.Done>Done</RimLogic.Btn.Done>
+  <RimLogic.Btn.Cancel>Cancel</RimLogic.Btn.Cancel>
+  <RimLogic.Btn.Apply>Apply</RimLogic.Btn.Apply>
+
+  <RimLogic.TypeWindow.Title>Block type</RimLogic.TypeWindow.Title>
+  <RimLogic.TypeWindow.Desc>Choose what this block should be, then press Done.</RimLogic.TypeWindow.Desc>
+
+  <RimLogic.ColorWindow.Title>Icon color</RimLogic.ColorWindow.Title>
+  <RimLogic.ColorWindow.Desc>Choose the block icon color.</RimLogic.ColorWindow.Desc>
+  <RimLogic.Color.White>White</RimLogic.Color.White>
+  <RimLogic.Color.Gray>Gray</RimLogic.Color.Gray>
+  <RimLogic.Color.Red>Red</RimLogic.Color.Red>
+  <RimLogic.Color.Orange>Orange</RimLogic.Color.Orange>
+  <RimLogic.Color.Yellow>Yellow</RimLogic.Color.Yellow>
+  <RimLogic.Color.Green>Green</RimLogic.Color.Green>
+  <RimLogic.Color.Teal>Teal</RimLogic.Color.Teal>
+  <RimLogic.Color.Blue>Light blue</RimLogic.Color.Blue>
+  <RimLogic.Color.Indigo>Blue</RimLogic.Color.Indigo>
+  <RimLogic.Color.Purple>Purple</RimLogic.Color.Purple>
+  <RimLogic.Color.Pink>Pink</RimLogic.Color.Pink>
+  <RimLogic.Color.Brown>Brown</RimLogic.Color.Brown>
+
+</LanguageData>
