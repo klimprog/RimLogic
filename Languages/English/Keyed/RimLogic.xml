@@ -10,32 +10,46 @@
   <RimLogic.Port.Power>power</RimLogic.Port.Power>
 
   <RimLogic.Gizmo.Type>Type</RimLogic.Gizmo.Type>
-  <RimLogic.Gizmo.TypeDesc>Choose what this block does, such as AND or a light sensor. Changing the type resets the block setup — sides, links, and outputs.</RimLogic.Gizmo.TypeDesc>
+  <RimLogic.Gizmo.TypeDesc>Choose what this block will be: a logic operation, a sensor, a timer and so on. Only researched types are listed.
+
+Careful: changing the type resets the block — side roles, every link and every output. It comes back as good as new, so settle on the type before you run wires to it.</RimLogic.Gizmo.TypeDesc>
 
   <RimLogic.Gizmo.Rename>Rename</RimLogic.Gizmo.Rename>
-  <RimLogic.Gizmo.RenameDesc>Give this block a custom name. It appears in the title and in nearby blocks' link lists, so complex circuits are easier to read.</RimLogic.Gizmo.RenameDesc>
+  <RimLogic.Gizmo.RenameDesc>Give the block a name of your own instead of the default one.
+
+The name shows in its title and in the link lists of neighbouring blocks. Once a circuit grows and five identical sensors sit side by side, names like "workshop light" save a lot of squinting.</RimLogic.Gizmo.RenameDesc>
 
   <RimLogic.Gizmo.Link>Add link</RimLogic.Gizmo.Link>
   <RimLogic.Gizmo.LinkActive>Output</RimLogic.Gizmo.LinkActive>
-  <RimLogic.Gizmo.LinkDesc>Create a signal wire between blocks. Press the button, click this block's output, then click the target block's input. Click empty cells to add route points. Right-click steps back, Esc cancels.</RimLogic.Gizmo.LinkDesc>
+  <RimLogic.Gizmo.LinkDesc>Run a signal wire from this block to another one.
+
+Press the button, click this block's output, then the input you want. Click empty tiles to drop route points so the line goes where it suits you instead of straight across. Right-click steps back, Esc cancels.</RimLogic.Gizmo.LinkDesc>
   <RimLogic.Link.PickOutput>Click the output this link should start from</RimLogic.Link.PickOutput>
   <RimLogic.Link.PickTarget>Click the target block.\nLeft-click an empty cell to add a route point; right-click to remove the last.</RimLogic.Link.PickTarget>
   <RimLogic.Link.PickInput>Click this block's input</RimLogic.Link.PickInput>
   <RimLogic.Link.Delete>Delete link</RimLogic.Link.Delete>
-  <RimLogic.Link.DeleteHint>Hover over a link and click to delete it</RimLogic.Link.DeleteHint>
+  <RimLogic.Link.DeleteHint>Hover over a link line and right-click to delete it</RimLogic.Link.DeleteHint>
   <RimLogic.ShowLinks>Show all RimLogic links</RimLogic.ShowLinks>
 
   <RimLogic.Gizmo.IconColor>Icon color</RimLogic.Gizmo.IconColor>
-  <RimLogic.Gizmo.IconColorDesc>Change the icon color on this block, so similar blocks are easier to tell apart.</RimLogic.Gizmo.IconColorDesc>
+  <RimLogic.Gizmo.IconColorDesc>Change the colour of the icon on this block.
+
+It makes no difference to how the block works — this one is purely for you. Handy when similar blocks stand together: different colours tell you at a glance which part of the circuit is which.</RimLogic.Gizmo.IconColorDesc>
   <RimLogic.Gizmo.ElectroIO>Power sides: input/output</RimLogic.Gizmo.ElectroIO>
-  <RimLogic.Gizmo.ElectroIODesc>Configure the electrical sides: which side takes power (input), and which side sends it out (output). Any side can be disabled.</RimLogic.Gizmo.ElectroIODesc>
+  <RimLogic.Gizmo.ElectroIODesc>Set up the block's electrical sides: which one takes power in, which one sends it out, and which is switched off.
+
+These are the sides the block ties into the grid with. Turn off the ones you do not need, so wires stop latching on where they have no business being.</RimLogic.Gizmo.ElectroIODesc>
   <RimLogic.Gizmo.LogicIO>Signal sides: input/output</RimLogic.Gizmo.LogicIO>
-  <RimLogic.Gizmo.LogicIODesc>Configure the logic sides: which side receives a signal (input), and which side sends one out (output). A disabled side shows no indicator.</RimLogic.Gizmo.LogicIODesc>
+  <RimLogic.Gizmo.LogicIODesc>Set up the block's logic sides: which one receives a signal, which one sends it out, and which is switched off.
+
+These are the sides that signal links attach to. A side that is off shows no indicator and takes no part in the circuit.</RimLogic.Gizmo.LogicIODesc>
 
   <RimLogic.Gizmo.Settings>Settings</RimLogic.Gizmo.Settings>
-  <RimLogic.Gizmo.SettingsDesc>Open this block's settings.</RimLogic.Gizmo.SettingsDesc>
+  <RimLogic.Gizmo.SettingsDesc>Open this block's settings: trigger conditions, values, check areas and modes — whatever its type has to offer.</RimLogic.Gizmo.SettingsDesc>
   <RimLogic.Gizmo.Reconnect>Reconnect power</RimLogic.Gizmo.Reconnect>
-  <RimLogic.Gizmo.ReconnectDesc>Choose which nearby power conduit feeds this block. Press the button, then click the conduit you want.</RimLogic.Gizmo.ReconnectDesc>
+  <RimLogic.Gizmo.ReconnectDesc>Choose which power line feeds this block.
+
+Useful when several branches run nearby and it matters which one it draws from — say, to keep a block running off the backup line rather than the main one. Press the button, then click the line you want.</RimLogic.Gizmo.ReconnectDesc>
   <RimLogic.Feed.NoNet>There is no reachable power conduit nearby.</RimLogic.Feed.NoNet>
   <RimLogic.Settings.Desc>Settings for the selected block.</RimLogic.Settings.Desc>
   <RimLogic.Settings.None>This block has nothing to configure yet.</RimLogic.Settings.None>
@@ -79,7 +93,10 @@
   <RimLogic.PollSensor.Radius>Radius</RimLogic.PollSensor.Radius>
   <RimLogic.PollSensor.Cells>cells</RimLogic.PollSensor.Cells>
   <RimLogic.PollSensor.RoomHeader>Room</RimLogic.PollSensor.RoomHeader>
-  <RimLogic.PollSensor.RoomNote>Checks the room where the block is placed. Outdoors, it checks a small area around the block instead.</RimLogic.PollSensor.RoomNote>
+  <RimLogic.PollSensor.RoomNote.Pollution>Checks pollution in the room where the block is placed. Outdoors, it checks a small area around the block instead.</RimLogic.PollSensor.RoomNote.Pollution>
+  <RimLogic.PollSensor.RoomNote.Motion>Checks for presence in the room where the block is placed. Outdoors, it checks a small area around the block instead.</RimLogic.PollSensor.RoomNote.Motion>
+  <RimLogic.PollSensor.RoomNote.Fire>Looks for fire in the room where the block is placed. Outdoors, it checks a small area around the block instead.</RimLogic.PollSensor.RoomNote.Fire>
+  <RimLogic.PollSensor.RoomNote.Multitool>Checks the room where the block is placed. Outdoors, it checks a small area around the block instead.</RimLogic.PollSensor.RoomNote.Multitool>
 
   <RimLogic.FireSensor.Title>Fire sensor settings</RimLogic.FireSensor.Title>
   <RimLogic.FireSensor.Desc>Outputs a signal and passes power from input to output while something is burning in the selected area.</RimLogic.FireSensor.Desc>
@@ -215,4 +232,54 @@
   <RimLogic.Color.Pink>Pink</RimLogic.Color.Pink>
   <RimLogic.Color.Brown>Brown</RimLogic.Color.Brown>
 
+
+  <!-- Mod-wide block status table (RimLogicState) -->
+  <RimLogic.Status.NoPower>no power</RimLogic.Status.NoPower>
+  <RimLogic.Status.On>on</RimLogic.Status.On>
+  <RimLogic.Status.Off>off</RimLogic.Status.Off>
+  <RimLogic.Status.Working>working</RimLogic.Status.Working>
+  <RimLogic.Status.Started>started work</RimLogic.Status.Started>
+  <RimLogic.Status.Finished>finished work</RimLogic.Status.Finished>
+  <RimLogic.Status.QueueEmpty>queue empty</RimLogic.Status.QueueEmpty>
+  <RimLogic.Status.NoResources>out of materials</RimLogic.Status.NoResources>
+  <RimLogic.Status.StorageFull>storage full</RimLogic.Status.StorageFull>
+  <RimLogic.Inspect.Status>Status</RimLogic.Inspect.Status>
+
+  <RimLogic.Crafter.NoTable>Not standing on a worktable's work spot</RimLogic.Crafter.NoTable>
+  <RimLogic.Crafter.Making>making: {0} ({1}%)</RimLogic.Crafter.Making>
+  <RimLogic.Crafter.Upgrade>Raise level</RimLogic.Crafter.Upgrade>
+  <RimLogic.Crafter.UpgradeDesc>Raise the block's level from {0} to {1}.
+
+The higher the level, the faster it works and the better its work turns out. The level stands in for the block's skill: it also decides which recipes it may take on.
+
+Cost: {2}
+Materials are taken from colony storage.</RimLogic.Crafter.UpgradeDesc>
+  <RimLogic.Crafter.MaxLevel>Skill is already at maximum</RimLogic.Crafter.MaxLevel>
+  <RimLogic.Crafter.NeedMore>Not enough materials: {0} ({1})</RimLogic.Crafter.NeedMore>
+  <RimLogic.Crafter.Level>Block level</RimLogic.Crafter.Level>
+  <RimLogic.Crafter.Skill>Skill</RimLogic.Crafter.Skill>
+  <RimLogic.Crafter.SettingsTitle>Crafter settings</RimLogic.Crafter.SettingsTitle>
+  <RimLogic.Crafter.SettingsDesc>Where materials come from and where finished goods go. What to actually make is set in the bench itself, not here.</RimLogic.Crafter.SettingsDesc>
+  <RimLogic.Crafter.Sources>Material sources</RimLogic.Crafter.Sources>
+  <RimLogic.Crafter.Products>Where to put products</RimLogic.Crafter.Products>
+  <RimLogic.Crafter.NoStorage>No storage touches this block. Put a stockpile or shelf right next to it.</RimLogic.Crafter.NoStorage>
+  <RimLogic.Crafter.AllNote>Every storage touching the block is used.</RimLogic.Crafter.AllNote>
+  <RimLogic.Crafter.Missing>missing: {0}</RimLogic.Crafter.Missing>
+  <RimLogic.Crafter.All>All nearby</RimLogic.Crafter.All>
+  <RimLogic.Crafter.Chosen>Chosen</RimLogic.Crafter.Chosen>
+  <RimLogic.Crafter.NoneChosen>No storage chosen — the block will not work.</RimLogic.Crafter.NoneChosen>
+  <RimLogic.Crafter.PickStorage>Pick storage</RimLogic.Crafter.PickStorage>
+  <RimLogic.Crafter.NoSources>nowhere to draw materials from</RimLogic.Crafter.NoSources>
+  <RimLogic.Crafter.NoProductStorage>nowhere to put finished goods</RimLogic.Crafter.NoProductStorage>
+  <RimLogic.Crafter.NoRoom>no room in the destination storage</RimLogic.Crafter.NoRoom>
+  <RimLogic.Converter.Title>Converter settings</RimLogic.Converter.Title>
+  <RimLogic.Converter.Desc>What counts as a signal coming in, and what to send back out.</RimLogic.Converter.Desc>
+  <RimLogic.Converter.Input>Expected input</RimLogic.Converter.Input>
+  <RimLogic.Converter.Output>Output signal</RimLogic.Converter.Output>
+  <RimLogic.Converter.Plain>Plain</RimLogic.Converter.Plain>
+  <RimLogic.Converter.Complex>Complex</RimLogic.Converter.Complex>
+  <RimLogic.Converter.PlainInNote>The condition is met whenever any signal arrives.</RimLogic.Converter.PlainInNote>
+  <RimLogic.Converter.PlainOutNote>While the condition holds, the output carries a plain signal.</RimLogic.Converter.PlainOutNote>
+  <RimLogic.Converter.ExpectValue>Value to expect</RimLogic.Converter.ExpectValue>
+  <RimLogic.Converter.SendValue>Value to send</RimLogic.Converter.SendValue>
 </LanguageData>

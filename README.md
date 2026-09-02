@@ -6,7 +6,7 @@
 
 **Electro-logic blocks for players who like their base to think for itself.**
 
-`Version 1.0.2` · `RimWorld 1.6` · requires [Harmony](https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077) · [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3750951495)
+`Version 1.1.6` · `RimWorld 1.6` · requires [Harmony](https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077) · [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3750951495)
 
 ## Overview
 
@@ -15,6 +15,8 @@ RimLogic adds a system of electro-logic blocks for automating your RimWorld colo
 The mod includes signal links between blocks, normal interaction with the power grid, sensors, logic blocks, timers, memory, generators, screens, an alert speaker, and several functional utility blocks. Signal links can be shown directly on the map: colored lines make it clear which blocks are connected and where the signal is going. That becomes especially useful once a circuit grows beyond just two or three blocks.
 
 With the diode, you can make power flow in only one direction. No more strange chains of switches when all you really need is a simple one-way power path. The diode makes those setups cleaner and easier to understand.
+
+Neighbouring blocks need no wiring at all: stand them flush so one block's output faces the other's input, and the signal passes straight across. A whole circuit can be built as a simple chain, without drawing a single line.
 
 Every block has its own settings menu.
 
@@ -38,6 +40,7 @@ Every block has its own settings menu.
 - **NOR** — inverted OR.
 - **XNOR** — inverted XOR.
 - **Splitter** — copies one signal to several outputs.
+- **Logic converter** — turns a plain signal into a number and back.
 
 ### Functional blocks
 
@@ -57,6 +60,10 @@ Every block has its own settings menu.
 - **Screen** — displays a digit; several screens can be used together to show a number.
 - **Clock** — outputs a signal at a chosen time of day.
 - **Speaker** — sends a custom notification on any signal.
+
+### Production
+
+- **Crafter block** — takes a colonist's place at a bench and works through its queue. Slower than a living crafter, but it never sleeps or wanders off.
 
 ## Usage examples
 
@@ -78,10 +85,11 @@ Harmony must load before RimLogic.
 - Requires Harmony
 - Safe to add to an existing save
 - Russian and English are supported
+- Multiplayer is not supported
 
 ## Documentation
 
-Documentation is still in progress. Later this page will include detailed circuit examples, block descriptions, and notes on block settings.
+**[Full guide](DOCUMENTATION_en.md)** — how the logic and power networks work, links and route points, placing blocks side by side without wiring, every block and type explained, and worked example circuits.
 
 [CHANGELOG](CHANGELOG.md)
 

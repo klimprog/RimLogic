@@ -33,7 +33,7 @@
     </thingCategories>
     <costList>
       <Steel>5</Steel>
-      <ComponentIndustrial>1</ComponentIndustrial>
+      <ComponentIndustrial>5</ComponentIndustrial>
     </costList>
     <comps>
       <li Class="RimLogic.CompProperties_RimLogicNode">
@@ -62,10 +62,57 @@
     </comps>
   </ThingDef>
 
+  <ThingDef Name="RimLogic_ConsumerBlockBase_5W" ParentName="RimLogic_BlockBase" Abstract="True">
+    <comps Inherit="False">
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>5</basePowerConsumption>
+        <transmitsPower>false</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="RimLogic_ConsumerBlockBase_15W" ParentName="RimLogic_BlockBase" Abstract="True">
+    <comps Inherit="False">
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>15</basePowerConsumption>
+        <transmitsPower>false</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="RimLogic_ConsumerBlockBase_25W" ParentName="RimLogic_BlockBase" Abstract="True">
+    <comps Inherit="False">
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>25</basePowerConsumption>
+        <transmitsPower>false</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="RimLogic_ConsumerBlockBase_500W" ParentName="RimLogic_BlockBase" Abstract="True">
+    <comps Inherit="False">
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>500</basePowerConsumption>
+        <transmitsPower>false</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+  </ThingDef>
+
+
   <ThingDef ParentName="RimLogic_BlockBase">
     <defName>RimLogic_LogicBlock</defName>
     <label>Логический блок</label>
-    <description>Универсальный блок логики. Типы: AND, OR, XOR, NAND, NOR, XNOR, разветвитель и т.д.. Тип меняется кнопкой «Тип» (доступны изученные).</description>
+    <description>Универсальный блок логики: одна постройка, а чем она будет — выбираешь после установки кнопкой «Тип».
+
+Доступны логические операции AND, OR, XOR, NAND, NOR, XNOR, разветвитель и преобразователь сигнала. Из них собираются условия: «если сработало это И то», «если хоть что-нибудь из этого». В списке показаны только изученные типы.</description>
     <uiOrder>10</uiOrder>
     <uiIconPath>Things/RimLogic/buttons/button_logic</uiIconPath>
     <modExtensions>
@@ -81,7 +128,9 @@
   <ThingDef ParentName="RimLogic_BlockBase">
     <defName>RimLogic_FunctionalBlock</defName>
     <label>Функциональный блок</label>
-    <description>Универсальный функциональный блок. Типы: выключатель, переключатель, математический блок, мультитул и т.д.. Тип меняется кнопкой «Тип» (доступны изученные).</description>
+    <description>Универсальный функциональный блок: одна постройка, а чем она будет — выбираешь после установки кнопкой «Тип».
+
+Доступны выключатель, переключатель, математический блок и мультитул. Это рабочие руки схемы: они управляют питанием, считают числа и связывают логику с обычными постройками колонии. В списке показаны только изученные типы.</description>
     <uiOrder>20</uiOrder>
     <uiIconPath>Things/RimLogic/buttons/button_functional</uiIconPath>
     <modExtensions>
@@ -97,7 +146,9 @@
   <ThingDef ParentName="RimLogic_BlockBase">
     <defName>RimLogic_Sensor</defName>
     <label>Датчик</label>
-    <description>Универсальный датчик. Типы: света, движения, температуры, тока, загрязнений, огня и т.д.. Тип меняется кнопкой «Тип» (доступны изученные).</description>
+    <description>Универсальный датчик: одна постройка, а за чем он будет следить — выбираешь после установки кнопкой «Тип».
+
+Доступны датчики света, движения, температуры, тока, загрязнений и огня. С них начинается любая схема: сначала что-то замечаем, потом решаем, что с этим делать. В списке показаны только изученные типы.</description>
     <uiOrder>30</uiOrder>
     <uiIconPath>Things/RimLogic/buttons/button_sensors</uiIconPath>
     <modExtensions>
@@ -113,7 +164,9 @@
   <ThingDef ParentName="RimLogic_BlockBase">
     <defName>RimLogic_Diode</defName>
     <label>Диод</label>
-    <description>Пропускает ток только в одну сторону: со входа на выход, пока на входной стороне есть избыток энергии, и размыкает цепь, когда его нет. Управляющий сигнал на входе включает и выключает диод, а на выход он отдаёт сигнал, когда действительно пропускает ток.</description>
+    <description>Пропускает ток только в одну сторону: со входа на выход, пока на входной стороне есть избыток энергии, и размыкает цепь, когда его нет.
+
+Позволяет разделить сеть на участки: например, отдать излишки резервной ветке, не давая ей тянуть энергию обратно. Управляющий сигнал включает и выключает диод, а на выход он отдаёт сигнал, когда действительно пропускает ток.</description>
     <uiOrder>40</uiOrder>
     <uiIconPath>Things/RimLogic/buttons/button_diode</uiIconPath>
     <modExtensions>
@@ -124,12 +177,14 @@
     <researchPrerequisites>
       <li>RimLogic_Res_Diode</li>
     </researchPrerequisites>
-  <costList><Steel>5</Steel><ComponentIndustrial>1</ComponentIndustrial></costList></ThingDef>
+  <costList><Steel>5</Steel><ComponentIndustrial>5</ComponentIndustrial></costList></ThingDef>
 
   <ThingDef ParentName="RimLogic_ConsumerBlockBase">
     <defName>RimLogic_SignalGenerator</defName>
     <label>Генератор сигнала</label>
-    <description>Постоянно держит сигнал на выходе, пока включён. Базовый источник «единицы» для схем. Можно управлять логическим входом. Требует питание.</description>
+    <description>Постоянно держит сигнал на выходе, пока включён. Это базовый источник «единицы» для схем.
+
+Нужен, когда чему-то требуется постоянный сигнал: держать открытой дверь, не давать блоку выключиться, задать заведомо истинное условие. Работу можно прерывать логическим входом. Требует питание.</description>
     <uiOrder>50</uiOrder>
     <uiIconPath>Things/RimLogic/buttons/button_signalgen</uiIconPath>
     <modExtensions>
@@ -140,12 +195,14 @@
     <researchPrerequisites>
       <li>RimLogic_Res_SignalGen</li>
     </researchPrerequisites>
-  <costList><Steel>8</Steel><ComponentIndustrial>1</ComponentIndustrial></costList></ThingDef>
+  <costList><Steel>8</Steel><ComponentIndustrial>5</ComponentIndustrial></costList></ThingDef>
 
   <ThingDef ParentName="RimLogic_ConsumerBlockBase">
     <defName>RimLogic_TickGenerator</defName>
     <label>Генератор тика</label>
-    <description>Выдаёт сигнал ровными импульсами. Можно управлять логическим входом. Требует питание.</description>
+    <description>Выдаёт сигнал ровными импульсами, снова и снова, с одинаковым промежутком.
+
+Это сердце схемы: по его импульсам считают счётчики, отмеряют шаги и запускают повторяющиеся действия. Импульсы можно прерывать логическим входом. Требует питание.</description>
     <uiOrder>60</uiOrder>
     <uiIconPath>Things/RimLogic/buttons/button_tickgen</uiIconPath>
     <modExtensions>
@@ -156,12 +213,14 @@
     <researchPrerequisites>
       <li>RimLogic_Res_TickGen</li>
     </researchPrerequisites>
-  <costList><Steel>10</Steel><ComponentIndustrial>1</ComponentIndustrial></costList></ThingDef>
+  <costList><Steel>10</Steel><ComponentIndustrial>5</ComponentIndustrial></costList></ThingDef>
 
-  <ThingDef ParentName="RimLogic_ConsumerBlockBase">
+  <ThingDef ParentName="RimLogic_ConsumerBlockBase_5W">
     <defName>RimLogic_Register</defName>
     <label>Регистр</label>
-    <description>Каждый новый сигнал на входе инвертирует выход. Хранит состояние. Требует питание.</description>
+    <description>Каждый новый сигнал на входе переключает выход в другое состояние: был включён — станет выключен, и наоборот. Между сигналами состояние держится само.
+
+Нужен, чтобы одним и тем же сигналом включать и выключать. Например: одна нажимная плита — свет в комнате загорается, второе нажатие гасит. Требует питание.</description>
     <uiOrder>70</uiOrder>
     <uiIconPath>Things/RimLogic/buttons/button_register</uiIconPath>
     <modExtensions>
@@ -174,10 +233,12 @@
     </researchPrerequisites>
   <costList><Steel>15</Steel><ComponentIndustrial>2</ComponentIndustrial></costList></ThingDef>
 
-  <ThingDef ParentName="RimLogic_ConsumerBlockBase">
+  <ThingDef ParentName="RimLogic_ConsumerBlockBase_5W">
     <defName>RimLogic_Timer</defName>
     <label>Таймер</label>
-    <description>Задерживает сигнал. Получив сигнал на вход, повторит его на выходе через заданное время (настраивается). Нужен для пауз и задержек. Требует питание.</description>
+    <description>Задерживает сигнал на заданное время. Получив сигнал, выжидает выставленную паузу и только потом передаёт его дальше.
+
+Если к этому моменту сигнал ещё держится — выход тоже держится; если уже пропал — выход даёт короткий импульс. Нужен, чтобы свет не гас мгновенно, дверь закрывалась не сразу, а события шли по цепочке с паузами. Требует питание.</description>
     <uiOrder>80</uiOrder>
     <uiIconPath>Things/RimLogic/buttons/button_timer</uiIconPath>
     <modExtensions>
@@ -190,10 +251,12 @@
     </researchPrerequisites>
   <costList><Steel>20</Steel><ComponentIndustrial>2</ComponentIndustrial></costList></ThingDef>
 
-  <ThingDef ParentName="RimLogic_ConsumerBlockBase">
+  <ThingDef ParentName="RimLogic_ConsumerBlockBase_5W">
     <defName>RimLogic_Memory</defName>
     <label>Память</label>
-    <description>Хранит число. От обычного сигнала запоминает 1 или 0, а от блоков передающих число (переключатель, математический блок, другая память) — полученное число, и держит до следующего изменения. Имеет значение по умолчанию заданное в настройках. При смене значения даёт импульс на выход. Требует питание.</description>
+    <description>Хранит число. От обычного сигнала запоминает 1 или 0, а от блоков, передающих число (переключатель, математический блок, другая память), — само число, и держит его до следующего изменения.
+
+В настройках задаётся текущее значение. При каждой смене значения даёт короткий импульс на выход — по нему можно понять, что данные обновились. Требует питание.</description>
     <uiOrder>90</uiOrder>
     <uiIconPath>Things/RimLogic/buttons/button_memory</uiIconPath>
     <modExtensions>
@@ -206,10 +269,12 @@
     </researchPrerequisites>
   <costList><Steel>30</Steel><ComponentIndustrial>3</ComponentIndustrial><ComponentSpacer>1</ComponentSpacer></costList></ThingDef>
 
-  <ThingDef ParentName="RimLogic_ConsumerBlockBase">
+  <ThingDef ParentName="RimLogic_ConsumerBlockBase_25W">
     <defName>RimLogic_Screen</defName>
     <label>Экран</label>
-    <description>Показывает на себе одну цифру числа, приходящего на вход. Несколько экранов от одного источника складываются в табло: первый подключённый показывает единицы, второй — десятки и так далее. У отрицательных чисел добавляется «минус». Требует питание.</description>
+    <description>Показывает на себе одну цифру числа, приходящего на вход.
+
+Несколько экранов от одного источника складываются в табло: первый подключённый показывает единицы, второй — десятки и так далее. У отрицательных чисел добавляется «минус». Так можно вывести на стену запас стали, температуру или показания любого блока, передающего число. Требует питание.</description>
     <uiOrder>100</uiOrder>
     <uiIconPath>Things/RimLogic/buttons/button_screen</uiIconPath>
     <modExtensions>
@@ -222,10 +287,12 @@
     </researchPrerequisites>
   <costList><Steel>20</Steel><ComponentIndustrial>2</ComponentIndustrial><Silver>15</Silver></costList></ThingDef>
 
-  <ThingDef ParentName="RimLogic_ConsumerBlockBase">
+  <ThingDef ParentName="RimLogic_ConsumerBlockBase_15W">
     <defName>RimLogic_Clock</defName>
     <label>Часы</label>
-    <description>Даёт сигнал в заданное время суток. В настройках выбираешь час или промежуток часов и условие (раньше, позже, в диапазоне и т.д.) — пока местное время ему отвечает, на выходе есть сигнал. Требует питание.</description>
+    <description>Даёт сигнал в заданное время суток. В настройках выбираешь час или промежуток часов и условие (раньше, позже, в диапазоне и так далее) — пока местное время ему отвечает, на выходе есть сигнал.
+
+Нужен для расписаний: свет по вечерам, работа станков только днём, ночное отключение второстепенного оборудования. Требует питание.</description>
     <uiOrder>110</uiOrder>
     <uiIconPath>Things/RimLogic/buttons/button_clock</uiIconPath>
     <modExtensions>
@@ -238,10 +305,12 @@
     </researchPrerequisites>
   <costList><Steel>20</Steel><ComponentIndustrial>2</ComponentIndustrial></costList></ThingDef>
 
-  <ThingDef ParentName="RimLogic_ConsumerBlockBase">
+  <ThingDef ParentName="RimLogic_ConsumerBlockBase_15W">
     <defName>RimLogic_Loudspeaker</defName>
     <label>Рупор</label>
-    <description>Получив сигнал, выводит на экран игровое уведомление — синее или красное, с твоим заголовком и текстом (настраивается). Удобно, чтобы датчик или схема сами сообщали о событии. Сигнал заодно проходит на выход. Требует питание.</description>
+    <description>Получив сигнал, выводит игровое уведомление — синее или красное, с твоим заголовком и текстом.
+
+Это голос всей схемы: датчик или расчёт могут сами сообщить о пожаре, нехватке энергии или пустом складе, не заставляя тебя следить за показаниями. Сигнал заодно проходит дальше на выход. Требует питание.</description>
     <uiOrder>120</uiOrder>
     <uiIconPath>Things/RimLogic/buttons/button_loudspeaker</uiIconPath>
     <modExtensions>
@@ -253,5 +322,46 @@
       <li>RimLogic_Res_Loudspeaker</li>
     </researchPrerequisites>
   <costList><Steel>25</Steel><ComponentIndustrial>2</ComponentIndustrial><Silver>10</Silver></costList></ThingDef>
+
+
+  <ThingDef ParentName="RimLogic_ConsumerBlockBase_500W">
+    <defName>RimLogic_Crafter</defName>
+    <label>Блок-ремесленник</label>
+    <description>Автоматический работник. Ставится на клетку у верстака, где стоял бы колонист, и выполняет очередь заданий этого верстака.
+
+Работает медленнее живого мастера и не даёт высокого качества, зато не спит, не ест и не отвлекается. Пока блок на месте, колонисты за этот верстак не встают. В настройках выбираются склады для материалов и готового, а уровень блока повышается за ресурсы. Требует много энергии.
+
+Работает как настоящий работник за верстаком: доступны любые рецепты, включая разделку туш и переплавку, а также верстаки из других модов. Скорость, качество и расход топлива считаются по тем же правилам, что и для колониста.
+
+Материалы берутся только из выбранных складов — блок не отправляется за ними через всю базу. Готовое сразу уходит в склады назначения.
+
+На выход блок отдаёт своё состояние числом:
+0 — нет питания
+1 — включён, работы нет
+2 — выключен сигналом
+3 — работает
+4 — начал изготовление (короткий импульс)
+5 — закончил изготовление (короткий импульс)
+6 — очередь верстака пуста
+7 — не хватает материалов
+8 — готовое некуда складывать
+
+Поймать нужное число и превратить его в обычный сигнал умеет логический преобразователь.</description>
+    <uiOrder>200</uiOrder>
+    <uiIconPath>Things/RimLogic/buttons/button_crafter</uiIconPath>
+    <modExtensions>
+      <li Class="RimLogic.RimLogicBuildExt">
+        <fixedType>RimLogic_Type_Crafter</fixedType>
+      </li>
+    </modExtensions>
+    <researchPrerequisites>
+      <li>RimLogic_Res_Crafter</li>
+    </researchPrerequisites>
+    <costList>
+      <Steel>300</Steel>
+      <ComponentSpacer>20</ComponentSpacer>
+      <Silver>100</Silver>
+    </costList>
+  </ThingDef>
 
 </Defs>

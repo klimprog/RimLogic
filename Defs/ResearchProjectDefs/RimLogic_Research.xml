@@ -102,7 +102,7 @@
     <tab>RimLogic</tab>
     <prerequisites><li>RimLogic_Res_LogicGroup</li></prerequisites>
     <researchViewX>4.00</researchViewX>
-    <researchViewY>2.90</researchViewY>
+    <researchViewY>2.30</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
@@ -114,7 +114,7 @@
     <tab>RimLogic</tab>
     <prerequisites><li>RimLogic_Res_LogicGroup</li></prerequisites>
     <researchViewX>4.00</researchViewX>
-    <researchViewY>3.40</researchViewY>
+    <researchViewY>2.80</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
@@ -126,7 +126,7 @@
     <tab>RimLogic</tab>
     <prerequisites><li>RimLogic_Res_LogicGroup</li></prerequisites>
     <researchViewX>4.00</researchViewX>
-    <researchViewY>3.90</researchViewY>
+    <researchViewY>3.30</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
@@ -138,7 +138,7 @@
     <tab>RimLogic</tab>
     <prerequisites><li>RimLogic_Res_LogicGroup</li></prerequisites>
     <researchViewX>4.00</researchViewX>
-    <researchViewY>4.40</researchViewY>
+    <researchViewY>3.80</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
@@ -150,7 +150,7 @@
     <tab>RimLogic</tab>
     <prerequisites><li>RimLogic_Res_LogicGroup</li></prerequisites>
     <researchViewX>4.00</researchViewX>
-    <researchViewY>4.90</researchViewY>
+    <researchViewY>4.30</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
@@ -162,7 +162,7 @@
     <tab>RimLogic</tab>
     <prerequisites><li>RimLogic_Res_LogicGroup</li></prerequisites>
     <researchViewX>4.00</researchViewX>
-    <researchViewY>5.40</researchViewY>
+    <researchViewY>4.80</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
@@ -186,7 +186,7 @@
     <tab>RimLogic</tab>
     <prerequisites><li>RimLogic_Res_LogicGroup</li></prerequisites>
     <researchViewX>4.00</researchViewX>
-    <researchViewY>5.90</researchViewY>
+    <researchViewY>5.30</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
@@ -391,6 +391,32 @@
     <prerequisites><li>RimLogic_Res_FunctionalGroup</li></prerequisites>
     <researchViewX>2.00</researchViewX>
     <researchViewY>3.60</researchViewY>
+  </ResearchProjectDef>
+
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_Crafter</defName>
+    <label>Блок-ремесленник</label>
+    <description>Автоматический работник, занимающий место колониста у верстака. Вершина ветки: самый дорогой и самый требовательный к энергии блок мода.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Basics</li></prerequisites>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>5.50</researchViewY>
+  </ResearchProjectDef>
+
+
+  <ResearchProjectDef>
+    <defName>RimLogic_Res_Converter</defName>
+    <label>Логический преобразователь</label>
+    <description>Тип «Логический преобразователь» — перевод между обычным и сложным сигналом.</description>
+    <baseCost>600</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>RimLogic</tab>
+    <prerequisites><li>RimLogic_Res_LogicGroup</li></prerequisites>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>5.80</researchViewY>
   </ResearchProjectDef>
 
 </Defs>

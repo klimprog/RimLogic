@@ -2,57 +2,134 @@
 <LanguageData>
   <RimLogic_Type_None.label>no type</RimLogic_Type_None.label>
   <RimLogic_Type_AND.label>Logic AND</RimLogic_Type_AND.label>
-  <RimLogic_Type_AND.description>Outputs a signal only when every connected input has a signal. If even one input is off, the output is off. With power it works the same way: power passes through only when all inputs are powered. Bring signals through links or power through conduits, then take the result from the output.</RimLogic_Type_AND.description>
+  <RimLogic_Type_AND.description>Outputs a signal only while every connected input has one. Let a single input go quiet and the output goes dark with it. Power behaves the same way: current passes only when all inputs are live.
+
+Use it when something should happen only if several conditions line up at once. Turn on a turret, say, but only if the motion sensor fired AND night has fallen.</RimLogic_Type_AND.description>
   <RimLogic_Type_OR.label>Logic OR</RimLogic_Type_OR.label>
-  <RimLogic_Type_OR.description>Outputs a signal if at least one connected input has a signal. With power it works the same way: power passes through if at least one input is powered. Bring signals or conduits to the inputs; take the result from the output.</RimLogic_Type_OR.description>
+  <RimLogic_Type_OR.description>Outputs a signal if at least ONE connected input has one. Power behaves the same way: current flows as long as any input is live.
+
+Use it when any of several reasons should be enough. Sound the alert if the fire sensor trips OR the motion sensor does — whichever gets there first.</RimLogic_Type_OR.description>
   <RimLogic_Type_XOR.label>Logic XOR</RimLogic_Type_XOR.label>
-  <RimLogic_Type_XOR.description>Outputs a signal when the inputs are different: one has a signal and the other does not. If both inputs are on, or both are off, the output is off. Power-through mode follows the same rule.</RimLogic_Type_XOR.description>
+  <RimLogic_Type_XOR.description>Outputs a signal when the inputs DISAGREE: one has a signal, the other does not. If both are on, or both are off, the output stays dark. Power behaves the same way.
+
+Handy when the disagreement itself is what matters: catch the moment two sensors stop telling the same story and raise an alert.</RimLogic_Type_XOR.description>
   <RimLogic_Type_NAND.label>Logic NAND</RimLogic_Type_NAND.label>
-  <RimLogic_Type_NAND.description>The opposite of AND: the output is on all the time, except when every input has a signal at once. Signal-only, no power-through mode. Bring signals to the inputs through links; take the result from the output.</RimLogic_Type_NAND.description>
+  <RimLogic_Type_NAND.description>The opposite of AND: the output is on ALL the time, except when every input has a signal at once. Signals only — no power passes through.
+
+Good for things that should run by default and stop when conditions meet. Ventilation keeps the air moving, then rests once every door is shut.</RimLogic_Type_NAND.description>
   <RimLogic_Type_NOR.label>Logic NOR</RimLogic_Type_NOR.label>
-  <RimLogic_Type_NOR.description>The opposite of OR: the output is on only when none of the inputs has a signal. If a signal appears anywhere, the output turns off. Signal-only, no power-through mode.</RimLogic_Type_NOR.description>
+  <RimLogic_Type_NOR.description>The opposite of OR: there is a signal only while NO input has one. The moment anything speaks up, the output goes dark. Signals only.
+
+This is your "all quiet" condition. Light the workshop only while both the fire sensor and the motion sensor have nothing to report.</RimLogic_Type_NOR.description>
   <RimLogic_Type_XNOR.label>Logic XNOR</RimLogic_Type_XNOR.label>
-  <RimLogic_Type_XNOR.description>The opposite of XOR: the output is on when the inputs match — both on or both off. If the inputs differ, the output turns off. Signal-only, no power-through mode.</RimLogic_Type_XNOR.description>
+  <RimLogic_Type_XNOR.description>The opposite of XOR: there is a signal while the inputs AGREE — both on, or both off. The moment they differ, the output goes dark. Signals only.
+
+Useful for watching that things stay consistent: as long as two sensors say the same thing, the circuit treats the situation as normal.</RimLogic_Type_XNOR.description>
   <RimLogic_Type_Register.label>Register</RimLogic_Type_Register.label>
-  <RimLogic_Type_Register.description>Each new signal on the input inverts the output. Keeps its state. Requires power.</RimLogic_Type_Register.description>
+  <RimLogic_Type_Register.description>Behaves like a latching button. Each new signal flips the output to the other state: on becomes off, off becomes on. Between signals it holds that state on its own.
+
+Use it to switch something on and off with the same signal. One pressure plate lights the room; press it again and the light goes out. Needs power.</RimLogic_Type_Register.description>
   <RimLogic_Type_Splitter.label>Splitter</RimLogic_Type_Splitter.label>
-  <RimLogic_Type_Splitter.description>Copies one signal to several outputs. Feed a signal or conduit into the input and it will go to every output at once. Useful when one signal needs to drive several blocks.</RimLogic_Type_Splitter.description>
+  <RimLogic_Type_Splitter.description>Copies one signal into several. Feed a signal (or power) into the input and it goes out through every output at once, identical and simultaneous.
+
+Use it when one sensor should drive several blocks: a single motion sensor turning on the lights, the turret and the speaker together.</RimLogic_Type_Splitter.description>
   <RimLogic_Type_SensorLight.label>Light sensor</RimLogic_Type_SensorLight.label>
-  <RimLogic_Type_SensorLight.description>Watches the light level on the cell under it. When the light matches the value set in its settings, it outputs a signal and passes power from input to output like a switch. Run a conduit through it and/or send its signal link to another block.</RimLogic_Type_SensorLight.description>
+  <RimLogic_Type_SensorLight.description>Watches the light level on its own tile. When the light matches what you set, it gives a signal and passes power from input to output, acting as a switch of its own.
+
+The classic use is street lighting: lamps come on as dusk falls and go out in the morning, without a single order from you.</RimLogic_Type_SensorLight.description>
   <RimLogic_Type_SensorMotion.label>Motion sensor</RimLogic_Type_SensorMotion.label>
-  <RimLogic_Type_SensorMotion.description>Reacts to movement in an area around itself. In settings, choose what it should detect — colonists, animals, enemies, prisoners, and so on — and set the area size. While a matching target is inside, it outputs a signal and passes power from input to output.</RimLogic_Type_SensorMotion.description>
+  <RimLogic_Type_SensorMotion.description>Reacts to movement in the area around it. In the settings you choose who to notice (colonists, animals, enemies, prisoners and others) and how wide the area reaches.
+
+While a matching target is inside, it gives a signal and passes power from input to output. Good for lights that follow people, doors that open themselves, or an alarm when strangers turn up.</RimLogic_Type_SensorMotion.description>
   <RimLogic_Type_SensorTemperature.label>Temperature sensor</RimLogic_Type_SensorTemperature.label>
-  <RimLogic_Type_SensorTemperature.description>Watches the temperature of the cell under it. When the temperature matches the condition, it outputs a signal and passes power from input to output. The condition is set in the settings.</RimLogic_Type_SensorTemperature.description>
+  <RimLogic_Type_SensorTemperature.description>Watches the temperature on its own tile. When it matches the condition you set, the sensor gives a signal and passes power from input to output.
+
+Use it to let the climate look after itself: the heater comes on when a room gets cold, the cooler when it gets hot. The condition is set in the settings.</RimLogic_Type_SensorTemperature.description>
   <RimLogic_Type_SensorCurrent.label>Power sensor</RimLogic_Type_SensorCurrent.label>
-  <RimLogic_Type_SensorCurrent.description>Connect its input to a power grid and it will watch the grid's surplus power or stored battery charge. When the value matches the condition, it outputs a signal. It only watches the grid; it does not pass power onward. The condition is set in the settings.</RimLogic_Type_SensorCurrent.description>
+  <RimLogic_Type_SensorCurrent.description>Wire the input into your grid and the sensor watches how much spare power it has, or how much charge is left in the batteries. When the figure matches your condition, it gives a signal.
+
+It only watches — no power passes through it. Use it to let a circuit answer a shortage on its own: shed the non-essentials when the batteries run low, or have the speaker warn you.</RimLogic_Type_SensorCurrent.description>
   <RimLogic_Type_SensorPressure.label>Pressure sensor</RimLogic_Type_SensorPressure.label>
   <RimLogic_Type_SensorPollution.label>Pollution sensor</RimLogic_Type_SensorPollution.label>
-  <RimLogic_Type_SensorPollution.description>Checks whether there is pollution in the selected area. If pollution is found, it outputs a signal and passes power from input to output. The area is set in the settings.</RimLogic_Type_SensorPollution.description>
+  <RimLogic_Type_SensorPollution.description>Checks whether there is pollution in the chosen area. If there is, it gives a signal and passes power from input to output.
+
+Handy for catching a problem before it spreads — raise an alert once the filth creeps up on your crops. The area is set in the settings.</RimLogic_Type_SensorPollution.description>
   <RimLogic_Type_SensorFire.label>Fire sensor</RimLogic_Type_SensorFire.label>
-  <RimLogic_Type_SensorFire.description>Reacts when a fire starts in the selected area. While something is burning, it outputs a signal and passes power from input to output. The area is set in the settings.</RimLogic_Type_SensorFire.description>
+  <RimLogic_Type_SensorFire.description>Reacts when a fire starts in the chosen area. While anything is burning it gives a signal and passes power from input to output.
+
+The foundation of a fire-response circuit: that signal can sound the speaker, cut power to a section, or open doors so people can get out. The area is set in the settings.</RimLogic_Type_SensorFire.description>
   <RimLogic_Type_Switch.label>Switch</RimLogic_Type_Switch.label>
-  <RimLogic_Type_Switch.description>A signal-controlled switch. While the control input has a signal, it passes power from electrical input to electrical output. When the signal disappears, the line is cut.</RimLogic_Type_Switch.description>
+  <RimLogic_Type_Switch.description>A switch driven by a signal. While the control input has a signal, power passes from the electrical input to the electrical output; when the signal stops, the circuit opens.
+
+This is how you hand power over to logic: any sensor or circuit gains the ability to switch a whole section of the grid on and off.</RimLogic_Type_Switch.description>
   <RimLogic_Type_Selector.label>Selector</RimLogic_Type_Selector.label>
-  <RimLogic_Type_Selector.description>Routes power from the input to one of two outputs: left or right. Each new signal on the control input switches to the other side. The output sends a short pulse on every switch.</RimLogic_Type_Selector.description>
+  <RimLogic_Type_Selector.description>Sends the incoming power to ONE of two outputs — left or right. Each new signal on the control input flips it to the other side.
+
+Power always goes to one place, never both at once, which makes it easy to share a supply between two consumers in turn. Every switch-over also sends a short pulse to the output.</RimLogic_Type_Selector.description>
   <RimLogic_Type_Analyzer.label>Analyzer</RimLogic_Type_Analyzer.label>
   <RimLogic_Type_Timer.label>Timer</RimLogic_Type_Timer.label>
-  <RimLogic_Type_Timer.description>Delays a signal by a set amount of time. When it receives a signal, it waits for the pause set in its settings and only then passes it on. If the signal is still held by then, the output stays on too; if it has already disappeared, the output sends a short pulse. Requires power.</RimLogic_Type_Timer.description>
+  <RimLogic_Type_Timer.description>Holds a signal back for a set time. When a signal arrives it waits out the delay you configured, and only then passes it on.
+
+If the signal is still there by then, the output holds too; if it has already stopped, the output gives a short pulse instead. Use it so lights do not snap off instantly, doors close a moment later, and events run in sequence with pauses between them. Needs power.</RimLogic_Type_Timer.description>
   <RimLogic_Type_Memory.label>Memory</RimLogic_Type_Memory.label>
-  <RimLogic_Type_Memory.description>Stores a number. A normal signal stores 1 or 0, while blocks that carry numbers (selector, math block, another memory block) pass their value through. Memory keeps that number until the next change. It has a default value set in settings. When the value changes, it sends a pulse on the output. Requires power.</RimLogic_Type_Memory.description>
+  <RimLogic_Type_Memory.description>Stores a number. From a plain signal it remembers 1 or 0; from blocks that carry a number (the selector, the math block, another memory) it remembers that number, and holds it until the next change.
+
+The current value is set in the settings. Every time the value changes it sends a short pulse to the output, so the rest of the circuit knows the data has been updated. Needs power.</RimLogic_Type_Memory.description>
   <RimLogic_Type_Math.label>Math block</RimLogic_Type_Math.label>
-  <RimLogic_Type_Math.description>Works with numbers. It takes the first number from the left input, the second from the right input, then performs the selected operation: add, subtract, multiply, divide, compare, and so on. The result goes to the output. Choose the operation in settings.</RimLogic_Type_Math.description>
+  <RimLogic_Type_Math.description>Works with numbers. It takes the number from the left input (the first) and the right one (the second) and performs the operation you chose: add, subtract, multiply, divide, compare and more. The result goes to the output.
+
+Comparisons turn a number back into a plain signal — "steel below 200", and the circuit raises the alert by itself. The operation is chosen in the settings.</RimLogic_Type_Math.description>
   <RimLogic_Type_Multitool.label>Multitool</RimLogic_Type_Multitool.label>
-  <RimLogic_Type_Multitool.description>A multi-purpose block with several modes chosen in settings: count items in an area, toggle a nearby device by signal, open or close doors, count harvest-ready crops, count pawns by filter, or measure storage fullness. One block, many jobs.</RimLogic_Type_Multitool.description>
+  <RimLogic_Type_Multitool.description>A jack of all trades: one building, several modes to pick from in its settings.
+
+It can count items in an area, switch a neighbouring device on and off by signal, open and close doors, count crops ready for harvest, count pawns by filter, and measure how full your storage is. Reach for it whenever a circuit needs to touch ordinary buildings and colony stockpiles.</RimLogic_Type_Multitool.description>
   <RimLogic_Type_Screen.label>Screen</RimLogic_Type_Screen.label>
-  <RimLogic_Type_Screen.description>Shows one digit of the number coming into its input. Several screens connected to the same source form a display: the first connected screen shows ones, the second shows tens, and so on. Negative numbers add a minus sign. Requires power.</RimLogic_Type_Screen.description>
+  <RimLogic_Type_Screen.description>Shows a single digit of the number arriving at its input.
+
+Several screens fed from one source form a display: the first one connected shows the units, the second the tens, and so on. Negative numbers get a minus sign. That is how you put your steel reserve, the temperature, or the reading of any number-carrying block up on a wall. Needs power.</RimLogic_Type_Screen.description>
   <RimLogic_Type_Clock.label>Clock</RimLogic_Type_Clock.label>
-  <RimLogic_Type_Clock.description>Outputs a signal at the chosen time of day. In settings, choose an hour or a range of hours and a condition (before, after, within range, and so on). While the local time matches it, the output has a signal. Requires power.</RimLogic_Type_Clock.description>
+  <RimLogic_Type_Clock.description>Gives a signal at a chosen time of day. In the settings you pick an hour or a span of hours and a condition (before, after, within a range and so on) — while local time matches it, the output carries a signal.
+
+Use it for schedules: lights in the evening, machines running only by day, non-essentials shut down overnight. Needs power.</RimLogic_Type_Clock.description>
   <RimLogic_Type_Loudspeaker.label>Loudspeaker</RimLogic_Type_Loudspeaker.label>
-  <RimLogic_Type_Loudspeaker.description>When it receives a signal, it shows an in-game notification — blue or red — with your own title and text. Useful when a sensor or circuit should report an event by itself. The signal also passes through to the output. Requires power.</RimLogic_Type_Loudspeaker.description>
+  <RimLogic_Type_Loudspeaker.description>On a signal it puts an in-game notification on screen — blue or red, with your own heading and text.
+
+This is the voice of the whole circuit: a sensor or a calculation can tell you about a fire, a power shortage or an empty store, so you do not have to watch the readings yourself. The signal also carries on to the output. Needs power.</RimLogic_Type_Loudspeaker.description>
   <RimLogic_Type_Diode.label>Diode</RimLogic_Type_Diode.label>
-  <RimLogic_Type_Diode.description>Lets power flow only in one direction: from input to output while the input side has surplus energy, and opens the circuit when it does not. A control signal on the input turns the diode on or off, and the output sends a signal when power is actually passing through.</RimLogic_Type_Diode.description>
+  <RimLogic_Type_Diode.description>Lets power through in one direction only: from input to output while the input side has power to spare, and it opens the circuit when there is none.
+
+Use it to split a grid into sections — hand your surplus to a backup branch without letting that branch pull power back. The control signal switches the diode on and off, and its output carries a signal whenever current is actually passing.</RimLogic_Type_Diode.description>
   <RimLogic_Type_SignalGen.label>Signal generator</RimLogic_Type_SignalGen.label>
-  <RimLogic_Type_SignalGen.description>Keeps a signal on the output while enabled. A basic constant “one” source for circuits. Can be controlled by a logic input. Requires power.</RimLogic_Type_SignalGen.description>
+  <RimLogic_Type_SignalGen.description>Holds a signal on its output the whole time it is running. This is your basic source of a constant "on" for circuits.
+
+Use it when something needs a signal that never stops: holding a door open, keeping a block from switching itself off, or feeding a condition that is always true. A logic input can interrupt it. Needs power.</RimLogic_Type_SignalGen.description>
   <RimLogic_Type_TickGen.label>Tick generator</RimLogic_Type_TickGen.label>
-  <RimLogic_Type_TickGen.description>Outputs regular signal pulses. Can be controlled by a logic input. Requires power.</RimLogic_Type_TickGen.description>
+  <RimLogic_Type_TickGen.description>Sends out signals in an even rhythm, again and again, with the same gap between them.
+
+This is the heartbeat of a circuit: counters count by its pulses, sequences step through by them, and repeating actions fire on them. A logic input can interrupt the beat. Needs power.</RimLogic_Type_TickGen.description>
+  <RimLogic_Type_Crafter.label>Crafter</RimLogic_Type_Crafter.label>
+  <RimLogic_Type_Crafter.description>Takes a colonist's place at a bench and works through that bench's queue. What to make is set in the bench itself — there is nothing to configure on the block.
+
+While it stands there, colonists will not use that bench. Its settings choose which storage to draw materials from and where finished goods go. The block's level is raised with materials: the higher it goes, the faster it works and the better it builds.
+
+It works as a real worker at the bench: every recipe is available, butchering and smelting included, and so are benches from other mods. Speed, quality and fuel use are worked out by the same rules that apply to a colonist.
+
+Materials are only taken from the chosen storage — the block does not go fetching them from across the base. Finished goods go straight into the destination storage.
+
+The block reports its own state on the output as a number:
+0 — no power
+1 — on, nothing to do
+2 — switched off by signal
+3 — working
+4 — started an item (brief pulse)
+5 — finished an item (brief pulse)
+6 — the bench queue is empty
+7 — not enough materials
+8 — nowhere to put finished goods
+
+The logic converter is what catches a particular number and turns it into a plain signal.</RimLogic_Type_Crafter.description>
+  <RimLogic_Type_Converter.label>Logic converter</RimLogic_Type_Converter.label>
+  <RimLogic_Type_Converter.description>Translates one kind of signal into the other. It can wait for a plain signal or for one specific number, and send back either a plain signal or a number you choose.
+
+Its main use is catching a particular block state and turning it into a plain signal — "the crafter says it is out of materials" becomes a signal for the speaker. It works the other way round too: tag an ordinary event with a number.</RimLogic_Type_Converter.description>
 </LanguageData>

@@ -11,7 +11,9 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_AND</defName>
     <label>Логическое AND</label>
-    <description>Выдаёт сигнал, только когда сигнал есть сразу на ВСЕХ подключённых входах. Нет хотя бы на одном — на выходе пусто. С проводами так же: пропускает ток, когда запитаны все входы. Заведи сигналы (связями) или провода на входы, результат забери с выхода.</description>
+    <description>Выдаёт сигнал, только когда сигнал есть сразу на ВСЕХ подключённых входах. Нет хотя бы на одном — на выходе пусто. С проводами так же: пропускает ток, когда запитаны все входы.
+
+Нужен, когда действие должно происходить при совпадении нескольких условий сразу. Например: включить турель, только если сработал датчик движения И наступила ночь.</description>
     <iconPath>Things/RimLogic/types/logic_and</iconPath>
     <workerClass>RimLogic.RimLogicWorker_And</workerClass>
     <group>Logic</group>
@@ -31,7 +33,9 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_OR</defName>
     <label>Логическое OR</label>
-    <description>Выдаёт сигнал, если сигнал есть хотя бы на ОДНОМ из подключённых входов. С проводами так же: ток идёт, если запитан хотя бы один вход. Заведи сигналы или провода на входы, результат — с выхода.</description>
+    <description>Выдаёт сигнал, если сигнал есть хотя бы на ОДНОМ из подключённых входов. С проводами так же: ток идёт, если запитан хотя бы один вход.
+
+Нужен, когда сработать должно от любой из нескольких причин. Например: включить оповещение, если сработал датчик огня ИЛИ датчик движения — неважно который.</description>
     <iconPath>Things/RimLogic/types/logic_or</iconPath>
     <workerClass>RimLogic.RimLogicWorker_Or</workerClass>
     <group>Logic</group>
@@ -51,7 +55,9 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_XOR</defName>
     <label>Логическое XOR</label>
-    <description>Выдаёт сигнал, когда входы РАЗНЫЕ: на одном есть, на другом нет. Если сигнал есть на обоих сразу или нет нигде — на выходе пусто. С проводами работает так же.</description>
+    <description>Выдаёт сигнал, когда входы РАЗНЫЕ: на одном есть, на другом нет. Если сигнал есть на обоих сразу или нет нигде — на выходе пусто. С проводами работает так же.
+
+Удобно, когда важно именно расхождение: например, поймать момент, когда два датчика показывают разное, и включить оповещение.</description>
     <iconPath>Things/RimLogic/types/logic_xor</iconPath>
     <workerClass>RimLogic.RimLogicWorker_Xor</workerClass>
     <group>Logic</group>
@@ -71,7 +77,9 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_NAND</defName>
     <label>Логическое NAND</label>
-    <description>Противоположность AND: сигнал на выходе есть ВСЕГДА, кроме момента, когда сигнал пришёл сразу на все входы. Работает только с сигналами (проводов нет). Заведи сигналы связями на входы, результат — с выхода.</description>
+    <description>Противоположность AND: сигнал на выходе есть ВСЕГДА, кроме момента, когда сигнал пришёл сразу на все входы. Работает только с сигналами, провода не подключаются.
+
+Удобно, чтобы что-то работало по умолчанию и выключалось при совпадении условий. Например: вентиляция гоняет воздух постоянно, но встаёт, когда закрыты все двери.</description>
     <iconPath>Things/RimLogic/types/logic_nand</iconPath>
     <workerClass>RimLogic.RimLogicWorker_Nand</workerClass>
     <group>Logic</group>
@@ -87,7 +95,9 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_NOR</defName>
     <label>Логическое NOR</label>
-    <description>Противоположность OR: сигнал есть только тогда, когда НИ НА ОДНОМ входе сигнала нет. Появился сигнал хоть где-то — выход гаснет. Только сигналы (проводов нет).</description>
+    <description>Противоположность OR: сигнал есть только тогда, когда НИ НА ОДНОМ входе сигнала нет. Появился сигнал хоть где-то — выход гаснет. Работает только с сигналами.
+
+Нужен для условия «всё спокойно». Например: включить свет в мастерской, только когда молчат и датчик огня, и датчик движения.</description>
     <iconPath>Things/RimLogic/types/logic_nor</iconPath>
     <workerClass>RimLogic.RimLogicWorker_Nor</workerClass>
     <group>Logic</group>
@@ -103,7 +113,9 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_XNOR</defName>
     <label>Логическое XNOR</label>
-    <description>Противоположность XOR: сигнал есть, когда входы ОДИНАКОВЫЕ — на обоих есть или на обоих нет. Входы разные — выход гаснет. Только сигналы (проводов нет).</description>
+    <description>Противоположность XOR: сигнал есть, когда входы ОДИНАКОВЫЕ — на обоих есть или на обоих нет. Входы разные — выход гаснет. Работает только с сигналами.
+
+Пригодится, чтобы следить за согласованностью: пока два датчика показывают одно и то же, схема считает, что всё в порядке.</description>
     <iconPath>Things/RimLogic/types/logic_xnor</iconPath>
     <workerClass>RimLogic.RimLogicWorker_Xnor</workerClass>
     <group>Logic</group>
@@ -119,10 +131,13 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_Register</defName>
     <label>Регистр</label>
-    <description>Каждый новый сигнал на входе инвертирует выход. Хранит состояние. Требует питание.</description>
+    <description>Каждый новый сигнал на входе переключает выход в другое состояние: был включён — станет выключен, и наоборот. Между сигналами состояние держится само.
+
+Нужен, чтобы одним и тем же сигналом включать и выключать. Например: одна нажимная плита — свет в комнате загорается, второе нажатие гасит. Требует питание.</description>
     <iconPath>Things/RimLogic/types/register</iconPath>
     <workerClass>RimLogic.RimLogicWorker_Register</workerClass>
     <powerConsumer>true</powerConsumer>
+    <powerConsumption>5</powerConsumption>
     <logicInputs>3</logicInputs>
     <logicOutputs>1</logicOutputs>
     <colorableIcon>true</colorableIcon>
@@ -134,7 +149,9 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_Splitter</defName>
     <label>Разветвитель</label>
-    <description>Размножает один сигнал на несколько. Заведи сигнал (или провод) на вход — он пойдёт сразу на все выходы. Удобно раздать один сигнал нескольким блокам.</description>
+    <description>Размножает один сигнал на несколько. Заведи сигнал (или провод) на вход — он пойдёт сразу на все выходы, одинаковый и одновременно.
+
+Нужен, когда от одного датчика должно работать несколько блоков сразу: например, один датчик движения включает и свет, и турель, и рупор.</description>
     <iconPath>Things/RimLogic/types/splitter</iconPath>
     <workerClass>RimLogic.RimLogicWorker_Splitter</workerClass>
     <group>Logic</group>
@@ -154,7 +171,9 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_SensorLight</defName>
     <label>Датчик света</label>
-    <description>Следит за освещённостью клетки под собой. Когда света столько, сколько ты задал в настройках — даёт сигнал и пропускает ток с входа на выход, как выключатель. Подведи провод и/или уведи сигнал связью на другой блок.</description>
+    <description>Следит за освещённостью клетки под собой. Когда света столько, сколько ты задал в настройках — даёт сигнал и заодно пропускает ток с входа на выход, работая как выключатель.
+
+Классическое применение — уличный свет: фонари сами включаются с наступлением темноты и гаснут утром, без единого приказа.</description>
     <iconPath>Things/RimLogic/types/sensor_light</iconPath>
     <workerClass>RimLogic.RimLogicWorker_LightSensor</workerClass>
     <group>Sensors</group>
@@ -175,7 +194,9 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_SensorMotion</defName>
     <label>Датчик движения</label>
-    <description>Реагирует на движение в области вокруг себя. В настройках выбери, кого ловить (колонисты, животные, враги, пленники и т.д.) и размер области. Пока внутри есть подходящая цель — даёт сигнал и пропускает ток с входа на выход.</description>
+    <description>Реагирует на движение в области вокруг себя. В настройках выбираешь, кого замечать (колонисты, животные, враги, пленники и другие) и насколько велика область.
+
+Пока внутри есть подходящая цель — даёт сигнал и пропускает ток с входа на выход. Удобно для света по присутствию, автоматических дверей или тревоги при появлении чужих.</description>
     <iconPath>Things/RimLogic/types/sensor_motion</iconPath>
     <workerClass>RimLogic.RimLogicWorker_MotionSensor</workerClass>
     <group>Sensors</group>
@@ -196,7 +217,9 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_SensorTemperature</defName>
     <label>Датчик температуры</label>
-    <description>Следит за температурой клетки под собой. Когда она отвечает условию — даёт сигнал и пропускает ток с входа на выход. Условие задаётся в настройках.</description>
+    <description>Следит за температурой клетки под собой. Когда она отвечает заданному условию — даёт сигнал и пропускает ток с входа на выход.
+
+Нужен, чтобы климат держал себя сам: обогреватель включается, когда в комнате похолодало, кондиционер — когда стало жарко. Условие задаётся в настройках.</description>
     <iconPath>Things/RimLogic/types/sensor_temperature</iconPath>
     <workerClass>RimLogic.RimLogicWorker_TemperatureSensor</workerClass>
     <group>Sensors</group>
@@ -217,7 +240,9 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_SensorCurrent</defName>
     <label>Датчик тока</label>
-    <description>Подключи вход к электросети — датчик смотрит, сколько в ней свободной энергии (или заряда в аккумуляторах). Когда значение отвечает условию — даёт сигнал на выход. Только наблюдает, ток дальше не пускает. Условие задаётся в настройках.</description>
+    <description>Подключи вход к электросети — датчик смотрит, сколько в ней свободной энергии или сколько заряда осталось в аккумуляторах. Когда значение отвечает условию, он даёт сигнал.
+
+Ток дальше не пускает, только наблюдает. Нужен, чтобы схема сама реагировала на нехватку энергии: отключать второстепенное при низком заряде или предупреждать рупором.</description>
     <iconPath>Things/RimLogic/types/sensor_current</iconPath>
     <workerClass>RimLogic.RimLogicWorker_CurrentSensor</workerClass>
     <group>Sensors</group>
@@ -250,7 +275,9 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_SensorPollution</defName>
     <label>Датчик загрязнений</label>
-    <description>Проверяет, есть ли загрязнение в выбранной области. Если есть — даёт сигнал и пропускает ток с входа на выход. Область задаётся в настройках.</description>
+    <description>Проверяет, есть ли загрязнение в выбранной области. Если есть — даёт сигнал и пропускает ток с входа на выход.
+
+Пригодится, чтобы заметить проблему до того, как она разрастётся: например, включить оповещение, когда грязь подошла к посевам. Область задаётся в настройках.</description>
     <iconPath>Things/RimLogic/types/sensor_pollution</iconPath>
     <workerClass>RimLogic.RimLogicWorker_PollutionSensor</workerClass>
     <group>Sensors</group>
@@ -271,7 +298,9 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_SensorFire</defName>
     <label>Датчик огня</label>
-    <description>Реагирует, если в выбранной области начался пожар. Пока что-то горит — даёт сигнал и пропускает ток с входа на выход. Область задаётся в настройках.</description>
+    <description>Реагирует, если в выбранной области начался пожар. Пока что-то горит — даёт сигнал и пропускает ток с входа на выход.
+
+Основа противопожарной схемы: по сигналу можно включить рупор, обесточить участок или открыть двери для выхода. Область задаётся в настройках.</description>
     <iconPath>Things/RimLogic/types/sensor_fire</iconPath>
     <workerClass>RimLogic.RimLogicWorker_FireSensor</workerClass>
     <group>Sensors</group>
@@ -292,7 +321,9 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_Switch</defName>
     <label>Выключатель</label>
-    <description>Управляемый сигналом выключатель. Пока на управляющем входе есть сигнал — пропускает ток с электро-входа на электро-выход; сигнал пропал — разрывает.</description>
+    <description>Управляемый сигналом выключатель. Пока на управляющем входе есть сигнал — пропускает ток с электро-входа на электро-выход; сигнал пропал — размыкает цепь.
+
+Это способ отдать питание под управление логики: любой датчик или схема получают возможность включать и выключать целый участок сети.</description>
     <iconPath>Things/RimLogic/types/switch</iconPath>
     <workerClass>RimLogic.RimLogicWorker_Switch</workerClass>
     <group>Functional</group>
@@ -312,7 +343,9 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_Selector</defName>
     <label>Переключатель</label>
-    <description>Перекидывает ток с входа на ОДИН из двух выходов — левый или правый. Каждый новый сигнал на управляющем входе переключает сторону на другую. На выход даёт короткий импульс при каждом переключении.</description>
+    <description>Перекидывает ток с входа на ОДИН из двух выходов — левый или правый. Каждый новый сигнал на управляющем входе переключает сторону.
+
+Питание всегда идёт куда-то одно, а не в оба места сразу. Удобно распределять энергию между двумя потребителями по очереди. При каждом переключении даёт короткий импульс на выход.</description>
     <iconPath>Things/RimLogic/types/selector_switch</iconPath>
     <workerClass>RimLogic.RimLogicWorker_Selector</workerClass>
     <group>Functional</group>
@@ -347,10 +380,13 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_Timer</defName>
     <label>Таймер</label>
-    <description>Задерживает сигнал на заданное время. Получив сигнал, выжидает выставленную в настройках паузу и только потом передаёт его дальше. Если к этому моменту сигнал ещё держится — выход тоже держится; если уже пропал — выход даёт короткий импульс. Требует питание.</description>
+    <description>Задерживает сигнал на заданное время. Получив сигнал, выжидает выставленную паузу и только потом передаёт его дальше.
+
+Если к этому моменту сигнал ещё держится — выход тоже держится; если уже пропал — выход даёт короткий импульс. Нужен, чтобы свет не гас мгновенно, дверь закрывалась не сразу, а события шли по цепочке с паузами. Требует питание.</description>
     <iconPath>Things/RimLogic/types/timer</iconPath>
     <workerClass>RimLogic.RimLogicWorker_Timer</workerClass>
     <powerConsumer>true</powerConsumer>
+    <powerConsumption>5</powerConsumption>
     <logicInputs>1</logicInputs>
     <logicOutputs>3</logicOutputs>
     <colorableIcon>true</colorableIcon>
@@ -363,10 +399,13 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_Memory</defName>
     <label>Память</label>
-    <description>Хранит число. От обычного сигнала запоминает 1 или 0, а от блоков передающих число (переключатель, математический блок, другая память) — полученное число, и держит до следующего изменения. Имеет значение по умолчанию заданное в настройках. При смене значения даёт импульс на выход. Требует питание.</description>
+    <description>Хранит число. От обычного сигнала запоминает 1 или 0, а от блоков, передающих число (переключатель, математический блок, другая память) — само число, и держит его до следующего изменения.
+
+В настройках задаётся текущее значение. При каждой смене значения даёт короткий импульс на выход — по нему можно понять, что данные обновились. Требует питание.</description>
     <iconPath>Things/RimLogic/types/memory</iconPath>
     <workerClass>RimLogic.RimLogicWorker_Memory</workerClass>
     <powerConsumer>true</powerConsumer>
+    <powerConsumption>5</powerConsumption>
     <logicInputs>1</logicInputs>
     <logicOutputs>3</logicOutputs>
     <colorableIcon>true</colorableIcon>
@@ -379,7 +418,9 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_Math</defName>
     <label>Математический блок</label>
-    <description>Считает числа. Берёт число с левого входа (первое) и с правого (второе) и выполняет выбранное действие: сложить, вычесть, умножить, поделить, сравнить и т.д. Результат идёт на выход. Действие выбирается в настройках.</description>
+    <description>Считает числа. Берёт число с левого входа (первое) и с правого (второе) и выполняет выбранное действие: сложить, вычесть, умножить, поделить, сравнить и другие. Результат идёт на выход.
+
+Сравнения превращают число в обычный сигнал: например, «запас стали меньше 200» — и схема сама включит оповещение. Действие выбирается в настройках.</description>
     <iconPath>Things/RimLogic/types/math_block</iconPath>
     <workerClass>RimLogic.RimLogicWorker_Math</workerClass>
     <group>Functional</group>
@@ -398,7 +439,9 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_Multitool</defName>
     <label>Мультитул</label>
-    <description>Блок-комбайн с несколькими режимами (выбираются в настройках): считать предметы в области, включать/выключать соседний прибор по сигналу, открывать/закрывать двери, считать созревший урожай, считать пешек по фильтру, мерить заполненность складов. Один блок — много задач.</description>
+    <description>Блок-комбайн: одна постройка, несколько режимов на выбор в настройках.
+
+Умеет считать предметы в области, включать и выключать соседний прибор по сигналу, открывать и закрывать двери, считать созревший урожай, считать пешек по фильтру и мерить заполненность складов. Берите его, когда нужна связь схемы с обычными постройками и запасами колонии.</description>
     <iconPath>Things/RimLogic/types/multitool</iconPath>
     <workerClass>RimLogic.RimLogicWorker_Multitool</workerClass>
     <group>Functional</group>
@@ -416,10 +459,13 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_Screen</defName>
     <label>Экран</label>
-    <description>Показывает на себе одну цифру числа, приходящего на вход. Несколько экранов от одного источника складываются в табло: первый подключённый показывает единицы, второй — десятки и так далее. У отрицательных чисел добавляется «минус». Требует питание.</description>
+    <description>Показывает на себе одну цифру числа, приходящего на вход.
+
+Несколько экранов от одного источника складываются в табло: первый подключённый показывает единицы, второй — десятки и так далее. У отрицательных чисел добавляется «минус». Так можно вывести на стену запас стали, температуру или показания любого блока, передающего число. Требует питание.</description>
     <iconPath>Things/RimLogic/types/screen</iconPath>
     <workerClass>RimLogic.RimLogicWorker_Screen</workerClass>
     <powerConsumer>true</powerConsumer>
+    <powerConsumption>25</powerConsumption>
     <logicInputs>1</logicInputs>
     <logicOutputs>1</logicOutputs>
     <colorableIcon>true</colorableIcon>
@@ -431,10 +477,13 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_Clock</defName>
     <label>Часы</label>
-    <description>Даёт сигнал в заданное время суток. В настройках выбираешь час или промежуток часов и условие (раньше, позже, в диапазоне и т.д.) — пока местное время ему отвечает, на выходе есть сигнал. Требует питание.</description>
+    <description>Даёт сигнал в заданное время суток. В настройках выбираешь час или промежуток часов и условие (раньше, позже, в диапазоне и так далее) — пока местное время ему отвечает, на выходе есть сигнал.
+
+Нужен для расписаний: свет по вечерам, работа станков только днём, ночное отключение второстепенного оборудования. Требует питание.</description>
     <iconPath>Things/RimLogic/types/clock</iconPath>
     <workerClass>RimLogic.RimLogicWorker_Clock</workerClass>
     <powerConsumer>true</powerConsumer>
+    <powerConsumption>15</powerConsumption>
     <logicInputs>1</logicInputs>
     <logicOutputs>1</logicOutputs>
     <colorableIcon>true</colorableIcon>
@@ -447,10 +496,13 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_Loudspeaker</defName>
     <label>Рупор</label>
-    <description>Получив сигнал, выводит на экран игровое уведомление — синее или красное, с твоим заголовком и текстом (настраивается). Удобно, чтобы датчик или схема сами сообщали о событии. Сигнал заодно проходит на выход. Требует питание.</description>
+    <description>Получив сигнал, выводит игровое уведомление — синее или красное, с твоим заголовком и текстом.
+
+Это голос всей схемы: датчик или расчёт могут сами сообщить о пожаре, нехватке энергии или пустом складе, не заставляя тебя следить за показаниями. Сигнал заодно проходит дальше на выход. Требует питание.</description>
     <iconPath>Things/RimLogic/types/loudspeaker</iconPath>
     <workerClass>RimLogic.RimLogicWorker_Loudspeaker</workerClass>
     <powerConsumer>true</powerConsumer>
+    <powerConsumption>15</powerConsumption>
     <logicInputs>1</logicInputs>
     <logicOutputs>1</logicOutputs>
     <colorableIcon>true</colorableIcon>
@@ -463,7 +515,9 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_Diode</defName>
     <label>Диод</label>
-    <description>Пропускает ток только в одну сторону: со входа на выход, пока на входной стороне есть избыток энергии, и размыкает цепь, когда его нет. Управляющий сигнал на входе включает и выключает диод, а на выход он отдаёт сигнал, когда действительно пропускает ток.</description>
+    <description>Пропускает ток только в одну сторону: со входа на выход, пока на входной стороне есть избыток энергии, и размыкает цепь, когда его нет.
+
+Позволяет разделить сеть на участки: например, отдать излишки резервной ветке, не давая ей тянуть энергию обратно. Управляющий сигнал включает и выключает диод, а на выход он отдаёт сигнал, когда действительно пропускает ток.</description>
     <iconPath>Things/RimLogic/types/diode</iconPath>
     <workerClass>RimLogic.RimLogicWorker_Diode</workerClass>
     <powerConsumer>false</powerConsumer>
@@ -481,10 +535,13 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_SignalGen</defName>
     <label>Генератор сигнала</label>
-    <description>Постоянно держит сигнал на выходе, пока включён. Базовый источник «единицы» для схем. Можно управлять логическим входом. Требует питание.</description>
+    <description>Постоянно держит сигнал на выходе, пока включён. Это базовый источник «единицы» для схем.
+
+Нужен, когда чему-то требуется постоянный сигнал: держать открытой дверь, не давать блоку выключиться, задать заведомо истинное условие. Работу можно прерывать логическим входом. Требует питание.</description>
     <iconPath>Things/RimLogic/types/signal_generator</iconPath>
     <workerClass>RimLogic.RimLogicWorker_SignalGen</workerClass>
     <powerConsumer>true</powerConsumer>
+    <powerConsumption>10</powerConsumption>
     <logicInputs>1</logicInputs>
     <logicOutputs>1</logicOutputs>
     <colorableIcon>true</colorableIcon>
@@ -496,10 +553,13 @@
   <RimLogic.RimLogicTypeDef>
     <defName>RimLogic_Type_TickGen</defName>
     <label>Генератор тика</label>
-    <description>Выдаёт сигнал ровными импульсами. Можно управлять логическим входом. Требует питание.</description>
+    <description>Выдаёт сигнал ровными импульсами, снова и снова, с одинаковым промежутком.
+
+Это сердце схемы: по его импульсам считают счётчики, отмеряют шаги и запускают повторяющиеся действия. Импульсы можно прерывать логическим входом. Требует питание.</description>
     <iconPath>Things/RimLogic/types/tick_generator</iconPath>
     <workerClass>RimLogic.RimLogicWorker_TickGen</workerClass>
     <powerConsumer>true</powerConsumer>
+    <powerConsumption>10</powerConsumption>
     <logicInputs>1</logicInputs>
     <logicOutputs>1</logicOutputs>
     <colorableIcon>true</colorableIcon>
@@ -507,6 +567,68 @@
     <tickPeriod>8</tickPeriod>
     <defaultLogicRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultLogicRoles>
     <order>120</order>
+  </RimLogic.RimLogicTypeDef>
+
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_Crafter</defName>
+    <label>Ремесленник</label>
+    <description>Встаёт на рабочее место у верстака вместо колониста и выполняет его очередь заданий. Что именно делать — задаётся в самом верстаке, в блоке настраивать нечего.
+
+Пока блок стоит на месте, колонисты за этот верстак не встают. В настройках выбираются склады, откуда брать материалы и куда складывать готовое. Уровень блока повышается за материалы: чем выше, тем быстрее работа и лучше качество.
+
+Работает как настоящий работник за верстаком: доступны любые рецепты, включая разделку туш и переплавку, а также верстаки из других модов. Скорость, качество и расход топлива считаются по тем же правилам, что и для колониста.
+
+Материалы берутся только из выбранных складов — блок не отправляется за ними через всю базу. Готовое сразу уходит в склады назначения.
+
+На выход блок отдаёт своё состояние числом:
+0 — нет питания
+1 — включён, работы нет
+2 — выключен сигналом
+3 — работает
+4 — начал изготовление (короткий импульс)
+5 — закончил изготовление (короткий импульс)
+6 — очередь верстака пуста
+7 — не хватает материалов
+8 — готовое некуда складывать
+
+Поймать нужное число и превратить его в обычный сигнал умеет логический преобразователь.</description>
+    <iconPath>Things/RimLogic/types/crafter</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_Crafter</workerClass>
+    <hasSettings>true</hasSettings>
+    <powerConsumer>true</powerConsumer>
+    <powerConsumption>500</powerConsumption>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>1</logicOutputs>
+    <electroInputs>0</electroInputs>
+    <electroOutputs>0</electroOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <defaultLogicRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultLogicRoles>
+    <order>200</order>
+  </RimLogic.RimLogicTypeDef>
+
+
+  <RimLogic.RimLogicTypeDef>
+    <defName>RimLogic_Type_Converter</defName>
+    <label>Логический преобразователь</label>
+    <description>Переводит сигнал из одного вида в другой. На входе можно ждать обычный сигнал или конкретное число, на выходе — отдавать обычный сигнал или заданное число.
+
+Главное применение — поймать нужное состояние блока и превратить его в простой сигнал: например, «ремесленник сообщил, что кончилось сырьё» превратить в сигнал для рупора. Работает и наоборот: пометить обычное событие числом.</description>
+    <iconPath>Things/RimLogic/types/logic_converter</iconPath>
+    <workerClass>RimLogic.RimLogicWorker_Converter</workerClass>
+    <group>Logic</group>
+    <hasSettings>true</hasSettings>
+    <powerConsumer>false</powerConsumer>
+    <electroInputs>0</electroInputs>
+    <electroOutputs>0</electroOutputs>
+    <logicInputs>1</logicInputs>
+    <logicOutputs>3</logicOutputs>
+    <colorableIcon>true</colorableIcon>
+    <autoAssignFaces>true</autoAssignFaces>
+    <defaultLogicRoles><li>2</li><li>0</li><li>1</li><li>0</li></defaultLogicRoles>
+    <order>90</order>
+    <researchPrerequisite>RimLogic_Res_Converter</researchPrerequisite>
   </RimLogic.RimLogicTypeDef>
 
 </Defs>

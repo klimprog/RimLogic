@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- The crafter's "hands": a minimal pawn that exists only to be a WORKER the game recognises.
+       Everything about a worktable in RimWorld runs through a Pawn — bench speed and efficiency, fuel,
+       reservations, butchery and smelting, the completion notification mods hook into. A block cannot reach
+       any of that, so the block gets itself a pawn and hands it a genuine vanilla bill job.
+
+       It is deliberately stripped: mechanoid flesh (no blood, no pain), never sleeps, never eats, no genders,
+       and its think tree does nothing but run the job it is given — it will not wander off looking for work
+       of its own. -->
+
+  <ThingDef ParentName="BasePawn">
+    <defName>RimLogic_DronePawn</defName>
+    <label>манипулятор ремесленника</label>
+    <description>Рабочая рука блока-ремесленника. Своей воли у него нет: делает ровно то задание, которое дал ему блок, и ничего больше.</description>
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <tradeability>None</tradeability>
+    <butcherProducts>
+      <Steel>5</Steel>
+    </butcherProducts>
+    <statBases>
+      <MoveSpeed>3.0</MoveSpeed>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>250</ComfyTemperatureMax>
+      <Flammability>0</Flammability>
+      <MarketValue>0</MarketValue>
+      <MeatAmount>0</MeatAmount>
+      <ToxicResistance>1</ToxicResistance>
+      <PsychicSensitivity>0</PsychicSensitivity>
+    </statBases>
+    <race>
+      <fleshType>Mechanoid</fleshType>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>RimLogic_DroneThink</thinkTreeMain>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <foodType>None</foodType>
+      <lifeExpectancy>2500</lifeExpectancy>
+      <bloodDef>Filth_MachineBits</bloodDef>
+      <baseBodySize>0.4</baseBodySize>
+      <baseHealthScale>1.0</baseHealthScale>
+      <mechFixedSkillLevel>8</mechFixedSkillLevel>
+      <body>Scyther</body>
+      <renderTree>Animal</renderTree>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+        </li>
+      </lifeStageAges>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef>
+    <defName>RimLogic_DroneKind</defName>
+    <label>манипулятор ремесленника</label>
+    <race>RimLogic_DronePawn</race>
+    <combatPower>0</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+    <canBeSapper>false</canBeSapper>
+    <destroyGearOnDrop>true</destroyGearOnDrop>
+    <canStrip>false</canStrip>
+    <lifeStages>
+      <li>
+        <!-- Drawn as nothing at all. The manipulator is part of the block, not a creature standing on it:
+             a second sprite on the block's tile read as a stray pawn and covered the block's own icon. The
+             graphic still has to exist — the renderer expects one — so it is a fully transparent texture. -->
+        <bodyGraphicData>
+          <texPath>Things/RimLogic/misc/blank</texPath>
+          <drawSize>0.05</drawSize>
+          <shaderType>Transparent</shaderType>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <!-- The whole point: run the job we hand it, otherwise stand still. No work scanning, no wandering,
+       no needs behaviour — the block decides, the drone executes. -->
+  <ThinkTreeDef>
+    <defName>RimLogic_DroneThink</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_QueuedJob" />
+        <li Class="JobGiver_Idle" />
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+  <!-- The block's purchased level, expressed the way the game itself expresses ability: a hediff whose
+       severity IS the level and whose stages set the work speed factor. Going through WorkSpeedGlobal means
+       every recipe stat is scaled at once — vanilla and modded alike — instead of us second-guessing which
+       stat a bench uses. The curve is the same one the block always had: a deliberate 30% behind a colonist
+       of equal skill, because a machine trades finesse for never getting tired. -->
+  <HediffDef>
+    <defName>RimLogic_DroneTuning</defName>
+    <label>калибровка</label>
+    <description>Настройка манипулятора под уровень блока-ремесленника: чем выше уровень, тем быстрее идёт работа.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>15</maxSeverity>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <minSeverity>3</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>0.455</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>4</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>0.49</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>5</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>0.525</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>6</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>0.56</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>7</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>0.595</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>8</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>0.63</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>9</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>0.665</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>10</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>0.7</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>11</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>0.735</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>12</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>0.77</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>13</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>0.805</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>14</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>0.84</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>15</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>0.875</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

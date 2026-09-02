@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <RimLogic_DroneTuning.label>calibration</RimLogic_DroneTuning.label>
+  <RimLogic_DroneTuning.description>The manipulator tuned to its crafter block's level: the higher the level, the faster the work goes.</RimLogic_DroneTuning.description>
+
+</LanguageData>

@@ -10,32 +10,46 @@
   <RimLogic.Port.Power>питание</RimLogic.Port.Power>
 
   <RimLogic.Gizmo.Type>Тип</RimLogic.Gizmo.Type>
-  <RimLogic.Gizmo.TypeDesc>Выбрать, чем будет этот блок (например, AND или датчик света). Внимание: смена типа сбрасывает настройки блока — грани, связи и выходы.</RimLogic.Gizmo.TypeDesc>
+  <RimLogic.Gizmo.TypeDesc>Выбрать, чем будет этот блок: логической операцией, датчиком, таймером и так далее. В списке показаны только изученные типы.
+
+Внимание: смена типа сбрасывает настройки блока — роли граней, все связи и выходы. Блок становится как новый, поэтому определяйся с типом до того, как протянешь к нему провода.</RimLogic.Gizmo.TypeDesc>
 
   <RimLogic.Gizmo.Rename>Переименовать</RimLogic.Gizmo.Rename>
-  <RimLogic.Gizmo.RenameDesc>Дать блоку своё имя. Оно показывается в заголовке и в списке связей у соседних блоков — так легче не запутаться.</RimLogic.Gizmo.RenameDesc>
+  <RimLogic.Gizmo.RenameDesc>Дать блоку своё имя вместо стандартного.
+
+Имя видно в заголовке и в списках связей у соседних блоков. Когда схема разрастается и рядом стоят пять одинаковых датчиков, имена вроде «свет в мастерской» экономят много времени.</RimLogic.Gizmo.RenameDesc>
 
   <RimLogic.Gizmo.Link>Добавить связь</RimLogic.Gizmo.Link>
   <RimLogic.Gizmo.LinkActive>Выход</RimLogic.Gizmo.LinkActive>
-  <RimLogic.Gizmo.LinkDesc>Протянуть «провод сигнала» между блоками. Нажми кнопку, кликни на выход этого блока, затем на вход нужного блока. По пустым клеткам можно расставить точки маршрута. ПКМ — шаг назад, Esc — отмена.</RimLogic.Gizmo.LinkDesc>
+  <RimLogic.Gizmo.LinkDesc>Протянуть «провод сигнала» от этого блока к другому.
+
+Нажми кнопку, кликни на выход этого блока, затем на вход нужного. По пустым клеткам можно расставить точки маршрута, чтобы линия шла там, где тебе удобно, а не напрямик. ПКМ — шаг назад, Esc — отмена.</RimLogic.Gizmo.LinkDesc>
   <RimLogic.Link.PickOutput>Кликни на выход, от которого пойдёт связь</RimLogic.Link.PickOutput>
   <RimLogic.Link.PickTarget>Кликни на блок-цель.\nЛКМ по пустой клетке — точка маршрута, ПКМ — убрать последнюю.</RimLogic.Link.PickTarget>
   <RimLogic.Link.PickInput>Кликни на вход этого блока</RimLogic.Link.PickInput>
   <RimLogic.Link.Delete>Удалить связь</RimLogic.Link.Delete>
-  <RimLogic.Link.DeleteHint>Наведи на связь и кликни, чтобы её удалить</RimLogic.Link.DeleteHint>
+  <RimLogic.Link.DeleteHint>Наведи на линию связи и нажми правую кнопку мыши, чтобы её удалить</RimLogic.Link.DeleteHint>
   <RimLogic.ShowLinks>Показать все связи RimLogic</RimLogic.ShowLinks>
 
   <RimLogic.Gizmo.IconColor>Цвет значка</RimLogic.Gizmo.IconColor>
-  <RimLogic.Gizmo.IconColorDesc>Поменять цвет значка на этом блоке — чтобы похожие блоки было легче различать.</RimLogic.Gizmo.IconColorDesc>
+  <RimLogic.Gizmo.IconColorDesc>Поменять цвет значка на этом блоке.
+
+На работу не влияет — это чисто для тебя. Удобно, когда рядом стоят похожие блоки: разный цвет позволяет с одного взгляда понять, где какая часть схемы.</RimLogic.Gizmo.IconColorDesc>
   <RimLogic.Gizmo.ElectroIO>Провода: вход/выход</RimLogic.Gizmo.ElectroIO>
-  <RimLogic.Gizmo.ElectroIODesc>Настроить электрические грани: какая принимает ток (вход), какая отдаёт (выход). Любую грань можно отключить.</RimLogic.Gizmo.ElectroIODesc>
+  <RimLogic.Gizmo.ElectroIODesc>Настроить электрические грани блока: какая принимает ток, какая отдаёт, а какая отключена.
+
+Вход и выход — это стороны, которыми блок врезается в электросеть. Ненужные грани лучше отключать, чтобы провода не цеплялись туда, где они не нужны.</RimLogic.Gizmo.ElectroIODesc>
   <RimLogic.Gizmo.LogicIO>Сигнал: вход/выход</RimLogic.Gizmo.LogicIO>
-  <RimLogic.Gizmo.LogicIODesc>Настроить логические грани: какая принимает сигнал (вход), какая отдаёт (выход). Отключённая грань не показывает индикатор.</RimLogic.Gizmo.LogicIODesc>
+  <RimLogic.Gizmo.LogicIODesc>Настроить логические грани блока: какая принимает сигнал, какая отдаёт, а какая отключена.
+
+Именно к этим граням цепляются линии связи. Отключённая грань не показывает индикатор и не участвует в схеме.</RimLogic.Gizmo.LogicIODesc>
 
   <RimLogic.Gizmo.Settings>Настройки</RimLogic.Gizmo.Settings>
-  <RimLogic.Gizmo.SettingsDesc>Открыть настройки этого блока.</RimLogic.Gizmo.SettingsDesc>
+  <RimLogic.Gizmo.SettingsDesc>Открыть настройки этого блока: условия срабатывания, значения, области проверки и режимы — всё, что зависит от его типа.</RimLogic.Gizmo.SettingsDesc>
   <RimLogic.Gizmo.Reconnect>Переподключить питание</RimLogic.Gizmo.Reconnect>
-  <RimLogic.Gizmo.ReconnectDesc>Выбрать, от какой электролинии питать блок. Нажми кнопку и кликни на нужную линию рядом.</RimLogic.Gizmo.ReconnectDesc>
+  <RimLogic.Gizmo.ReconnectDesc>Выбрать, от какой линии электросети питается блок.
+
+Нужно, когда рядом проходит несколько веток и важно, от какой именно он берёт энергию: например, чтобы блок работал от резервной линии, а не от основной. Нажми кнопку и кликни на нужную линию рядом.</RimLogic.Gizmo.ReconnectDesc>
   <RimLogic.Feed.NoNet>Рядом нет электролинии, до которой можно дотянуться.</RimLogic.Feed.NoNet>
   <RimLogic.Settings.Desc>Настройки выбранного блока.</RimLogic.Settings.Desc>
   <RimLogic.Settings.None>У этого блока пока нечего настраивать.</RimLogic.Settings.None>
@@ -79,7 +93,10 @@
   <RimLogic.PollSensor.Radius>Радиус</RimLogic.PollSensor.Radius>
   <RimLogic.PollSensor.Cells>кл.</RimLogic.PollSensor.Cells>
   <RimLogic.PollSensor.RoomHeader>Помещение</RimLogic.PollSensor.RoomHeader>
-  <RimLogic.PollSensor.RoomNote>Проверяется загрязнение в комнате, где стоит блок. Под открытым небом — небольшая область вокруг блока.</RimLogic.PollSensor.RoomNote>
+  <RimLogic.PollSensor.RoomNote.Pollution>Проверяется загрязнение в комнате, где стоит блок. Под открытым небом — небольшая область вокруг блока.</RimLogic.PollSensor.RoomNote.Pollution>
+  <RimLogic.PollSensor.RoomNote.Motion>Присутствие проверяется в комнате, где стоит блок. Под открытым небом — небольшая область вокруг блока.</RimLogic.PollSensor.RoomNote.Motion>
+  <RimLogic.PollSensor.RoomNote.Fire>Огонь ищется в комнате, где стоит блок. Под открытым небом — небольшая область вокруг блока.</RimLogic.PollSensor.RoomNote.Fire>
+  <RimLogic.PollSensor.RoomNote.Multitool>Проверяется комната, где стоит блок. Под открытым небом — небольшая область вокруг блока.</RimLogic.PollSensor.RoomNote.Multitool>
 
   <RimLogic.FireSensor.Title>Настройка датчика огня</RimLogic.FireSensor.Title>
   <RimLogic.FireSensor.Desc>Даёт сигнал и пропускает ток с входа на выход, когда в выбранной области что-то горит.</RimLogic.FireSensor.Desc>
@@ -215,4 +232,54 @@
   <RimLogic.Color.Pink>Розовый</RimLogic.Color.Pink>
   <RimLogic.Color.Brown>Коричневый</RimLogic.Color.Brown>
 
+
+  <!-- Общая таблица состояний блоков (RimLogicState) -->
+  <RimLogic.Status.NoPower>нет питания</RimLogic.Status.NoPower>
+  <RimLogic.Status.On>включен</RimLogic.Status.On>
+  <RimLogic.Status.Off>выключен</RimLogic.Status.Off>
+  <RimLogic.Status.Working>работает</RimLogic.Status.Working>
+  <RimLogic.Status.Started>начал работу</RimLogic.Status.Started>
+  <RimLogic.Status.Finished>закончил работу</RimLogic.Status.Finished>
+  <RimLogic.Status.QueueEmpty>очередь пуста</RimLogic.Status.QueueEmpty>
+  <RimLogic.Status.NoResources>нет сырья</RimLogic.Status.NoResources>
+  <RimLogic.Status.StorageFull>хранилище переполнено</RimLogic.Status.StorageFull>
+  <RimLogic.Inspect.Status>Состояние</RimLogic.Inspect.Status>
+
+  <RimLogic.Crafter.NoTable>Блок не стоит на рабочем месте у верстака</RimLogic.Crafter.NoTable>
+  <RimLogic.Crafter.Making>изготавливает: {0} ({1}%)</RimLogic.Crafter.Making>
+  <RimLogic.Crafter.Upgrade>Повысить уровень</RimLogic.Crafter.Upgrade>
+  <RimLogic.Crafter.UpgradeDesc>Поднять уровень блока с {0} до {1}.
+
+Чем выше уровень, тем быстрее блок работает и тем лучше качество изделий. Уровень заменяет блоку навык: от него же зависит, за какие рецепты он вправе браться.
+
+Стоимость: {2}
+Материалы берутся со складов колонии.</RimLogic.Crafter.UpgradeDesc>
+  <RimLogic.Crafter.MaxLevel>Достигнут максимальный уровень навыка</RimLogic.Crafter.MaxLevel>
+  <RimLogic.Crafter.NeedMore>Не хватает материалов: {0} ({1})</RimLogic.Crafter.NeedMore>
+  <RimLogic.Crafter.Level>Уровень блока</RimLogic.Crafter.Level>
+  <RimLogic.Crafter.Skill>Навык</RimLogic.Crafter.Skill>
+  <RimLogic.Crafter.SettingsTitle>Настройка ремесленника</RimLogic.Crafter.SettingsTitle>
+  <RimLogic.Crafter.SettingsDesc>Откуда брать материалы и куда складывать готовое. Что именно делать — задаётся в самом верстаке, а не здесь.</RimLogic.Crafter.SettingsDesc>
+  <RimLogic.Crafter.Sources>Источники материалов</RimLogic.Crafter.Sources>
+  <RimLogic.Crafter.Products>Куда складывать готовое</RimLogic.Crafter.Products>
+  <RimLogic.Crafter.NoStorage>Рядом с блоком нет ни одного хранилища. Поставь склад или полку вплотную к блоку.</RimLogic.Crafter.NoStorage>
+  <RimLogic.Crafter.AllNote>Используются все хранилища, примыкающие к блоку.</RimLogic.Crafter.AllNote>
+  <RimLogic.Crafter.Missing>не хватает: {0}</RimLogic.Crafter.Missing>
+  <RimLogic.Crafter.All>Все рядом</RimLogic.Crafter.All>
+  <RimLogic.Crafter.Chosen>Выбранные</RimLogic.Crafter.Chosen>
+  <RimLogic.Crafter.NoneChosen>Не выбрано ни одного хранилища — блок работать не будет.</RimLogic.Crafter.NoneChosen>
+  <RimLogic.Crafter.PickStorage>Выбрать хранилища</RimLogic.Crafter.PickStorage>
+  <RimLogic.Crafter.NoSources>неоткуда брать материалы</RimLogic.Crafter.NoSources>
+  <RimLogic.Crafter.NoProductStorage>некуда складывать готовое</RimLogic.Crafter.NoProductStorage>
+  <RimLogic.Crafter.NoRoom>на складе назначения нет места</RimLogic.Crafter.NoRoom>
+  <RimLogic.Converter.Title>Настройка преобразователя</RimLogic.Converter.Title>
+  <RimLogic.Converter.Desc>Что считать сигналом на входе и что отдавать на выход.</RimLogic.Converter.Desc>
+  <RimLogic.Converter.Input>Ожидание на входе</RimLogic.Converter.Input>
+  <RimLogic.Converter.Output>Выходной сигнал</RimLogic.Converter.Output>
+  <RimLogic.Converter.Plain>Обычный</RimLogic.Converter.Plain>
+  <RimLogic.Converter.Complex>Сложный</RimLogic.Converter.Complex>
+  <RimLogic.Converter.PlainInNote>Условие выполнено, когда на входе есть любой сигнал.</RimLogic.Converter.PlainInNote>
+  <RimLogic.Converter.PlainOutNote>Пока условие выполнено, на выходе обычный сигнал.</RimLogic.Converter.PlainOutNote>
+  <RimLogic.Converter.ExpectValue>Ожидаемое число</RimLogic.Converter.ExpectValue>
+  <RimLogic.Converter.SendValue>Передаваемое число</RimLogic.Converter.SendValue>
 </LanguageData>

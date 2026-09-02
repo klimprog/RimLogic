@@ -64,4 +64,8 @@
   <RimLogic_Res_Math.description>The Math block type.</RimLogic_Res_Math.description>
   <RimLogic_Res_Multitool.label>multitool</RimLogic_Res_Multitool.label>
   <RimLogic_Res_Multitool.description>The Multitool type — a multi-mode functional block.</RimLogic_Res_Multitool.description>
+  <RimLogic_Res_Crafter.label>crafter block</RimLogic_Res_Crafter.label>
+  <RimLogic_Res_Crafter.description>An automatic worker that takes a colonist's place at a bench. The top of the tree: the most expensive block in the mod, and the hungriest for power.</RimLogic_Res_Crafter.description>
+  <RimLogic_Res_Converter.label>logic converter</RimLogic_Res_Converter.label>
+  <RimLogic_Res_Converter.description>The "logic converter" type — translating between plain and complex signals.</RimLogic_Res_Converter.description>
 </LanguageData>
