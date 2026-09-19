@@ -61,8 +61,16 @@
     <defName>RimLogic_DroneKind</defName>
     <label>манипулятор ремесленника</label>
     <race>RimLogic_DronePawn</race>
-    <combatPower>0</combatPower>
+    <!-- Kept OUT of mechanoid cluster generation, the way vanilla keeps its own work mechs (war urchin,
+         paramedic) out of it. The cluster generator picks mechs while points remain, and a candidate worth
+         ZERO points never spends any: with such a mech in the pool the loop cannot end, and the game runs
+         itself out of memory. The combat rating is 1 rather than 0 for the same reason — nothing that walks
+         the colony should be free to add. This manipulator is a tool bolted to a bench; it has no business
+         in a raid in any case. -->
+    <allowInMechClusters>false</allowInMechClusters>
+    <combatPower>1</combatPower>
     <canArriveManhunter>false</canArriveManhunter>
+    <isFighter>false</isFighter>
     <canBeSapper>false</canBeSapper>
     <destroyGearOnDrop>true</destroyGearOnDrop>
     <canStrip>false</canStrip>

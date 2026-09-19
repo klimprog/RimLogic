@@ -6,7 +6,7 @@
 
 **Electro-logic blocks for players who like their base to think for itself.**
 
-`Version 1.1.6` · `RimWorld 1.6` · requires [Harmony](https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077) · [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3750951495)
+`Version 1.1.8` · `RimWorld 1.6` · requires [Harmony](https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077) · [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3750951495)
 
 # Changelog
 
@@ -21,6 +21,7 @@
 - Block descriptions and button tooltips are fuller: they now explain not just what a block does, but what it is for.
 
 ### Fixed
+- The crafter block could hang the game when a mechanoid cluster appeared (requires Royalty): cluster generation never finished and ate memory.
 - Link lines routed poorly, folding back on themselves instead of looping or going around.
 - Consumer blocks all drew the same power regardless of their type.
 - Notes in sensor windows were too small to read, and the room note did not match the sensor.

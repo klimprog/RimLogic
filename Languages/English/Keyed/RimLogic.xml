@@ -245,7 +245,7 @@ Useful when several branches run nearby and it matters which one it draws from â
   <RimLogic.Status.StorageFull>storage full</RimLogic.Status.StorageFull>
   <RimLogic.Inspect.Status>Status</RimLogic.Inspect.Status>
 
-  <RimLogic.Crafter.NoTable>Not standing on a worktable's work spot</RimLogic.Crafter.NoTable>
+Not standing on a worktable's work spot</RimLogic.Crafter.NoTable>
   <RimLogic.Crafter.Making>making: {0} ({1}%)</RimLogic.Crafter.Making>
   <RimLogic.Crafter.Upgrade>Raise level</RimLogic.Crafter.Upgrade>
   <RimLogic.Crafter.UpgradeDesc>Raise the block's level from {0} to {1}.
