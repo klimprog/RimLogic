@@ -6,9 +6,18 @@
 
 **Электро-логические блоки для тех, кто любит, когда база думает сама.**
 
-`Version 1.1.8` · `RimWorld 1.6` · requires [Harmony](https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077) · [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3750951495)
+`Version 1.2.1` · `RimWorld 1.6 · 1.7` · requires [Harmony](https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077) · [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3750951495)
 
 # История изменений
+
+## 1.2
+
+### Добавлено
+- **Поддержка RimWorld 1.7.** Мод работает и в 1.6, и в 1.7; игра сама загружает версию для себя.
+
+### Исправлено
+- Английский интерфейс мода не загружался — вместо текстов были ключи.
+- Блок-ремесленник переставал работать после смены языка прямо в игре: дрон не появлялся, а лог заполнялся ошибками.
 
 ## 1.1
 

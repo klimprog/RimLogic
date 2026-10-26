@@ -6,9 +6,18 @@
 
 **Electro-logic blocks for players who like their base to think for itself.**
 
-`Version 1.1.8` · `RimWorld 1.6` · requires [Harmony](https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077) · [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3750951495)
+`Version 1.2.1` · `RimWorld 1.6 · 1.7` · requires [Harmony](https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077) · [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3750951495)
 
 # Changelog
+
+## 1.2
+
+### Added
+- **RimWorld 1.7 support.** The mod runs on both 1.6 and 1.7; the game loads the right version by itself.
+
+### Fixed
+- The mod's English interface failed to load, showing raw keys instead of text.
+- The crafter block stopped working after switching language in-game: its drone never appeared and the log filled with errors.
 
 ## 1.1
 

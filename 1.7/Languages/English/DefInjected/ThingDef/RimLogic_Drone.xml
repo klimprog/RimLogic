@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <RimLogic_DronePawn.label>crafter manipulator</RimLogic_DronePawn.label>
+  <RimLogic_DronePawn.description>The working arm of a crafter block. It has no will of its own: it does exactly the job its block hands it, and nothing else.</RimLogic_DronePawn.description>
+
+</LanguageData>

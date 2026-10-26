@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Each game version loads ONLY its own folder. The root is deliberately not listed: it holds About and
+     the documents, not content, and keeping it out means a change made for one version can never leak
+     into the other. 1.6 (Unity) is frozen (1.1.9 code + crafter fix, assembly 1.1.10); 1.7 (Waylith) is where development happens. -->
+<loadFolders>
+  <v1.6>
+    <li>1.6</li>
+  </v1.6>
+  <v1.7>
+    <li>1.7</li>
+  </v1.7>
+</loadFolders>
